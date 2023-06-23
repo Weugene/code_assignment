@@ -1,0 +1,211 @@
+* 1.5
+* calendar event delete fix
+* the_content add
+* 1.4
+* abort ctrl for my invites added
+* drag to refresh added
+* translation sync
+* build added
+* vibebp_fireabase_update_stale_requests check added
+* stale request added
+* event create sync added
+* build added
+* cache handling added
+* event filter fixed
+* build added
+* reload comp added
+* no_cache and post added in fetch
+* message notification fixed
+* Invite user search fixed
+* settings_fix
+* language files
+* build added
+* switch added for select meet create
+* console removed
+* event add button show fixed
+* google event create added
+* new event google sync field added
+* sync loader added
+* google sync added
+* build added
+* Google meet url add show added
+* switch fixed for recurring type selection
+* show event remove the sync
+* simple event synced added
+* recuring events handled
+* sync all my events initialized
+* settings page link updated
+* on disable button not show
+* add to google calendar added
+* minified files
+* 1.3.1
+* storage key typo fixed
+* button text auto translatable
+* key site langauge pickup added
+* typo issue fixed
+* language calendar
+* translation show based on locale first
+* myinvites show in events fixed
+* language change option added
+* locale for invite added
+* fullcal locale based translation added
+* additional security for creating , deleting and other things impacting database
+* language files updated
+* group and course events
+* 1.3
+* calendar widget
+* bugs 1
+* removing BUGGY Code
+* test
+* invite api fixed
+* hide edit option in tab calendar
+* calendar render in group
+* view event in group added
+* style fixed
+* invite fixed
+* title append shared value name
+* filter fixed
+* post title update single function to get event
+* manage events tab added
+* sharing and filtering to component added
+* lable select styling fixed
+* eventon shifted to wplms-eventon
+* creator can not be removed
+* 1.2.1
+* bug fix
+* double calendar appearing fix
+* 1.2
+* bug fixes
+* events
+* version 1.2
+* translations updated
+* build complete
+* remove vibe zoom.js
+* two component showing issue fixed
+* invite,css fixed
+* change description
+* remove notice
+* with sidebar added
+* avatar added
+* css fixed
+* my invites fixed
+* my invites calendar added
+* fetch events on date change fixed
+* 1.0
+* 1.0
+* finalise
+* css fixes
+* translations
+* build files
+* always render neew cal on events load but checking if start and end dates should not same to stop loop
+* show event from context function added
+* batch rending fixed
+* my events show fixed
+* fix
+* minify
+* check
+* my invites calendar added
+* some fixes
+* fetch events and show fixed without rerendering
+* removed react calendar inbuilt
+* new calendar
+* old
+* extras
+* nav removed and show_for_displayed_user
+* user shared post fetch query added
+* vibezoom initialized in calendar
+* fixes
+* cal
+* styling changes
+* typo and view fixes
+* label filter added
+* console removed
+* label title fixed
+* label js added
+* restriction added for edit event
+* restriction and and add event and remove label api added
+* eventon extra key add on api
+* typo fixed
+* eventon added
+* eventon submenu added
+* location fixed
+* location field added and saving data to db
+* location field added
+* view events before api fixed
+* view invites before api fixed
+* invitation fetch fixed with start end
+* calendar event filter with start end added
+* my invites api filter added
+* js tabs added in invites
+* events context update after accept
+* issue with my_invites mapping
+* invite added in edit page
+* invites view in calendar
+* taxonomy api fixed
+* taxonomy api fixed
+* all-lablels fixed
+* add_event api fixed
+* react flatpickr removed
+* color added
+* color comp added
+* fixed add edit event with date
+* passing re
+* typo fixed
+* parseInt on field value
+* show event fixed
+* drag drop added
+* parse function moved to fullcalendar.js
+* fixes
+* parse event added
+* flatpicker issue
+* taxonomy token error fixed
+* meta check
+* edit event for existing events ?
+* labels css fixes
+* missing data check
+* datetime fix
+* datetime fix
+* newevent
+* full calendar css
+* Customizable event fields
+* working with label filter api
+* Event fields
+* Calendar taxonomy
+* api fixed
+* label add delete ,event color, taxonomy added
+* working on color
+* api can_edit
+* some translation added
+* events and invites fixed
+* full-cal used and data format changed
+* calendar js import fixed
+* full calendar using and comp added
+* (issue)only pending or accepted invite show
+* invites fetch from db
+* test data removed
+* test data added
+* my invites js mutation issue
+* my invites js fixed
+* my invites api fixed
+* week cal
+* event show and edit
+* calendar api and appearance in week
+* translation and text domain fixed
+* typo fixed
+* api fixed send
+* events and invites added
+* delete invitation added
+* accept invite api added
+* my invites api added
+* add event fixed
+* invite api added
+* search users added and api initialized
+* my events showing
+* ref and flatpickr implementation
+* design and structure changes
+* my events fetch api initialized
+* add event added
+* add event started
+* calender CSS fixes
+* calendar ready
+* init
