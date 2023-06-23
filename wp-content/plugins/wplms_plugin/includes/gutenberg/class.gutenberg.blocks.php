@@ -221,8 +221,17 @@ class Wplms_Plugin_Register_Guten_Blocks {
 			'order'=>'alphabetical',
 			'show_course_popup'=>false,
 			'taxonomy__course-cat'=>'all',
+			
 		);
 
+		$location = vibe_get_option('location');
+ 		if(isset($location) && $location){
+ 			$defaults['taxonomy__location']='all';
+ 		}
+ 		$level = vibe_get_option('level');
+ 		if(isset($level) && $level){
+ 			$defaults['taxonomy__level']='all';
+ 		}
 		$settings = wp_parse_args($settings,$defaults);
 		if(!empty($settings['courses_per_page'])){
 			$settings['courses_per_page'] = array('size'=>$settings['courses_per_page']);
@@ -734,6 +743,16 @@ class Wplms_Plugin_Register_Guten_Blocks {
 			'posts_per_page'=>-1
 		);
 
+
+		$member_cards = array();
+
+		$args1 = array(
+			'post_type'=>'member-card',
+			'post_status'=>'publish',
+			'posts_per_page'=>-1
+		);
+
+
 		global $post;
 		$temp_post = $post;
 		$cards[] = array('value'=>0,'label'=>_x('Select','','wplms'));
@@ -743,6 +762,22 @@ class Wplms_Plugin_Register_Guten_Blocks {
        			$results->the_post();
        			
        			$cards[] = array('value'=>$post->ID,'label'=>$post->post_title); 
+	
+			}
+		}
+		wp_reset_postdata();
+		$post = $temp_post;
+
+
+		global $post;
+		$temp_post = $post;
+		$member_cards[] = array('value'=>0,'label'=>_x('Select','','wplms'));
+		$results  = new WP_Query($args1);
+       	if($results->have_posts()){
+       		while($results->have_posts()){
+       			$results->the_post();
+       			
+       			$member_cards[] = array('value'=>$post->ID,'label'=>$post->post_title); 
 	
 			}
 		}
@@ -799,6 +834,7 @@ class Wplms_Plugin_Register_Guten_Blocks {
 			'default_profile_value'=>_x('default value','','vibebp'),
 			'default_name'=>_x('default name','','vibebp'),
 			'cards' => $cards,
+			'member_cards'=>$member_cards,
 			'default_text_color_options'=>$color_options,
 			'course_info_options'=>apply_filters('wplms_course_info_display_options',[
 					'title'=>__('Course Title','wplms'),

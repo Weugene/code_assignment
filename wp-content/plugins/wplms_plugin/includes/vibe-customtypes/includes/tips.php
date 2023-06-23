@@ -2779,13 +2779,16 @@ class WPLMS_tips{
 			}else{
 				$url = home_url();
 			}
-			
+			$link = bp_core_get_user_domain($user->ID);
+			if(function_exists('vibebp_get_setting') && vibebp_get_setting('bp_single_page')){
+				$link = get_permalink(vibebp_get_setting('bp_single_page'));
+			}
 			$redirect_array = apply_filters('wplms_redirect_location',array(
 					'home' => $url,
 					'profile' => bp_core_get_user_domain($user->ID),
-					'mycourses' => bp_core_get_user_domain($user->ID).'#component='.BP_COURSE_SLUG,
-					'instructing_courses' => bp_core_get_user_domain($user->ID).'#component=manage_courses',
-					'dashboard' => bp_core_get_user_domain($user->ID),
+					'mycourses' => $link.'#component='.BP_COURSE_SLUG,
+					'instructing_courses' => $link.'#component=manage_courses',
+					'dashboard' => $link.'#component=dashboard',
 					'same' => '',
 					));
 			

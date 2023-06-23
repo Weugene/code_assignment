@@ -5531,7 +5531,7 @@ msgstr "Добавить"
 
 #: options/fields/pages_select/field_pages_select.php:43
 msgid "None"
-msgstr "Отсутсвует"
+msgstr "Отсутствует"
 
 # @ vibe
 #: options/fields/seo_panel/field_seo_panel.php:37
@@ -8849,7 +8849,7 @@ msgstr "Переадресация при отсутствии доступа к
 #: vibe-options.php:382 vibe-options.php:407 vibe-options.php:423
 msgid "User is redirected to this page on error."
 msgstr ""
-"В случае отсутсвия доступа к информации посетитель будет переадресован на "
+"В случае отсутствия доступа к информации посетитель будет переадресован на "
 "эту страницу."
 
 # @ vibe

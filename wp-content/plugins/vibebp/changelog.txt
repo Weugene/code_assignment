@@ -1,3 +1,14 @@
+* 1.9.8.4
+* editor fixes
+* re-init disabled
+* PDF in courses
+* sw fixes
+* cart fixes
+* fixes
+* word break issue
+* cartjs bug fix
+* registration page styling
+* group card public permission
 * 1.9.8.3.3
 * settings filter incorrect
 * social signup filter to enable disable registration via social logins

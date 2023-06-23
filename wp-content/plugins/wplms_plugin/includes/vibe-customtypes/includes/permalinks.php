@@ -508,7 +508,7 @@ class Vibe_CustomTypes_Permalinks{
 				}
 
 				add_filter('body_class',function($class){$class[]='single-course';return $class;});
-				if(function_exists('bp_get_template_part')){
+				if(function_exists('bp_get_template_part') && !empty($post)){
 					global $wp_query,$post,$withcomments;
 					
 					status_header( 200 );

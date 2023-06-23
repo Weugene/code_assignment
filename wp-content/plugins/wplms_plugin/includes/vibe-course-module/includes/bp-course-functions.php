@@ -280,10 +280,6 @@
                     $all_marks[$all_questions['ques'][$i]]=$marks;
                 }
 
-            }else if(is_array($all_questions) && $all_questions[0]['type'] == 'question'){
-                foreach($all_questions as $question){
-                    $all_marks[$question['data']['id']]=$question['marks'];
-                }
             }
         
             if(is_array($all_marks)){
@@ -297,51 +293,44 @@
       
             if(!empty($all_questions['ques'])){
                 $all_questions = $all_questions['ques'];
-            }else if(is_array($all_questions) && $all_questions[0]['type'] == 'question'){
-                $qs=[];
-                foreach($all_questions as $q){
-                    $qs[]=$q['data']['id'];
-                }
-                $all_questions=$qs;
             }
                
-               
-                foreach($all_questions as $k=>$question_id){
-                     
-                    if($status  >= 3){
-                        $results =  array();
-                        if(function_exists('bp_is_active') && bp_is_active('activity')){
-                            global $wpdb,$bp;
+            foreach($all_questions as $k=>$question_id){
+                 
+                if($status  >= 3){
+                    $results =  array();
+                    if(function_exists('bp_is_active') && bp_is_active('activity')){
+                        global $wpdb,$bp;
 
-                            if(empty($activity_id)){
-                                $activity_id = $wpdb->get_var($wpdb->prepare( "
-                                        SELECT id 
-                                        FROM {$bp->activity->table_name}
-                                        WHERE secondary_item_id = %d
-                                        AND type = 'quiz_evaluated'
-                                        AND user_id = %d
-                                        ORDER BY date_recorded DESC
-                                        LIMIT 0,1
-                                        " ,$item_id,$user_id));
-                                if(!empty($activity_id)){
-                                    $results = bp_course_get_quiz_results_meta($item_id,$user_id,$activity_id);
-                                }
-                            }else{
+                        if(empty($activity_id)){
+                            $activity_id = $wpdb->get_var($wpdb->prepare( "
+                                    SELECT id 
+                                    FROM {$bp->activity->table_name}
+                                    WHERE secondary_item_id = %d
+                                    AND type = 'quiz_evaluated'
+                                    AND user_id = %d
+                                    ORDER BY date_recorded DESC
+                                    LIMIT 0,1
+                                    " ,$item_id,$user_id));
+                            if(!empty($activity_id)){
+                                $results = bp_course_get_quiz_results_meta($item_id,$user_id,$activity_id);
+                            }
+                        }else{
 
-                                $results = bp_course_get_quiz_results_meta($item_id,$user_id,$activity_id,true);
-                
-                            }
-                            if(is_serialized($results)){
-                                $results = unserialize($results);
-                            }
-                            if(!empty($results) && is_array($results)){
-                                $questions = $results;
-                            }
+                            $results = bp_course_get_quiz_results_meta($item_id,$user_id,$activity_id,true);
+            
                         }
-                        $tags_data =  get_user_meta($user_id,'tags_data'.$item_id,true);
-                        break;
-                    }else{
-                        
+                        if(is_serialized($results)){
+                            $results = unserialize($results);
+                        }
+                        if(!empty($results) && is_array($results)){
+                            $questions = $results;
+                        }
+                    }
+                    $tags_data =  get_user_meta($user_id,'tags_data'.$item_id,true);
+                    break;
+                }else{
+                    if(!empty($question_id)){
                         $question = bp_course_get_question_details($question_id,1);
                         if(!empty($all_marks) && !empty($all_marks[$question_id])){
                             $question['marks'] = $all_marks[$question_id];
@@ -398,7 +387,9 @@
                         }
                         array_push($questions, $question);
                     }
+                    
                 }
+            }
             
             if(!empty($all_questions)){
                 $progress = round((100*$progress/count($all_questions)),2); 
@@ -491,7 +482,7 @@
         //'progress' => $progress,
         'marks'=> $user_marks,
         'max' => $max,
-        'questions' => $questions,
+        'questions' => apply_filters('wplms_user_quiz_questions_array',$questions,$item_id,$user_id),
         'auto'=>(($auto == 'S')?1:0),
         'retakes' => $retake_count,
         'completion_message'=>  $completion_message,

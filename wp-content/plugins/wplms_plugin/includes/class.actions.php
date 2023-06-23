@@ -691,7 +691,7 @@ class WPLMS_4_Actions{
 
                 if(function_exists('bp_is_directory') && !bp_is_directory() && !function_exists('elementor_load_plugin_textdomain') || 
 
-                    !\Elementor\Plugin::$instance->documents->get( $post->ID )->is_built_with_elementor()){
+                    (class_exists('\Elementor\Plugin') && !\Elementor\Plugin::$instance->documents->get( $post->ID )->is_built_with_elementor())){
 
                     //!\Elementor\Plugin::$instance->documents->get( $post->ID )->is_built_with_elementor()
 

@@ -304,10 +304,25 @@ if ( ! class_exists( 'BP_Course_Rest_Course_Controller' ) ) {
 				array(
 					'methods'             =>  'POST',
 					'callback'            =>  array( $this, 'subscribe_to_course' ),
-					'permission_callback' => array($this,'get_unit_permissions_check_single')
+					'permission_callback' => array($this,'get_course_subscribe_permissions_check_single')
 				))
 		);
 			
+		}
+
+		function get_course_subscribe_permissions_check_single($request){
+			$body = json_decode($request->get_body(),true);
+        
+	        if(!empty($body['token'])){
+	            
+	            $this->user = apply_filters('vibebp_api_get_user_from_token','',$body['token']);
+	            if(!empty($this->user)){
+	            	$this->user_id = $this->user->id;
+	                return true;
+	            }
+	        }
+			
+			return false;
 		}
 
 		function get_unit_permissions_check_single($request){
@@ -321,6 +336,13 @@ if ( ! class_exists( 'BP_Course_Rest_Course_Controller' ) ) {
 	                return true;
 	            }
 	        }
+
+	        $item_id = $request['unit_id'];
+			$is_free = get_post_meta( $item_id, 'vibe_free', true );
+			$allow = false;
+			if($is_free=="S"){
+				return true;
+			}
 			
 			return false;
 		}
@@ -824,7 +846,8 @@ if ( ! class_exists( 'BP_Course_Rest_Course_Controller' ) ) {
 		public function get_price_html($course){
 
 			$free = get_post_meta($course->ID,'vibe_course_free',true);
-			if(isset($free) && $free != 'H'){
+
+			if(isset($free) && $free == 'S'){
 				return _x('FREE','REST API FREE course label','wplms');
 			}
 			$price_html =array();
@@ -2618,7 +2641,7 @@ if ( ! class_exists( 'BP_Course_Rest_Course_Controller' ) ) {
 					'duration'=>bp_course_get_course_duration(get_the_ID()),
 				);
 
-				if(bp_course_is_member(get_the_id(),$this->user->id)){
+				if(bp_course_is_member(get_the_ID(),$this->user->id)){
 					$course['user_progress']=bp_course_get_user_progress($this->user->id,get_the_ID());
 					$course['user_status']=bp_course_get_user_course_status($this->user->id,get_the_ID());
 				}else{
@@ -2634,7 +2657,7 @@ if ( ! class_exists( 'BP_Course_Rest_Course_Controller' ) ) {
 					}else{
 						$apply_course = get_post_meta(get_the_ID(),'vibe_course_apply',true);						
 						if(vibe_validate($apply_course)){
-							$applied = get_user_meta($this->user->id,'apply_course'.$course_id,true);
+							$applied = get_user_meta($this->user->id,'apply_course'.get_the_ID(),true);
 							if(!empty($applied)){
 								$course['pricing'] = [
 									'type'=>'applied',

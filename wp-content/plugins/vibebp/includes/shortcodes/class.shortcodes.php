@@ -1050,7 +1050,7 @@ class VibeBp_Shortcodes{
                         $fname = str_replace(' ','_',$field->name);
                         if(is_array($fields) && in_array($fname,$fields)){
 
-                            $return_fields .='<div class="vibebp_registration_field">';
+                            $return_fields .='<div class="vibebp_registration_field vibebp_field_type_'.bp_get_the_profile_field_type().'">';
                             $field_type = bp_xprofile_create_field_type( bp_get_the_profile_field_type() );
                             ob_start();
                             ?><div <?php bp_field_css_class( 'bp-profile-field' ); ?>>

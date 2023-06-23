@@ -1549,12 +1549,12 @@ function bp_course_get_quiz_questions($quiz_id,$user_id){
 	      	}
 	    }
 	    
-	    if(!empty($questions)){ 
+	    if(!empty($questions['ques'])){ 
 	    	update_user_meta($user_id,'quiz_questions'.$quiz_id,$questions);
 	    }	    
     }
     $template->quiz_questions[$quiz_id][$user_id] = $questions;
-  	return $questions;
+  	return apply_filters('wplms_bp_course_get_quiz_questions',$questions,$quiz_id,$user_id);
 }
 
 
@@ -1564,9 +1564,11 @@ function bp_course_get_quiz_questions($quiz_id,$user_id){
 * @since 3.0.0
 */
 function bp_course_update_quiz_questions($quiz_id,$user_id,$questions){
-	update_user_meta($user_id,'quiz_questions'.$quiz_id,$questions);
-	$template = BP_Course_Template::init();
-	$template->quiz_questions[$quiz_id][$user_id] = $questions;
+	if(!empty($questions)){
+		update_user_meta($user_id,'quiz_questions'.$quiz_id,$questions);
+		$template = BP_Course_Template::init();
+		$template->quiz_questions[$quiz_id][$user_id] = $questions;
+	}
 }
 
 /**

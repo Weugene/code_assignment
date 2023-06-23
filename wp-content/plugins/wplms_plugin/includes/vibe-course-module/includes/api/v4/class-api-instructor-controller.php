@@ -2618,8 +2618,10 @@ if ( ! class_exists( 'BP_Course_Rest_Instructor_Controller' ) ) {
 	          				}
 	          				update_user_meta($member, 'certificates', $certificates);
 	          				$allowed = apply_filters('wplms_action_certificate_earned_bulk_action_allowed',true,$course_id,$certificates,$member);
-		                    if($allowed)
+	          				
+		                    if($allowed){
 		                      do_action('wplms_certificate_earned',$course_id,$certificates,$member,true);
+		                    }
 	          				break;
 	          			case 'remove_badge':
 	          				$badges = vibe_sanitize(get_user_meta($member, 'badges', false));
@@ -3317,6 +3319,7 @@ if ( ! class_exists( 'BP_Course_Rest_Instructor_Controller' ) ) {
 	            			'correct_answer' => isset($question['correct_answer'])?$question['correct_answer']:'',
 	            			'type' => isset($question['type'])?$question['type']:''
 	            		);
+	            		$max_sum += intval($question['max_marks']);
 	            		$structure['questions'][]=$temp;
 	            	}
 				}
@@ -3326,7 +3329,7 @@ if ( ! class_exists( 'BP_Course_Rest_Instructor_Controller' ) ) {
 
 				$structure['activity_id']=isset($activity_id)?$activity_id:0;
 				$structure['user_marks']=isset($results['user_marks'])?$results['user_marks']:0;
-				$structure['total_marks']=isset($results['total_marks'])?$results['total_marks']:0;
+				$structure['total_marks']=isset($results['total_marks'])?$results['total_marks']:$max_sum;
 
 			}
 			if(empty($structure)){

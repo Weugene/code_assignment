@@ -1814,7 +1814,7 @@ class BP_Course_Action{
 	    	// STATIC QUIZ
 	    	if(empty($quiz_questions) || empty($quiz_questions['ques']))
 	        	$quiz_questions = vibe_sanitize(get_post_meta($quiz_id,'vibe_quiz_questions',false));
-
+            $rand_quiz_questions = [];
 	        $randomize=get_post_meta($quiz_id,'vibe_quiz_random',true);
 	        if(isset($randomize) && $randomize == 'S'){ // If Radomise is not set.
 	            if(isset($quiz_questions['ques']) && is_array($quiz_questions['ques']) && count($quiz_questions['ques']) > 1){

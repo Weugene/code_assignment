@@ -52,7 +52,7 @@ if ( ! class_exists( 'Vibe_BP_API_Rest_Groups_Controller' ) ) {
 			register_rest_route( $this->namespace, '/group_card/(?P<group_id>\d+)', array(
 				array(
 					'methods'             =>  'POST',
-					'permission_callback' => array( $this, 'get_groups_permissions' ),
+					'permission_callback' => array( $this, 'get_public_groups_permissions' ),
 					'callback'            =>  array( $this, 'get_group_card' ),
 				),
 			));

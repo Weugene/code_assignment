@@ -2461,7 +2461,9 @@ class BP_Course_Ajax{
       }
       
       if(isset($coursetaken) && $coursetaken){
-
+        if(class_exists('WPBMap')){
+          WPBMap::addAllMappedShortcodes();
+        }
         if(!bp_course_check_unit_complete($unit_id,$user_id,$course_id)){ // IF unit not completed by user
             // Drip Feed Check    
             $drip_enable= apply_filters('wplms_course_drip_switch',get_post_meta($course_id,'vibe_course_drip',true),$course_id);

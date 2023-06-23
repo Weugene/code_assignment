@@ -1188,12 +1188,14 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 		}
 
 		function get_user_progress($course,$user_id){
-			$p = bp_course_get_user_progress($user_id,$course->ID);
+			if(is_numeric($course)){$course_id = $course;}else{$course_id = $course->ID;}
+			$p = bp_course_get_user_progress($user_id,$course_id);
 			return empty($p)?0:$p;
 		}
 
 		function get_user_status($course,$user_id){
-			return bp_course_get_user_course_status($user_id,$course->ID);
+			if(is_numeric($course)){$course_id = $course;}else{$course_id = $course->ID;}
+			return bp_course_get_user_course_status($user_id,$course_id);
 		}
 
 		function get_course_featured_image($course){
@@ -1658,7 +1660,7 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				$version =  bp_course_get_setting( 'app_version', 'api','number' ); 
 				//Get content
 				if(!empty($version) && $version > 2){
-					$return = array('current_unit_key'=>$curr_unit_key,'status'=> $this->get_user_status($course,$user_id),'courseitems'=>$curriculum_arr) ;
+					$return = array('current_unit_key'=>$curr_unit_key,'status'=> $this->get_user_status($course_id,$user_id),'courseitems'=>$curriculum_arr) ;
 				}else{
 					$return = array('current_unit_key'=>$curr_unit_key,'courseitems'=>$curriculum_arr) ;
 				}
@@ -1860,7 +1862,6 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 
 									$return['scripts']=apply_filters('wplms_api_elementor_unit_scripts',array(
 										
-										//array('key'=>'backbone-marionette-js','src'=>plugins_url().'/elementor/assets/lib/backbone/backbone.marionette.min.js'),
 										array('key'=>'elementor-common-modules-js','src'=>plugins_url().'/elementor/assets/js/common-modules.min.js'),
 										array('key'=>'elementor-common-js','src'=>plugins_url().'/elementor/assets/js/common.min.js'),
 										
@@ -3259,7 +3260,7 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 						}
 						$correct_count = 0;
 						$incorrect_count = 0;
-						if(!empty($res['id'])){
+						if(!empty($res['id']) && is_numeric($res['id'])){
 							if(!empty($res['usercorrect']) && $res['usercorrect'] > 0){
 								update_question_correct_percentage($res['id']);
 							}else{
@@ -3269,7 +3270,12 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 							$correct_count = intval($correct_count);
 							$incorrect_count = get_question_incorrect_percentage($res['id']);
 							$incorrect_count = intval($incorrect_count);
-							$actual_percentage = round(($correct_count/($incorrect_count+$correct_count))*100);
+							if(empty(($incorrect_count+$correct_count))){
+								$actual_percentage = 0;
+							}else{
+								$actual_percentage = round(($correct_count/($incorrect_count+$correct_count))*100);
+							}
+							
 							$correct_data[$res['id']] = $actual_percentage;
 							$res['correct_data'] = $correct_data[$res['id']];
 

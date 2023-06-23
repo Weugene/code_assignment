@@ -1,3 +1,30 @@
+* 1.9.7.3
+* build files
+* additional checks for warnings
+* redirect to bp single page
+* permalink fix
+* function check for other themes
+* new title fix
+* php fix
+* add wpbmap shortcodes
+* minified
+* additional check
+* price fix in all courses in app
+* guten block level error fix
+* inst card fix
+* todo fixes
+* consistent class
+* course id
+* provision to custom comment options for ai
+* free unit not available fix
+* max marks not appearing fix
+* php error fixes for ai quiz
+* quiz fixes in php
+* wplms_bp_course_get_quiz_questions filter to set ai quiz questions
+* difficulty
+* Free trials removed
+* minified
+* console.log removed from practice questions
 * 1.9.7.2
 * styling fixes
 * all courses pagination fix

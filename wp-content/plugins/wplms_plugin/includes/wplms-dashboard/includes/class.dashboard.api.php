@@ -2637,9 +2637,15 @@ class WPLMS_Dashboard_Api
             $todo_list = array();
             foreach ($body['todo_data'] as $task) {
                 $task_obj = new stdClass();
-                $task_obj->status = $task['status'];
+                
+                if(!empty($task['status'])){
+                    $task_obj->status = $task['status'];
+                }
                 $task_obj->text = $task['content'];
-                $task_obj->date = $task['date'];
+                if(!empty($task['date'])){
+                    $task_obj->date = $task['date'];
+                }
+                
                 array_push($todo_list, $task_obj);
             }
             $result = update_user_meta($this->user->id,'tasks',$todo_list);

@@ -568,12 +568,13 @@ class VibeBP_Actions{
     function getvw(){
     	
     	//read file
-    	if(file_exists(plugin_dir_path(__FILE__).'../assets/js/service-worker.js') && !empty(vibebp_get_setting('offline_page','service_worker'))){
+
+    	if(file_exists(plugin_dir_path(__FILE__).'../assets/js/service-worker.js') && !empty(vibebp_get_setting('offline_page','service_worker','general'))){
             
             $contents = file_get_contents(plugin_dir_path(__FILE__).'../assets/js/service-worker.js');
             //replace constants
-            $version = vibebp_get_setting('version','service_worker') ;
-            $cache_first = vibebp_get_setting('cache_first','service_worker') ;
+            $version = vibebp_get_setting('version','service_worker','general') ;
+            $cache_first = vibebp_get_setting('cache_first','service_worker','general') ;
             if(!empty($cache_first)){
             	$contents = str_replace('[CACHE_FIRST]','true',$contents);            	
             }else{
@@ -592,7 +593,7 @@ class VibeBP_Actions{
 				
 			}
 
-			$get = wp_remote_get(get_permalink(vibebp_get_setting('offline_page','service_worker')).'?pre_cache=1');
+			$get = wp_remote_get(get_permalink(vibebp_get_setting('offline_page','service_worker','general')).'?pre_cache=1');
 
 			$scripts=  get_option('vibe_sw_scripts');
 			$styles=  get_option('vibe_sw_styles');
@@ -609,7 +610,7 @@ class VibeBP_Actions{
 			}
 
 			if(vibebp_get_setting('service_workers')){
-				$links = vibebp_get_setting('pre-cached','service_worker');	
+				$links = vibebp_get_setting('pre-cached','service_worker','general');	
 				if(!empty($links)){
 					foreach($links as $key=>$link){
 						$scripts[]=$link;
@@ -626,7 +627,7 @@ class VibeBP_Actions{
 			
 			$contents = str_replace('[STATIC_ASSETS]',json_encode($scripts),$contents);
 
-			$image = vibebp_get_setting('default_image','service_worker');
+			$image = vibebp_get_setting('default_image','service_worker','general');
 			if(is_numeric($image)){
 				$image = wp_get_attachment_image_src($image,'full');
 				$image = $image[0];
@@ -634,7 +635,7 @@ class VibeBP_Actions{
 				$image = plugins_url('../assets/images/avatar.jpg',__FILE__);
 			}
 			$contents = str_replace('[DEFAULT_IMAGE]','"'.$image.'"', $contents);
-			$pid = vibebp_get_setting('offline_page','service_worker');
+			$pid = vibebp_get_setting('offline_page','service_worker','general');
 			$contents = str_replace('[OFFLINE_URL]','"'.get_permalink($pid).'"', $contents);
 			ob_start();
 			do_action('vibebp_default_service_worker',$contents);
@@ -862,7 +863,7 @@ class VibeBP_Actions{
 			      	"type"=> "image/png"
   				),
   				array(
-  					"src"=> $att[1] == 512?wp_get_attachment_url($app_icon):$upload_dir['baseurl']."/icon-512x512.png",
+  					"src"=> !empty($att) && $att[1] == 512?wp_get_attachment_url($app_icon):$upload_dir['baseurl']."/icon-512x512.png",
       				"sizes"=> "512x512",
       				"type"=> "image/png"	
   				),
