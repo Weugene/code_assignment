@@ -1,6 +1,13 @@
 
 
 
+version 1.5.73:
+
+- bug fix: added support for wordpress proxy in api calling
+- bug fix: fixed empty post in query result
+- bug fix: fixed "wrong template ID" elementor error in post accordion
+
+
 version 1.5.72:
 
 -bug fix: added the swf extension in the allowed files in assets

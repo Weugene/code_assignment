@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.14.0 - 18-06-2023 */
+/*! elementor-pro - v3.14.0 - 26-06-2023 */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({});
@@ -116,7 +116,7 @@
 /******/ 			if (chunkId === "loop-carousel") return "" + chunkId + ".bb1d12b699805ace419f.bundle.js";
 /******/ 			if (chunkId === "mega-menu") return "" + chunkId + ".6a41b17ca3362b2df95d.bundle.js";
 /******/ 			if (chunkId === "mega-menu-stretch-content") return "" + chunkId + ".749b8c1dc8bd8c9b37d2.bundle.js";
-/******/ 			if (chunkId === "nested-carousel") return "" + chunkId + ".4b92d02078ce6e22f22e.bundle.js";
+/******/ 			if (chunkId === "nested-carousel") return "" + chunkId + ".ccfe690d939a97e56aba.bundle.js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

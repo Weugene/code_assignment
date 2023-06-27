@@ -3735,7 +3735,7 @@ class UniteCreatorElementorWidget extends Widget_Base {
     	
 	    	$postListName = UniteFunctionsUC::getVal($arrPostListParam, "name");
 	    	$postsSource = UniteFunctionsUC::getVal($arrValues, $postListName."_source");
-	    	    	
+	    	
 	    	if($postsSource != "current")
 	    		return("");
     	}

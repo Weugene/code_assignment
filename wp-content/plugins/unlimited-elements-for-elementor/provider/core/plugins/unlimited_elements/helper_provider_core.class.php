@@ -514,7 +514,7 @@ class HelperProviderCoreUC_EL{
 	 * put post content, or render with elementor
 	 */
 	public static function getPostContent($postID, $content=""){
-				
+		
 		if(empty($postID))
 			return(false);
 			
@@ -548,7 +548,7 @@ class HelperProviderCoreUC_EL{
 		//elementor content
 		
 		$content = self::getElementorTemplate($postID);
-
+		
 		self::$arrPostContentCache[$postID]	= $content;
 		
 		return($content);

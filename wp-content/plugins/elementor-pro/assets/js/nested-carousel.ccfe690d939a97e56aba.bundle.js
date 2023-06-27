@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.14.0 - 18-06-2023 */
+/*! elementor-pro - v3.14.0 - 26-06-2023 */
 "use strict";
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["nested-carousel"],{
 
@@ -57,7 +57,7 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
         nextEl: isRtl ? `${widgetSelector} .elementor-swiper-button-prev` : `${widgetSelector} .elementor-swiper-button-next`
       };
     }
-    swiperOptions.shortSwipes = false;
+    this.applySwipeOptions(swiperOptions);
     return swiperOptions;
   }
   async onInit() {
@@ -102,10 +102,24 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
       arrows_position: 'arrows_position' // Not a Swiper setting.
     };
   }
+
+  applySwipeOptions(swiperOptions) {
+    if (!this.isTouchDevice()) {
+      swiperOptions.shortSwipes = false;
+    } else {
+      swiperOptions.touchRatio = 1;
+      swiperOptions.longSwipesRatio = 0.3;
+      swiperOptions.followFinger = true;
+      swiperOptions.threshold = 10;
+    }
+  }
+  isTouchDevice() {
+    return elementorFrontend.utils.environment.isTouchDevice;
+  }
 }
 exports["default"] = NestedCarousel;
 
 /***/ })
 
 }]);
-//# sourceMappingURL=nested-carousel.4b92d02078ce6e22f22e.bundle.js.map
+//# sourceMappingURL=nested-carousel.ccfe690d939a97e56aba.bundle.js.map

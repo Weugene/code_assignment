@@ -1252,6 +1252,13 @@ Note : This plugin works with Elementor. Make sure you have [Elementor](https://
 
 == Changelog ==
 
+version 1.5.73: 2023-06-26
+
+* Feature: added options for revisions in widget editor
+* Fix: added support for wordpress proxy in api calling
+* Fix: fixed empty post in query result
+* Fix: fixed "wrong template ID" elementor error in post accordion
+
 
 version 1.5.72: 2023-06-21
 

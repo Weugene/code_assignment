@@ -82,15 +82,15 @@ class CodeAssignment extends Widget_Base{
         'label' => 'Условие задания',
       ]
     );
-    $this->add_control(
-      'apply_button',
-      [
-          'label' => esc_html__('Apply Button', 'apply-button'),
-          'type' => \Elementor\Controls_Manager::BUTTON,
-          'text' => esc_html__('Apply', 'apply-button'),
-          'default' => 'no', // Set your desired default value here
-      ]
-    );
+    // $this->add_control(
+    //   'apply_button',
+    //   [
+    //       'label' => esc_html__('Apply Button', 'apply-button'),
+    //       'type' => \Elementor\Controls_Manager::BUTTON,
+    //       'text' => esc_html__('Apply', 'apply-button'),
+    //       'default' => 'no', // Set your desired default value here
+    //   ]
+    // );
     // list of controls
 
     $this->add_control(
@@ -253,6 +253,7 @@ class CodeAssignment extends Widget_Base{
     ?>
     <script>
       var widgetData = <?php echo json_encode( $w_data ); ?>;
+      var widgetDataTest = "some test";
       // should I put html escape to protect from XSS attack?
       function htmlEscape(input) {
         // return input.replace(/[&<>"'/]/g, function(match) {
@@ -353,9 +354,9 @@ class CodeAssignment extends Widget_Base{
 
   // JS renderer specifies the data bindings between the widget settings and the HTML elements
   protected function _content_template(){
-    $apply_button = $this->apply_button_value;
-    write_log('Apply-button'.$apply_button );
-    if ($apply_button === 'yes') {
+    // $apply_button = $this->apply_button_value;
+    // write_log('Apply-button'.$apply_button );
+    // if ($apply_button === 'yes') {
       ?>
         <#
           view.addInlineEditingAttributes( 'assignment_heading', 'advanced' );
@@ -417,8 +418,8 @@ class CodeAssignment extends Widget_Base{
         </script>
 
       <?php
-    } else{
-      echo "Test";
-    }
+    // } else{
+    //   echo "Test";
+    // }
   }
 }

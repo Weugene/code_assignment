@@ -1,5 +1,10 @@
 # Elementor Pro - by Elementor.com
 
+#### 3.14.1 - 2023-06-26
+
+* Tweak: Improved navigation on touch devices in Carousel widget ([#22827](https://github.com/elementor/elementor/issues/22827))
+* Fix: Missing navigation arrows on lightbox in Gallery widget ([#22870](https://github.com/elementor/elementor/issues/22870))
+
 #### 3.14.0 - 2023-06-19
 
 * New: Introducing Carousel widget - Infinite design possibilities, and nesting capabilities ([#2587](https://github.com/elementor/elementor/issues/2587), [#219](https://github.com/elementor/elementor/issues/219))

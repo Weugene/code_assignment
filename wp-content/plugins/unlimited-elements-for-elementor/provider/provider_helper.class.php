@@ -802,7 +802,28 @@ class HelperProviderUC{
 		
 		if($hasPermission == false)
 			UniteFunctionsUC::throwError("The user don't have permission to do this operation");
-		
 	}
-	
+
+	/**
+	 * check if addon revisions are enabled
+	 */
+	public static function isAddonRevisionsEnabled(){
+
+		$isRevisionsEnabled = HelperProviderCoreUC_EL::getGeneralSetting("enable_revisions");
+		$isRevisionsEnabled = UniteFunctionsUC::strToBool($isRevisionsEnabled);
+
+		return $isRevisionsEnabled;
+	}
+
+	/**
+	 * verify if addon revisions are enabled, use it before ajax actions
+	 */
+	public static function verifyAddonRevisionsEnabled(){
+
+		$isRevisionsEnabled = self::isAddonRevisionsEnabled();
+
+		if($isRevisionsEnabled === false)
+			UniteFunctionsUC::throwError("The revisions are disabled.");
+	}
+
 }
