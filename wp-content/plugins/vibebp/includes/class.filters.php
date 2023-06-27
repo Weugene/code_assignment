@@ -635,7 +635,7 @@ class VibeBP_Filters{
 			}
 		}
 
-		$enabled_member_type = vibebp_get_setting('member_type_based_menu','bp');
+		$enabled_member_type = vibebp_get_setting('member_type_based_menu','bp','general');
 		if(!empty($enabled_member_type) && $enabled_member_type == 'on'){
 			//get user member type
 			$type = bp_get_member_type($user->id);
@@ -662,7 +662,7 @@ class VibeBP_Filters{
 			}
 		}
 
-		$enabled_member_type = vibebp_get_setting('member_type_based_menu','bp');
+		$enabled_member_type = vibebp_get_setting('member_type_based_menu','bp','general');
 		if(!empty($enabled_member_type) && $enabled_member_type == 'on'){
 			//get user member type
 			$type = bp_get_member_type($user->id);
@@ -674,7 +674,7 @@ class VibeBP_Filters{
 	}
 
 	function member_type_sidebar($sidebar,$user_id){
-		$enabled_member_type = vibebp_get_setting('member_type_based_dashboard','bp');
+		$enabled_member_type = vibebp_get_setting('member_type_based_dashboard','bp','general');
 		if(!empty($enabled_member_type) && $enabled_member_type == 'on'){
 			$type = bp_get_member_type($user_id);
 			if(!empty($type) && is_active_sidebar('vibebp-dashboard-'.$type)){

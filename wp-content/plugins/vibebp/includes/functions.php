@@ -715,7 +715,7 @@ function vibebp_activity_remove_user_like($activity_id,$user_id){
 }
 
 function vibebp_can_access_member_details($user){
-	$member_type  = vibebp_get_setting('create_member','bp');
+	$member_type  = vibebp_get_setting('create_member','bp','general');
 	$caps = (array)$user->caps;
 	if( !empty($user) && ( (!$member_type && user_can($user->id,'manage_options')) || !empty($caps[$member_type] )) ){
 		return true;

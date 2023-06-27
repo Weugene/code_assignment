@@ -166,7 +166,7 @@ if ( ! class_exists( 'VIBE_BP_API_Rest_XProfile_Controller' ) ) {
 	    }
 
 	    function get_all_fields($request){
-	    	return new WP_REST_Response(array('status'=>true,'data'=>vibebp_get_all_member_type_profile_fields(),'default_member_type'=>vibebp_get_setting('default_member_type','bp')) , 200 );
+	    	return new WP_REST_Response(array('status'=>true,'data'=>vibebp_get_all_member_type_profile_fields(),'default_member_type'=>vibebp_get_setting('default_member_type','bp','general')) , 200 );
 	    }
 
 	    function get_profile_subnav($request){

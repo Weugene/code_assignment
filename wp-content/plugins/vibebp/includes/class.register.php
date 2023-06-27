@@ -87,7 +87,7 @@ class VibeBP_Register{
             }
         }
 
-        $member_type_based_menu = vibebp_get_setting('member_type_based_menu','bp');
+        $member_type_based_menu = vibebp_get_setting('member_type_based_menu','bp','general');
         if(!empty($member_type_based_menu) && $member_type_based_menu == 'on'){
             $types = bp_get_member_types(array(),'objects');
  
@@ -199,7 +199,7 @@ class VibeBP_Register{
                 'strong_password' => vibebp_get_setting('strong_password','general','login'),
                 'firebase_config'=>$firebase_config,
                 'session_lock' => vibebp_get_setting('session_lock','general','firebase'),
-                'create_member'=>vibebp_get_setting('create_member','bp'),
+                'create_member'=>vibebp_get_setting('create_member','bp','general'),
                 'auth'=>array(
                     'google'=>vibebp_get_setting('firebase_google_auth','general','firebase'),
                     'facebook'=>vibebp_get_setting('firebase_facebook_auth','general','firebase'),
@@ -215,9 +215,9 @@ class VibeBP_Register{
                 'login_redirect_component'=>apply_filters('vibebp_login_redirect_component',false),
                 'pdfjs_script'=>plugins_url('../assets/js/pdf/pdf.min.js',__FILE__),
                 'map_marker'=>plugins_url('../assets/images/marker.png',__FILE__),
-                'followers' => vibebp_get_setting('bp_followers','bp'),
+                'followers' => vibebp_get_setting('bp_followers','bp','general'),
                 'friends' => (function_exists('bp_is_active') && bp_is_active('friends'))?1:0,
-                'likes' => vibebp_get_setting('bp_likes','bp'),
+                'likes' => vibebp_get_setting('bp_likes','bp','general'),
                 'profile_page'=>vibebp_get_setting('offline_page','service_worker'),
                 'enable_registrations'=>apply_filters('vibebp_enable_registration',true),
                 'media_tabs'=>apply_filters('vibebp_media_tabs',array(
@@ -975,7 +975,7 @@ class VibeBP_Register{
                 );
             }
 
-            if(vibebp_get_setting('bp_followers','bp')){
+            if(vibebp_get_setting('bp_followers','bp','general')){
                 $vibebp['components']['followers']=array(
                     'label'=>__('Followers','vibebp'),
                     'sorters'=>array(
@@ -1255,7 +1255,7 @@ class VibeBP_Register{
             wp_localize_script('vibebp-members-actions','vibebpactions',apply_filters('vibebpactions_translations',array(
                 'api_url'=>apply_filters('vibebp_rest_api',get_rest_url($blog_id,Vibe_BP_API_NAMESPACE)),
                 'friends'=>bp_is_active('friends')?1:0,
-                'followers'=>vibebp_get_setting('followers','bp')?1:0,
+                'followers'=>vibebp_get_setting('followers','bp','general')?1:0,
                 'translations'=>array(
                     'message_text'=>__('Type message','vibebp'),
                     'message_subject'=>__('Message subject','vibebp'),

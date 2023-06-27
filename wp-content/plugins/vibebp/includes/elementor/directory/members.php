@@ -420,7 +420,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$action_data = apply_filters('vibebpactions_translations',array(
 			'api_url'=>apply_filters('vibebp_rest_api',get_rest_url($blog_id,Vibe_BP_API_NAMESPACE)),
 			'friends'=>bp_is_active('friends')?1:0,
-			'followers'=>vibebp_get_setting('followers','bp')?1:0,
+			'followers'=>vibebp_get_setting('followers','bp','general')?1:0,
 			'translations'=>array(
 				'message_text'=>__('Type message','vibebp'),
 				'message_subject'=>__('Message subject','vibebp'),

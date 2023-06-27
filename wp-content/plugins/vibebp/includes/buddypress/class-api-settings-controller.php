@@ -1258,7 +1258,7 @@ if ( ! class_exists( 'VIBE_BP_API_Rest_Settings_Controller' ) ) {
 		}
 		
 		function can_access_member_details(){
-			if( (!empty($this->user) && !vibebp_get_setting('create_member','bp') && user_can($this->user->id,'manage_options')) || (vibebp_get_setting('create_member','bp') && in_array(vibebp_get_setting('create_member','bp'),array_keys($this->user->caps))) ) {
+			if( (!empty($this->user) && !vibebp_get_setting('create_member','bp','general') && user_can($this->user->id,'manage_options')) || (vibebp_get_setting('create_member','bp','general') && in_array(vibebp_get_setting('create_member','bp'),array_keys($this->user->caps))) ) {
 				return true;
 			}
 			return false;

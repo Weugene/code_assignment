@@ -191,7 +191,7 @@ class VibeBP_SetupWizard{
     	update_option('bp-active-components',$this->bp_active_components);
     } 
     function enable_followers(){
-    	$check = vibebp_get_setting('followers','bp');
+    	$check = vibebp_get_setting('followers','bp','general');
     	if(empty($check) || $check != 'on'){
     		$vibebp = get_option(VIBE_BP_SETTINGS);
     		$vibebp['bp']['followers']='on';
@@ -199,7 +199,7 @@ class VibeBP_SetupWizard{
     	}
     } 
     function enable_likes(){
-    	$check = vibebp_get_setting('likes','bp');
+    	$check = vibebp_get_setting('likes','bp','general');
     	if(empty($check) || $check != 'on'){
     		$vibebp = get_option(VIBE_BP_SETTINGS);
     		$vibebp['bp']['likes']='on';

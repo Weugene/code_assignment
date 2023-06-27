@@ -340,7 +340,7 @@ class VibeBP_Actions{
 
 	function accessibility_settings(){
 		if(function_exists('bp_is_user') && bp_is_user()){
-			$disable = vibebp_get_setting('public_profile','bp');
+			$disable = vibebp_get_setting('public_profile','bp','general');
 			$client_id = vibebp_get_setting('client_id');
 			if($disable == 'on'){
 
@@ -356,7 +356,7 @@ class VibeBP_Actions{
 		}
 		
 		if(function_exists('bp_current_component') && bp_current_component() == 'members'){
-			$disable = vibebp_get_setting('public_member_directory','bp');
+			$disable = vibebp_get_setting('public_member_directory','bp','general');
 			$client_id = vibebp_get_setting('client_id');
 			if($disable == 'on'){
 
@@ -373,7 +373,7 @@ class VibeBP_Actions{
 
 
 		if(function_exists('bp_current_component') && bp_current_component() == 'groups'){
-			$disable = vibebp_get_setting('public_group_directory','bp');
+			$disable = vibebp_get_setting('public_group_directory','bp','general');
 			$client_id = vibebp_get_setting('client_id');
 			if($disable == 'on'){
 
@@ -389,7 +389,7 @@ class VibeBP_Actions{
 		}
 		
 		if(function_exists('bp_current_component') && bp_current_component() == 'activity'){
-			$disable = vibebp_get_setting('public_activity','bp');
+			$disable = vibebp_get_setting('public_activity','bp','general');
 			$client_id = vibebp_get_setting('client_id');
 			if($disable == 'on'){
 
@@ -479,7 +479,7 @@ class VibeBP_Actions{
 		}
 
 
-		if(vibebp_get_setting('bp_followers','bp')){
+		if(vibebp_get_setting('bp_followers','bp','general')){
 			
 	    	$slug = 'followers';
 			global $bp;

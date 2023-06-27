@@ -5,7 +5,7 @@
  * Description: Convert your BuddyPress site into a PWA.
  * Author: VibeThemes
  * Author URI: https://www.vibethemes.com
- * Version: 1.9.8.4
+ * Version: 1.9.8.4.1
  * Text Domain: vibebp
  * Domain Path: /languages
  * Tested up to: 6.2.2
@@ -15,7 +15,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'VIBEBP_VERSION','1.9.8.4');
+define( 'VIBEBP_VERSION','1.9.8.4.1');
 define( 'VIBEBP_SERVICE_WORKER_VERSION', '1');
 defined('VIBEBP_TOKEN') or define('VIBEBP_TOKEN', 'token');
 defined('VIBEBP') or define('VIBEBP', 'VibeBP_');

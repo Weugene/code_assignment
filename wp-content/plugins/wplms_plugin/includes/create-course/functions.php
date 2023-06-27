@@ -1,6 +1,20 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+if (!function_exists('write_log')) {
+
+    function write_log($log) {
+        if (true === WP_DEBUG) {
+            if (is_array($log) || is_object($log)) {
+                error_log(print_r($log, true));
+            } else {
+                error_log($log);
+            }
+        }
+    }
+
+}
+
 class WPLMS_Functions{
 
     public $posts=[];
@@ -12,11 +26,15 @@ class WPLMS_Functions{
     }
 
     function get_post($id){
+        write_log("HHHH");
+        write_log("id=".$id);
         if(is_array($id)){
             return;
         }
+        write_log($this->posts);
         if(empty($this->posts[$id])){
             $this->posts[$id] = (Array)get_post($id);
+            write_log($this->posts);
         }
         return $this->posts[$id];
     }

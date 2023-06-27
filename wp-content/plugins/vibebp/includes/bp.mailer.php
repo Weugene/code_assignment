@@ -70,7 +70,7 @@ class vibebp_touch_mails{
 
     function vibebp_emails_migrate_notice(){
         global $pagenow;
-        if (!( $pagenow == 'admin.php' && $_GET['page'] == 'vibebp_settings')) {
+        if (!( $pagenow == 'admin.php' && !empty($_GET['page']) && $_GET['page'] == 'vibebp_settings')) {
             return;
         }
         if(!function_exists('bp_get_email_tax_type')){

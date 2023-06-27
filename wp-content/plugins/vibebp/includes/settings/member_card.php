@@ -83,7 +83,7 @@
 					<?php
 				}
 
-				if(vibebp_get_setting('bp_followers','bp')){
+				if(vibebp_get_setting('bp_followers','bp','general')){
 					?>
 					<div class="option" draggable="true" data-type="profile_data" data-id="follower_count" data-default="<?php _e('Followers','vibebp'); ?>" data-value="5" >
 						<span class="vicon vicon-comments-smiley"></span>

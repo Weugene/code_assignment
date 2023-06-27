@@ -1,3 +1,10 @@
+* 1.9.8.4.1
+* setting change fix
+* disable public profile not working fix
+* member type dashboards
+* warning on mail import
+* post member action warning
+* offline page setting fix
 * 1.9.8.4
 * editor fixes
 * re-init disabled

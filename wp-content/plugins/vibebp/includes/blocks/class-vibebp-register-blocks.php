@@ -197,7 +197,7 @@ class VibeBP_Register_Blocks {
 		if(bp_is_active('groups')){
 			$member_data_options['count_groups'] = __('Group Count','vibebp');
 		}
-		if(vibebp_get_setting('bp_followers','bp')){
+		if(vibebp_get_setting('bp_followers','bp','general')){
 			$member_data_options['count_followers'] = __('Followers Count','vibebp');
 			$member_data_options['count_following'] = __('Following Count','vibebp');
 		}
@@ -217,7 +217,7 @@ class VibeBP_Register_Blocks {
 		if(bp_is_active('friends')){
 			$profile_data['add_friend'] =__('Add Friend','vibebp');
 		}
-		if(vibebp_get_setting('bp_followers','bp')){
+		if(vibebp_get_setting('bp_followers','bp','general')){
 			$profile_data['follow'] = __('Follow Member','vibebp');
 		}
 
@@ -871,7 +871,7 @@ class VibeBP_Register_Blocks {
 		wp_localize_script('vibebp-members-actions','vibebpactions',apply_filters('vibebpactions_translations',array(
 			'api_url'=>apply_filters('vibebp_rest_api',get_rest_url($blog_id,Vibe_BP_API_NAMESPACE)),
 			'friends'=>bp_is_active('friends')?1:0,
-			'followers'=>vibebp_get_setting('followers','bp')?1:0,
+			'followers'=>vibebp_get_setting('followers','bp','general')?1:0,
 			'translations'=>array(
 				'message_text'=>__('Type message','vibebp'),
 				'message_subject'=>__('Message subject','vibebp'),
@@ -1504,7 +1504,7 @@ class VibeBP_Register_Blocks {
 		wp_localize_script('vibebp-members-actions','vibebpactions',apply_filters('vibebpactions_translations',array(
 			'api_url'=>apply_filters('vibebp_rest_api',get_rest_url($blog_id,Vibe_BP_API_NAMESPACE)),
 			'friends'=>bp_is_active('friends')?1:0,
-			'followers'=>vibebp_get_setting('followers','bp')?1:0,
+			'followers'=>vibebp_get_setting('followers','bp','general')?1:0,
 			'translations'=>array(
 				'message_text'=>__('Type message','vibebp'),
 				'message_subject'=>__('Message subject','vibebp'),
@@ -1518,7 +1518,7 @@ class VibeBP_Register_Blocks {
        	
 
        	if(empty($settings['action']) ){$settings['action']='view';};
-
+       	if(empty($settings['post_action_label'])){$settings['post_action_label']='';}
        	return '<span class="profile_data_action">'.$this->get_profile_action($settings['action'],$settings['action_label'],$settings['post_action_label']).'</span>';
 	}
 

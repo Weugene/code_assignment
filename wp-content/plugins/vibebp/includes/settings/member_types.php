@@ -30,7 +30,7 @@
         global $wpdb;
         $results = [];
         if(current_user_can('manage_options') && wp_verify_nonce($_POST['security'],'change_bp_member_type') ){
-        $get_default_mtype = vibebp_get_setting('default_member_type','bp');
+        $get_default_mtype = vibebp_get_setting('default_member_type','bp','general');
             if(!empty($_POST['ID'])){
                 foreach($_POST['ID'] as $user_id){
                     $user_id = intval($user_id);
@@ -50,7 +50,7 @@
                 ON term_relation.term_taxonomy_id = term_tax.term_id
                 WHERE term_tax.taxonomy = 'bp_member_type'",ARRAY_A);
             if(!empty($userid_has_member_type)){
-                $get_default_mtype = vibebp_get_setting('default_member_type','bp');
+                $get_default_mtype = vibebp_get_setting('default_member_type','bp','general');
                 $user_ids = wp_list_pluck( $userid_has_member_type, 'user_id' );
                 $no_member_type_user_ids = $wpdb->get_results("SELECT ID FROM {$wpdb->users} WHERE ID NOT IN (".implode(',',$user_ids).")");
                 if(!empty($no_member_type_user_ids)){
@@ -77,7 +77,7 @@
     }
 
     function assign_member_type_new_user($user_id){
-             $set_default_mtype = vibebp_get_setting('default_member_type','bp');
+             $set_default_mtype = vibebp_get_setting('default_member_type','bp','general');
              return bp_set_member_type($user_id, $set_default_mtype);
     }
 

@@ -217,7 +217,7 @@ class VibeBP_Init{
 	}
 
 	function register_member_dashboards(){
-		$member_type_based_dashboard = vibebp_get_setting('member_type_based_dashboard','bp');
+		$member_type_based_dashboard = vibebp_get_setting('member_type_based_dashboard','bp','general');
 
 
         if(!empty($member_type_based_dashboard) && $member_type_based_dashboard == 'on'){

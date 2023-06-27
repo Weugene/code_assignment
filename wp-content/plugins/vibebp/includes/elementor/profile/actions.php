@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if(bp_is_active('friends')){
 			$profile_data['add_friend'] =__('Add Friend','vibebp');
 		}
-		if(vibebp_get_setting('bp_followers','bp')){
+		if(vibebp_get_setting('bp_followers','bp','general')){
 			$profile_data['follow'] = __('Follow Member','vibebp');
 		}
 
@@ -127,7 +127,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		wp_localize_script('vibebp-members-actions','vibebpactions',apply_filters('vibebpactions_translations',array(
 			'api_url'=>apply_filters('vibebp_rest_api',get_rest_url($blog_id,Vibe_BP_API_NAMESPACE)),
 			'friends'=>bp_is_active('friends')?1:0,
-			'followers'=>vibebp_get_setting('followers','bp')?1:0,
+			'followers'=>vibebp_get_setting('followers','bp','general')?1:0,
 			'translations'=>array(
 				'message_text'=>__('Type message','vibebp'),
 				'message_subject'=>__('Message subject','vibebp'),

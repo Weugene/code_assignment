@@ -1,6 +1,21 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
+use Elementor\Plugin;
+
+if (!function_exists('write_log')) {
+
+	function write_log($log) {
+		if (true === WP_DEBUG) {
+			if (is_array($log) || is_object($log)) {
+				error_log(print_r($log, true));
+			} else {
+				error_log($log);
+			}
+		}
+	}
+  
+  }
 
 if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 	
@@ -4742,13 +4757,17 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 	            $alreaday_submitted=0;
 	            $umeta = get_post_meta($assignment_id,$this->user_id,true);
 	           	$assignment_type = get_post_meta($assignment_id,'vibe_assignment_submission_type',true);
-	            //*************** for previous last attachment url **************//
+				write_log($assignment_id);
+				write_log($umeta);
+				write_log($assignment_type);
+				//*************** for previous last attachment url **************//
 	            $args = array(  
 				    'number' => '1',
 				    'user_id' => $this->user_id,
 				    'post_id' => $assignment_id,
 				);
 				$comments = get_comments($args);
+				write_log($comments);
 				if(count($comments) > 0){
 					$alreaday_submitted=1;
 				
@@ -4779,6 +4798,21 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				//************************* for assignment_content **********************//
 	            $post_content = get_post($assignment_id);
 	            $content = $post_content->post_content; 
+				write_log($post_content);
+				// $elementor_data = get_post_meta($assignment_id, '_elementor_data', true);
+				// write_log("ELEMENTORR" . $elementor_data);
+				// $post_content = get_post_field('post_content', $assignment_id);
+
+				// // If Elementor is used, process the content to render Elementor shortcodes
+				// if (strpos($post_content, '[elementor') !== false) {
+				// 	$post_content = apply_filters('the_content', $post_content);
+				// }
+				// write_log("ELEMENTORR" . $post_content);
+
+				// $content = Elementor\Plugin::instance()->frontend->get_builder_content_for_display($assignment_id);
+				$content = Elementor\Plugin::instance()->frontend->get_builder_content($assignment_id);
+				// $elementor_data = Elementor\Plugin::instance()->frontend->get_builder_content_for_display(get_the_ID());
+				write_log("ELEMENTORR" . $content);
 
 	            $data=array(
 					'id'=>$assignment_id,

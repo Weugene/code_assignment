@@ -522,7 +522,7 @@ class VibeBP_Menu{
 			 						'label'=>__('Followers','vibebp'),
 			 						'recommended'=>1,
 			 						'icon'=>'<svg width="100%" height="100%" viewBox="0 0 100 100" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path  serif:id=" " d="M81.25,62.5C70.904,62.5 62.5,70.896 62.5,81.25C62.5,91.604 70.904,100 81.25,100C91.596,100 100,91.604 100,81.25C100,70.896 91.596,62.5 81.25,62.5ZM91.667,83.333L83.333,83.333L83.333,91.667L79.167,91.667L79.167,83.333L70.833,83.333L70.833,79.167L79.167,79.167L79.167,70.833L83.333,70.833L83.333,79.167L91.667,79.167L91.667,83.333Z" style="fill-opacity:0.62;fill-rule:nonzero;"/><path serif:id=" " d="M61.75,100L0.021,100L0,94.829C0,84.329 0.829,78.267 13.242,75.4C27.263,72.163 41.108,69.263 34.45,56.992C14.729,20.621 28.825,0 50,0C78.129,0 81.275,31.646 65.167,56.996C59.783,65.458 54.167,72.121 54.167,81.25C54.167,88.529 57.067,95.129 61.75,100Z" style="fill-rule:nonzero;"/></svg>',
-			 						'is_active'=>(vibebp_get_setting('followers','bp') == 'on')?true:false
+			 						'is_active'=>(vibebp_get_setting('followers','bp','general') == 'on')?true:false
 			 					),
 			 					array(
 			 						'type'=>'vibebp',
@@ -530,7 +530,7 @@ class VibeBP_Menu{
 			 						'label'=>__('Likes','vibebp'),
 			 						'recommended'=>1,
 			 						'icon'=>'<svg width="100%" height="100%" viewBox="0 0 100 100"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M94.229,56.617C90.658,56.138 91.821,53.558 94.358,52.775C96.529,52.108 100,50.692 100,46.483C100,43.683 97.917,39.975 90.537,40.275C85.421,40.483 75.262,39.45 69.792,36.588C73.567,21.354 72.658,0 62.758,0C56.117,0 54.858,7.529 52.862,14.454C47.775,32.129 39.062,39.525 29.167,43.142L29.167,88.467C47.425,91.388 55.604,100 72.937,100C86.262,100 93.154,92.771 93.154,88.892C93.154,87.496 92.021,86.504 89.154,86.283C85.775,86.025 86.096,82.9 89.283,82.313C94.567,81.337 96.892,78.504 96.892,75.883C96.892,73.679 95.242,71.625 92.317,70.963C88.829,70.175 89.55,67.808 92.446,67.579C97.167,67.204 99.479,64.396 99.479,61.704C99.479,59.35 97.712,57.083 94.229,56.617Z" style="fill-opacity:0.73;fill-rule:nonzero;"/><rect x="0" y="41.667" width="20.833" height="50" style="fill-rule:nonzero;"/></svg>',
-			 						'is_active'=>(vibebp_get_setting('likes','bp') == 'on')?true:false
+			 						'is_active'=>(vibebp_get_setting('likes','bp','general') == 'on')?true:false
 			 					),
 			 				)
 			 			),

@@ -1891,13 +1891,13 @@ class VibeBP_Settings{
 			echo '<div class="notice notice-error is-dismissible"><p>Enable service workers and generate PWA.<a href="https://www.youtube.com/watch?v=LSHRqf-gm14" target="_blank">Reference Video</a></p></div>';
 			return;
 		}
-		$pwa_url = vibebp_get_setting('offline_page','service_worker');
+		$pwa_url = vibebp_get_setting('offline_page','service_worker','general');
 		$pwa_url = get_permalink($pwa_url);
 		if(empty($pwa_url)){
 			echo '<div class="notice notice-error is-dismissible"><p>Set an offline page for PWA.<a href="https://www.youtube.com/watch?v=LSHRqf-gm14" target="_blank">Reference Video</a></p></div>';
 			return;
 		}
-		$app_name = vibebp_get_setting('app_short_name','service_worker');
+		$app_name = vibebp_get_setting('app_short_name','service_worker','general');
 		if(empty($app_name)){
 			echo '<div class="notice notice-error is-dismissible"><p>Set an offline page for PWA.<a href="https://www.youtube.com/watch?v=LSHRqf-gm14" target="_blank">Reference Video</a></p></div>';
 			return;

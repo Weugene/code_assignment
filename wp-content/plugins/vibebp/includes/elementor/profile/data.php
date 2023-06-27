@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if(bp_is_active('groups')){
 			$profile_data['count_groups'] = __('Group Count','vibebp');
 		}
-		if(vibebp_get_setting('bp_followers','bp')){
+		if(vibebp_get_setting('bp_followers','bp','general')){
 			$profile_data['count_followers'] = __('Followers Count','vibebp');
 			$profile_data['count_following'] = __('Following Count','vibebp');
 		}
