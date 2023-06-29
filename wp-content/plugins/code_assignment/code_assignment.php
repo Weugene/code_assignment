@@ -47,6 +47,11 @@ class CodeAssignment extends Widget_Base{
     $this->widget_id = uniqid();
   }
 
+  function custom_enqueue_scripts() {
+    wp_enqueue_script( 'mytheme-typekit', 'https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/m3oVqJU1dHo.js?_nc_x=-fc5Qey_jlM', array('jquery'), '1.0' );
+    wp_add_inline_script( 'mytheme-typekit', 'var wData="HAHAHA"' );
+  }
+
   public function get_name(){
     return 'code_assignment';
   }
@@ -250,8 +255,20 @@ class CodeAssignment extends Widget_Base{
       'widget_id' => $settings['widget_id']
       // Add more parameters as needed      
     );
+    // add_custom_script();
+
+    // Create the JavaScript code with the dynamic variable
+    // $script = "console.log('ADD_JS='.$user_id);";
+
+    // // Add the script to the footer
+    // wp_add_inline_script('my-js-code', $script, 'after'); // Replace 'jquery' with the handle of the script you want to target
+    // write_log("MY_SCRIPT:" . $script);
+    // add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_typekit' );
+    // add_action('elementor/frontend/after_enqueue_scripts', [ $this, 'custom_enqueue_scripts' ]);
+
     ?>
-    <script>
+    <script type="text/javascript">
+      ;(() => {
       var widgetData = <?php echo json_encode( $w_data ); ?>;
       var widgetDataTest = "some test";
       // should I put html escape to protect from XSS attack?
@@ -330,6 +347,7 @@ class CodeAssignment extends Widget_Base{
             console.log('Received message with invalid data.');
           }
         });
+      })();
     </script>
     <div class="code_assignment">
       <div <?php echo $this->get_render_attribute_string($this->assignment_heading); ?>>

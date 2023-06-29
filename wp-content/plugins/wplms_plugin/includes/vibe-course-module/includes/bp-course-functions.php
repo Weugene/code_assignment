@@ -24,6 +24,20 @@
 
  if ( ! defined( 'ABSPATH' ) ) exit;
 
+ if (!function_exists('write_log')) {
+
+  function write_log($log) {
+      if (true === WP_DEBUG) {
+          if (is_array($log) || is_object($log)) {
+              error_log(print_r($log, true));
+          } else {
+              error_log($log);
+          }
+      }
+  }
+
+}
+
   function update_question_correct_percentage($question_id,$increment_value=null){
     $correct_count = apply_filters('get_question_correct_percentage',get_post_meta($question_id,'correct_count',true),$question_id);
     if(empty($correct_count)){
@@ -937,7 +951,7 @@ function the_course_button($id=NULL,$no_current_user_id=null){
         }      
      }
    }
-
+   
    if(!empty($coursetaken) && (is_user_logged_in() && !$no_current_user_id)){   // COURSE IS TAKEN & USER IS LOGGED IN
 
          if($coursetaken > time()){  // COURSE ACTIVE
