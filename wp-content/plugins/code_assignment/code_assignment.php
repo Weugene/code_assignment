@@ -32,6 +32,20 @@ if (!function_exists('write_log')) {
 
 }
 
+// function add_custom_script() {
+//   // Get the post ID
+//   $post_id = 777;
+
+//   // Create the JavaScript code with the dynamic variable
+//   $script = "console.log('ADD_JS='.$post_id);";
+
+//   // Add the script to the footer
+//   wp_add_inline_script('jquery', $script, 'footer'); // Replace 'jquery' with the handle of the script you want to target
+// }
+
+// add_action('wp_enqueue_scripts', 'add_custom_script');
+
+
 
 class CodeAssignment extends Widget_Base{
   var $assignment_heading = 'assignment_heading';
@@ -194,6 +208,7 @@ class CodeAssignment extends Widget_Base{
   
   // PHP renderer generates the final HTML
   protected function render(){
+    // wp_enqueue_script( 'code_assignment', plugins_url( 'code_assignment/input_limiter.js'), array( 'jquery' ), '1.13.2', false );
     // widget settings from the elementor sidebar
     $settings = $this->get_settings_for_display();
 
@@ -268,7 +283,7 @@ class CodeAssignment extends Widget_Base{
 
     ?>
     <script type="text/javascript">
-      ;(() => {
+      // $(document).ready(function() {
       var widgetData = <?php echo json_encode( $w_data ); ?>;
       var widgetDataTest = "some test";
       // should I put html escape to protect from XSS attack?
@@ -293,61 +308,62 @@ class CodeAssignment extends Widget_Base{
         // });
         return input;
       }
+      // Add listener to save code
       window.addEventListener('message', function(event) {
-          // Validate the event source
-          if (event.origin !== 'https://trinket.io') {
-              console.log('Received message from an untrusted source.');
-              return;
-          }
-          // send code to the server
-          if (event.data && event.data.code) {
-            // Sanitize and escape the code data to prevent XSS attacks
-            let sanitizedCode = htmlEscape(event.data.code);
+        // Validate the event source
+        if (event.origin !== 'https://trinket.io') {
+            console.log('Received message from an untrusted source.');
+            return;
+        }
+        // send code to the server
+        if (event.data && event.data.code) {
+          // Sanitize and escape the code data to prevent XSS attacks
+          let sanitizedCode = htmlEscape(event.data.code);
 
-            // Get the current URL
-            const currentUrlString = window.location.href;
+          // Get the current URL
+          const currentUrlString = window.location.href;
 
-            // Create a URL object
-            const currentUrl = new URL(currentUrlString);
+          // Create a URL object
+          const currentUrl = new URL(currentUrlString);
 
-            // Get the value of the "preview_id" query parameter
-            const post_id = currentUrl.searchParams.get('preview_id');
+          // Get the value of the "preview_id" query parameter
+          const post_id = currentUrl.searchParams.get('preview_id');
 
-            // Use the post_id in your code
-            console.log('Post ID:', post_id);
-            console.log(event);
-            console.log(event.data);
-            const data = {
-              post_id: post_id,
-              widget_id: widgetData['widget_id'],
-              code: sanitizedCode,
-              ide_for_iframe: widgetData['ide_for_iframe']
-            };
-            console.log(data);
+          // Use the post_id in your code
+          console.log('Post ID:', post_id);
+          console.log(event);
+          console.log(event.data);
+          const data = {
+            post_id: post_id,
+            widget_id: widgetData['widget_id'],
+            code: sanitizedCode,
+            ide_for_iframe: widgetData['ide_for_iframe']
+          };
+          console.log(data);
 
-            url = '/wordpress/wp-json/trinket/v1/submit-code';
-            fetch(url, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-WP-Nonce': wpApiSettings.nonce, // Make sure to localize this value in your WordPress script
-              },
-              body: JSON.stringify(data),
-            }).then(response => {
-              return response.json();
-            }).then(jsonResponse => {
-              console.log({jsonResponse})
-            }).catch(error => {
-              // Handle any errors
-              console.error("Some error occured: " + error);
-            });
+          url = '/wordpress/wp-json/trinket/v1/submit-code';
+          fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-WP-Nonce': wpApiSettings.nonce, // Make sure to localize this value in your WordPress script
+            },
+            body: JSON.stringify(data),
+          }).then(response => {
+            return response.json();
+          }).then(jsonResponse => {
+            console.log({jsonResponse})
+          }).catch(error => {
+            // Handle any errors
+            console.error("Some error occured: " + error);
+          });
 
-            
-          } else {
-            console.log('Received message with invalid data.');
-          }
-        });
-      })();
+          
+        } else {
+          console.log('Received message with invalid data.');
+        }
+      });
+    // });
     </script>
     <div class="code_assignment">
       <div <?php echo $this->get_render_attribute_string($this->assignment_heading); ?>>

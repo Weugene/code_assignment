@@ -4798,21 +4798,19 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				//************************* for assignment_content **********************//
 	            $post_content = get_post($assignment_id);
 	            $content = $post_content->post_content; 
-				write_log($post_content);
+				write_log("WP content" . $post_content);
 				// $elementor_data = get_post_meta($assignment_id, '_elementor_data', true);
-				// write_log("ELEMENTORR" . $elementor_data);
 				// $post_content = get_post_field('post_content', $assignment_id);
 
 				// // If Elementor is used, process the content to render Elementor shortcodes
 				// if (strpos($post_content, '[elementor') !== false) {
 				// 	$post_content = apply_filters('the_content', $post_content);
 				// }
-				// write_log("ELEMENTORR" . $post_content);
 
 				// $content = Elementor\Plugin::instance()->frontend->get_builder_content_for_display($assignment_id);
 				$content = Elementor\Plugin::instance()->frontend->get_builder_content($assignment_id);
 				// $elementor_data = Elementor\Plugin::instance()->frontend->get_builder_content_for_display(get_the_ID());
-				write_log("ELEMENTORR" . $content);
+				write_log("ELEMENTOR content" . $content);
 
 	            $data=array(
 					'id'=>$assignment_id,
