@@ -4757,9 +4757,8 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 	            $alreaday_submitted=0;
 	            $umeta = get_post_meta($assignment_id,$this->user_id,true);
 	           	$assignment_type = get_post_meta($assignment_id,'vibe_assignment_submission_type',true);
-				write_log($assignment_id);
-				write_log($umeta);
-				write_log($assignment_type);
+				write_log("assignment_id: " . $assignment_id);
+				write_log("assignment_type: " . $assignment_type);
 				//*************** for previous last attachment url **************//
 	            $args = array(  
 				    'number' => '1',
@@ -4767,7 +4766,6 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				    'post_id' => $assignment_id,
 				);
 				$comments = get_comments($args);
-				write_log($comments);
 				if(count($comments) > 0){
 					$alreaday_submitted=1;
 				
@@ -4796,22 +4794,15 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				
 
 				//************************* for assignment_content **********************//
-	            $post_content = get_post($assignment_id);
-	            $content = $post_content->post_content; 
-				write_log("WP content" . $post_content);
-				// $elementor_data = get_post_meta($assignment_id, '_elementor_data', true);
-				// $post_content = get_post_field('post_content', $assignment_id);
-
-				// // If Elementor is used, process the content to render Elementor shortcodes
-				// if (strpos($post_content, '[elementor') !== false) {
-				// 	$post_content = apply_filters('the_content', $post_content);
-				// }
-
-				// $content = Elementor\Plugin::instance()->frontend->get_builder_content_for_display($assignment_id);
+				// old case without Elementor's beauty
+	            // $post_content = get_post($assignment_id);
+	            // $content = $post_content->post_content; 
+				// write_log("WP content" . $content);
 				$content = Elementor\Plugin::instance()->frontend->get_builder_content($assignment_id);
-				// $elementor_data = Elementor\Plugin::instance()->frontend->get_builder_content_for_display(get_the_ID());
-				write_log("ELEMENTOR content" . $content);
-
+				// write_log("ELEMENTOR content" . $content);
+				wp_register_script( 'script-postscribe', 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js', [ 'elementor-frontend' ], '2.8.0', true );
+				wp_register_script( 'script-input-limiter', plugins_url( 'code_assignment/input_limiter.js'), [ 'elementor-frontend' ], '1.0.0', true );
+			
 	            $data=array(
 					'id'=>$assignment_id,
 					'title'=>get_the_title($assignment_id),

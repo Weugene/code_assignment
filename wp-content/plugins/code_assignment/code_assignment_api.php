@@ -156,45 +156,8 @@ function trinket_extractor_plugin(int $post_id, WP_Post $post, $update) {
     // Success!
     return;
 }
-#add_action('init', 'trinket_extractor_plugin');
+// add_action('init', 'trinket_extractor_plugin');
 // add_action( 'post_updated', 'trinket_extractor_plugin', 10, 3 );
-
-// function fn_log_http_request_response( $wp_http_response, $request, $url ) {
-//     write_log("HAHA\n");
-//     $request = [
-//         'method' => $request['method'],
-//         'url' => $url,
-//         'headers' => $request['headers'],
-//         'body' => $request['body'],
-//     ];
-
-//     if($wp_http_response instanceof WP_Error) {
-//         $response = [
-//             'errors' => $wp_http_response->errors,
-//             'error_data' => $wp_http_response->error_data,
-//         ];
-//     } else {
-//         $response = [
-//             'status' => [
-//                 'code' => wp_remote_retrieve_response_code($wp_http_response),
-//                 'message' => wp_remote_retrieve_response_message($wp_http_response),
-//             ],
-//             'headers' => wp_remote_retrieve_headers($wp_http_response)->getAll(),
-//             'body' => wp_remote_retrieve_body($wp_http_response),
-//         ];
-//     }
-    
-
-//     write_log(print_r([
-//         'request' => $request,
-//         'response' => $response,
-//     ], true));
-
-//     return $wp_http_response;
-// }
-
-// // hook into WP_Http::_dispatch_request()
-// add_filter('http_response', 'fn_log_http_request_response', 10, 3 );
 
 
 // 
@@ -266,7 +229,7 @@ function my_custom_endpoint_callback( $request ) {
             $widget_id
         )
     );
-    write_log("record_exists=" . $record_exists."\n");
+    write_log("record_exists: " . $record_exists."\n");
 
     if ($record_exists) {
         // Extract saved code:
@@ -278,7 +241,7 @@ function my_custom_endpoint_callback( $request ) {
                 $widget_id
             )
         );
-        write_log($list_of_codes_old);
+        write_log("Extract saved code: " . $list_of_codes_old);
         // Update the existing record
         $updated = $wpdb->update($table_name, $data, $where);
 
@@ -307,24 +270,9 @@ function my_custom_endpoint_callback( $request ) {
         write_log("Inserted finally\n");
     }
 
-    
     $response['list_of_codes'] = $list_of_codes;
     $response['ide_for_iframe'] = $ide_for_iframe;
+    $response['post_id'] = $post_id;
 
     return rest_ensure_response( $response );
 }
-
-// add_action( 'elementor_pro/forms/new_record', function( $record, $ajax_handler ) {
-    
-//     $raw_fields = $record->get( 'fields' );
-//     $fields = [];
-//     foreach ( $raw_fields as $id => $field ) {
-//         $fields[ $id ] = $field['value'];
-//     }
-    
-//     global $wpdb;
-//     $output['success'] = $wpdb->insert('demo', array( 'name' => $fields['name'], 'email' => $fields['email'], 'message' => $fields['message']));
-    
-//     $ajax_handler->add_response_data( true, $output );
-    
-// }, 10, 2);

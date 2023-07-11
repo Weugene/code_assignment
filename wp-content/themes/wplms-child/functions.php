@@ -46,6 +46,22 @@ function add_prism() {
 
     // }
 }
+
+function add_postscribe(){
+	// Register not local postscribe.min.js file
+	wp_register_script(
+		'postscribeJS', // handle name for the script 
+		'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js' // location of the prism.js file
+	);
+	// Register local postscribe.min.js file
+	wp_register_script(
+		'postscribeJSlocal', // handle name for the script 
+		get_stylesheet_directory_uri() . '/postscribe.min.js' // location of the postscribe.min.js file
+	);
+	// Enqueue the registered style and script files
+	wp_enqueue_script('postscribeJS');
+}
 add_action('wp_enqueue_scripts', 'add_prism');
+// add_action('wp_enqueue_scripts', 'add_postscribe');
 
 ?>

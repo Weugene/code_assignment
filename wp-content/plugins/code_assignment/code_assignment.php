@@ -13,6 +13,7 @@ namespace WPC\Widgets;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
+use Elementor\Plugin;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 require_once __DIR__ . '/code_assignment_api.php';
@@ -32,20 +33,6 @@ if (!function_exists('write_log')) {
 
 }
 
-// function add_custom_script() {
-//   // Get the post ID
-//   $post_id = 777;
-
-//   // Create the JavaScript code with the dynamic variable
-//   $script = "console.log('ADD_JS='.$post_id);";
-
-//   // Add the script to the footer
-//   wp_add_inline_script('jquery', $script, 'footer'); // Replace 'jquery' with the handle of the script you want to target
-// }
-
-// add_action('wp_enqueue_scripts', 'add_custom_script');
-
-
 
 class CodeAssignment extends Widget_Base{
   var $assignment_heading = 'assignment_heading';
@@ -57,13 +44,12 @@ class CodeAssignment extends Widget_Base{
   protected $apply_button_value = 'no';
 
   public function __construct($data = [], $args = null) {
+    write_log("Starting to construct a widget");
     parent::__construct($data, $args);
     $this->widget_id = uniqid();
-  }
-
-  function custom_enqueue_scripts() {
-    wp_enqueue_script( 'mytheme-typekit', 'https://static.xx.fbcdn.net/rsrc.php/v3/yS/r/m3oVqJU1dHo.js?_nc_x=-fc5Qey_jlM', array('jquery'), '1.0' );
-    wp_add_inline_script( 'mytheme-typekit', 'var wData="HAHAHA"' );
+    // More details in https://developers.elementor.com/add-javascript-to-elementor-widgets/
+    $this->enqueue_custom_scripts();
+    write_log("Ending to construct a widget");
   }
 
   public function get_name(){
@@ -82,19 +68,19 @@ class CodeAssignment extends Widget_Base{
     return ['general'];
   }
 
+  public function get_script_depends() {
+    return [ 'script-postscribe', 'script-input-limiter' ];
+  }
+
   public function enqueue_custom_scripts() {
     // Enqueue your JavaScript file
-    // plugins_url( 'code_assignment.js.js', __FILE__ )
-    // wp_enqueue_script( 'code_assignment', './widgets/code_assignment.js', array( 'jquery' ), '1.13.2', false );
-    wp_enqueue_script( 'code_assignment', plugins_url( 'code_assignment/input_limiter.js'), array( 'jquery' ), '1.13.2', false );
-
-    wp_localize_script( 'code_assignment', 'wpApiSettings', array(
-        'nonce' => wp_create_nonce( 'wp_rest' )
-    ) );
+    wp_register_script( 'script-postscribe', 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js', [ 'elementor-frontend' ], '2.8.0', true );
+    wp_register_script( 'script-input-limiter', plugins_url( 'code_assignment/input_limiter.js'), [ 'elementor-frontend' ], '1.0.0', true );
   }
+
   // registers the controls used in the widget,
   protected function _register_controls(){
-    $this->enqueue_custom_scripts();
+    // $this->enqueue_custom_scripts();
     $this->start_controls_section(
       'section_content',
       [
@@ -208,9 +194,11 @@ class CodeAssignment extends Widget_Base{
   
   // PHP renderer generates the final HTML
   protected function render(){
-    // wp_enqueue_script( 'code_assignment', plugins_url( 'code_assignment/input_limiter.js'), array( 'jquery' ), '1.13.2', false );
     // widget settings from the elementor sidebar
     $settings = $this->get_settings_for_display();
+    $post_id = get_queried_object_id();
+
+    write_log('Current Post ID: ' . $post_id);
 
     $this->add_inline_editing_attributes($this->assignment_heading, 'advanced');
     // add attributes Key: {Attribute => Value}
@@ -247,7 +235,6 @@ class CodeAssignment extends Widget_Base{
       // Access the retrieved item's properties
       $settings['code_sample_urlencoded'] = rawurlencode($item->list_of_codes);
     }
-
     
     $this->add_render_attribute(
       'iframe_src',
@@ -267,104 +254,120 @@ class CodeAssignment extends Widget_Base{
     $w_data = array(
       'ide_for_iframe' => $settings['ide_for_iframe'],
       'code' => $settings['code_sample'],
-      'widget_id' => $settings['widget_id']
+      'widget_id' => $settings['widget_id'],
+      'post_id' => $post_id, // useful only inside Elementor environment, not WPLMS
+      'nonce' => wp_create_nonce('wp_rest'),
+      'autosave_time' => 5000
       // Add more parameters as needed      
     );
-    // add_custom_script();
-
-    // Create the JavaScript code with the dynamic variable
-    // $script = "console.log('ADD_JS='.$user_id);";
-
-    // // Add the script to the footer
-    // wp_add_inline_script('my-js-code', $script, 'after'); // Replace 'jquery' with the handle of the script you want to target
-    // write_log("MY_SCRIPT:" . $script);
-    // add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_typekit' );
-    // add_action('elementor/frontend/after_enqueue_scripts', [ $this, 'custom_enqueue_scripts' ]);
 
     ?>
-    <script type="text/javascript">
-      // $(document).ready(function() {
-      var widgetData = <?php echo json_encode( $w_data ); ?>;
-      var widgetDataTest = "some test";
-      // should I put html escape to protect from XSS attack?
-      function htmlEscape(input) {
-        // return input.replace(/[&<>"'/]/g, function(match) {
-        //     switch (match) {
-        //         case '&':
-        //             return '&amp;';
-        //         case '<':
-        //             return '&lt;';
-        //         case '>':
-        //             return '&gt;';
-        //         case '"':
-        //             return '&quot;';
-        //         case "'":
-        //             return '&#39;';
-        //         case '/':
-        //             return '&#x2F;';
-        //         default:
-        //             return match;
-        //     }
-        // });
-        return input;
-      }
-      // Add listener to save code
-      window.addEventListener('message', function(event) {
-        // Validate the event source
-        if (event.origin !== 'https://trinket.io') {
-            console.log('Received message from an untrusted source.');
-            return;
+    <script type="text/javascript" id="code_assignment_script">
+      jQuery(document).ready(function($) {
+        var widgetData = <?php echo json_encode( $w_data ); ?>;
+        var current_widget_id = null;
+        var last_widget_id = null;
+        var current_code = null;
+        var last_code = null;
+        // should I put html escape to protect from XSS attack?
+        function htmlEscape(input) {
+          // return input.replace(/[&<>"'/]/g, function(match) {
+          //     switch (match) {
+          //         case '&':
+          //             return '&amp;';
+          //         case '<':
+          //             return '&lt;';
+          //         case '>':
+          //             return '&gt;';
+          //         case '"':
+          //             return '&quot;';
+          //         case "'":
+          //             return '&#39;';
+          //         case '/':
+          //             return '&#x2F;';
+          //         default:
+          //             return match;
+          //     }
+          // });
+          return input;
         }
         // send code to the server
-        if (event.data && event.data.code) {
-          // Sanitize and escape the code data to prevent XSS attacks
-          let sanitizedCode = htmlEscape(event.data.code);
-
-          // Get the current URL
-          const currentUrlString = window.location.href;
-
-          // Create a URL object
-          const currentUrl = new URL(currentUrlString);
-
-          // Get the value of the "preview_id" query parameter
-          const post_id = currentUrl.searchParams.get('preview_id');
-
-          // Use the post_id in your code
-          console.log('Post ID:', post_id);
-          console.log(event);
-          console.log(event.data);
-          const data = {
-            post_id: post_id,
-            widget_id: widgetData['widget_id'],
-            code: sanitizedCode,
-            ide_for_iframe: widgetData['ide_for_iframe']
-          };
-          console.log(data);
-
-          url = '/wordpress/wp-json/trinket/v1/submit-code';
-          fetch(url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'X-WP-Nonce': wpApiSettings.nonce, // Make sure to localize this value in your WordPress script
-            },
-            body: JSON.stringify(data),
-          }).then(response => {
-            return response.json();
-          }).then(jsonResponse => {
-            console.log({jsonResponse})
-          }).catch(error => {
-            // Handle any errors
-            console.error("Some error occured: " + error);
-          });
-
+        function submitCodeToAPI(){
+          current_widget_id = document.activeElement.getAttribute("id");
           
-        } else {
-          console.log('Received message with invalid data.');
+          if (current_widget_id != last_widget_id){
+            current_code = null;
+            last_code = null;
+          }
+          // check is empty?
+          if (current_code != last_code && current_code) {
+            // console.log("INSIDE CONDITION!!!");
+            // Get the value assignment id from POST_ID_CURRENT
+            let post_id = 0;
+            if (typeof POST_ID_CURRENT !== 'undefined' && POST_ID_CURRENT){
+              post_id = POST_ID_CURRENT;
+              console.log("post id is extracted from POST_ID_CURRENT: " + post_id);
+            } else if (elementorFrontendConfig.post.id){
+              post_id = elementorFrontendConfig.post.id;
+              console.log("post id is extracted from elementorFrontendConfig.post.id: " + post_id);
+            } else {
+              console.log("post_id is not defined!");
+            }
+            // Sanitize and escape the code data to prevent XSS attacks
+            let sanitizedCode = htmlEscape(current_code);
+            
+            const data = {
+              post_id: post_id,
+              widget_id: current_widget_id,
+              code: sanitizedCode,
+              ide_for_iframe: widgetData['ide_for_iframe']
+            };
+            console.log("Payload:" + JSON.stringify(data, "I don't understand", 4));
+            const url_to_submit_code = '/wordpress/wp-json/trinket/v1/submit-code';
+            fetch(url_to_submit_code, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-WP-Nonce': widgetData["nonce"], // Make sure to localize this value in your WordPress script
+              },
+              body: JSON.stringify(data),
+            }).then(response => {
+              return response.json();
+            }).then(jsonResponse => {
+              console.log({jsonResponse})
+            }).catch(error => {
+              // Handle any errors
+              console.error("Some error occured: " + error);
+            });
+            // save the last code
+            last_code = current_code;
+            last_widget_id = current_widget_id;
+            ca("vibebp").addNotification({
+              text: "Code is saved",
+            });
+          } else {
+            // console.log('Received message with invalid data or the same code'); // TODO: comment me
+          }
+          last_widget_id = current_widget_id;
+
         }
+        // Add only one listener to save code
+        window.addEventListener('message', function(event) { // addEventListener
+          // Validate the event source
+          if (event.origin !== 'https://trinket.io') {
+              console.log('Received message from an untrusted source.');
+              return;
+          }
+          console.log(event);
+          current_code = event.data.code;
+          
+          console.log("current_widget_id: " + current_widget_id);
+          console.log("current_code: " + current_code);
+        });
+        setInterval (submitCodeToAPI, widgetData['autosave_time']);
       });
-    // });
     </script>
+
     <div class="code_assignment">
       <div <?php echo $this->get_render_attribute_string($this->assignment_heading); ?>>
         <?php echo $settings[$this->assignment_heading] ?>
@@ -388,6 +391,8 @@ class CodeAssignment extends Widget_Base{
 
   // JS renderer specifies the data bindings between the widget settings and the HTML elements
   protected function _content_template(){
+    $this->add_render_attribute('data-custom-data', 'nonce', wp_create_nonce('wp_rest'));
+
     // $apply_button = $this->apply_button_value;
     // write_log('Apply-button'.$apply_button );
     // if ($apply_button === 'yes') {
@@ -437,7 +442,7 @@ class CodeAssignment extends Widget_Base{
           </div>
         </div>
 
-        <script>
+        <!-- <script>
           jQuery(document).on('click', '.apply-button', function() {
                   console.log("BUTTON");
                   var widget = $(this).closest('.elementor-widget');
@@ -449,7 +454,7 @@ class CodeAssignment extends Widget_Base{
 
                   result.html(newContent);
           });
-        </script>
+        </script> -->
 
       <?php
     // } else{
