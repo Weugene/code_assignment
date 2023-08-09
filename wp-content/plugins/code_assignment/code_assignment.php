@@ -34,22 +34,112 @@ if (!function_exists('write_log')) {
 }
 
 
+abstract class Iframe_SUOT {
+  public $name = null;
+  public $src = null;
+  public $id = null;
+  public $width = '100';
+  public $height = '356';
+  public function __construct($data) {
+    write_log("Construct a Iframe_SUOT base ");
+    $this->name = $data['name'];
+    $this->src = $data['src'];
+    $this->id = $data['id'];
+    $this->width = isset($data['width']) ? $data['width'] : $this->width;
+    $this->height = isset($data['height']) ? $data['height'] : $this->height;
+    write_log("Finished a Iframe_SUOT base ");
+  }
+  final public function iframe_name(){
+    return $this->name;
+  }
+  abstract public function generate_iframe_attributes($settings);
+}
+
+class Trinket_SUOT extends Iframe_SUOT{
+  public $frameborder = '0';
+  public $marginwidth = '0';
+  public $marginheight = '0';
+  public $allowfullscreen = true;
+
+  public function __construct($data) {
+    $data['name'] = 'trinket-iframe';
+    write_log("Trinket constructor");
+    parent::__construct($data);
+    $this->frameborder = isset($data['frameborder']) ? $data['frameborder'] : $this->frameborder;
+    $this->marginwidth = isset($data['marginwidth']) ? $data['marginwidth'] : $this->marginwidth;
+    $this->marginheight = isset($data['marginheight']) ? $data['marginheight'] : $this->marginheight;
+    $this->allowfullscreen = isset($data['allowfullscreen']) ? $data['allowfullscreen'] : $this->allowfullscreen;
+    write_log("Finished Trinket constructor");
+  }
+
+  // useful to generate attributed for iframe
+  public function generate_iframe_attributes($settings){
+    return [
+      'src' => ['https://trinket.io/embed/pygame?listen=true#code='.$settings['code_sample_urlencoded']],
+      'id' => [$settings['widget_id']],
+      'class' => ['iframe-suot'],
+      'ide' => [$this->name],
+      'width' => [$this->width . "%"],
+      'height' => [$this->height],
+      'frameborder' => [$this->frameborder],
+      'marginwidth' => [$this->marginwidth],
+      'marginheight' => [$this->marginheight],
+      'allowfullscreen' => [$this->allowfullscreen],
+    ];
+  }
+
+  // useful to generate attributed for iframe
+  public function generate_iframe_attributes_for_elementor_js(){
+    echo "{
+      'id': settings.widget_id,
+      'class': ['iframe-suot'],
+      'ide': settings.ide_for_iframe,
+      'src': 'https://trinket.io/embed/pygame?listen=true#code=' + encodedVariable,
+      'width': settings.width + '%',
+      'height': settings.height,
+      'frameborder': '0',
+      'marginwidth': '0',
+      'marginheight': '0',
+      'allowfullscreen': true,
+    }";
+  }
+
+}
+
+
 class CodeAssignment extends Widget_Base{
-  var $assignment_heading = 'assignment_heading';
-  var $assignment_content = 'assignment_content';
-  var $code_sample = 'code_sample';
-  var $code_solution = 'code_solution';
-  var $code_language = 'python';
+  protected $assignment_heading = 'assignment_heading';
+  protected $assignment_content = 'assignment_content';
+  protected $code_sample = 'code_sample';
+  protected $code_solution = 'code_solution';
+  protected $autograder_input = 'autograder_input';
+  protected $code_language = 'python';
   protected $widget_id;
   protected $apply_button_value = 'no';
+  protected $iframeObj = null;
+  private static $counter = 0;
 
   public function __construct($data = [], $args = null) {
-    write_log("Starting to construct a widget");
+    write_log("Starting to construct a CodeAssignment widget");
     parent::__construct($data, $args);
-    $this->widget_id = uniqid();
+    $this->widget_id = uniqid(); // TODO: FIX BUG!!!
+    $settings = [
+      'ide_for_iframe' => 'trinket-iframe',
+      'code_sample_urlencoded' => 'print%28%22Hello%20world%22%29',
+      'widget_id' => $this->widget_id,
+      'width' => '100%',
+      'height' => '400'
+    ];
+    $this->create_iframe_object($settings);
+    // write_log("IN CONSTRUCTOR:");
+    // write_log(get_object_vars($this));
+    // Generate the widget ID
+    self::$counter++;
+    
+    write_log("counter: ".self::$counter);
     // More details in https://developers.elementor.com/add-javascript-to-elementor-widgets/
     $this->enqueue_custom_scripts();
-    write_log("Ending to construct a widget");
+    write_log("Ending to construct a CodeAssignment widget");
   }
 
   public function get_name(){
@@ -69,22 +159,73 @@ class CodeAssignment extends Widget_Base{
   }
 
   public function get_script_depends() {
-    return [ 'script-postscribe', 'script-input-limiter' ];
+    return [ 'script-postscribe', 'script-input-limiter', 'tsparticles-confetti', 'tsparticles-preset-fireworks' ];
   }
+
+  public function get_style_depends() {
+		return [ 'code-assignment-css' ];
+	}
 
   public function enqueue_custom_scripts() {
-    // Enqueue your JavaScript file
-    wp_register_script( 'script-postscribe', 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js', [ 'elementor-frontend' ], '2.8.0', true );
+    wp_enqueue_script('script-postscribe', 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js', array(), '2.0.8', true  );
     wp_register_script( 'script-input-limiter', plugins_url( 'code_assignment/input_limiter.js'), [ 'elementor-frontend' ], '1.0.0', true );
+    // Register tsparticles-confetti script
+    wp_register_script('tsparticles-confetti', 'https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js', array(), '2.12.0', true);
+    // Register tsparticles-preset-fireworks script
+    wp_register_script('tsparticles-preset-fireworks', 'https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2.7.0/tsparticles.preset.fireworks.bundle.js', array('tsparticles-confetti'), '2.7.0', true);
+    
+    // Enqueue CSS files
+    wp_register_style( 'code-assignment-css', plugins_url( 'code_assignment/code_assignment.css') );
+
+    // Enqueue scripts and styles
+    wp_enqueue_script('script-postscribe');
+    wp_enqueue_script('tsparticles-confetti');
+    wp_enqueue_script('tsparticles-preset-fireworks');
+    wp_enqueue_style('code-assignment-css');
   }
 
-  // registers the controls used in the widget,
+  public function create_iframe_object($settings){
+    $data = [
+      'id' => $settings['widget_id'],
+      'width' => $settings['width'],
+      'height' => $settings['height']
+    ];
+    if ($settings['ide_for_iframe'] === "trinket-iframe"){
+      $newData = [
+        'src' => ['https://trinket.io/embed/pygame?listen=true#code='.$settings['code_sample_urlencoded']],
+        'frameborder' => '0',
+        'marginwidth' => '0',
+        'marginheight' => '0',
+        'allowfullscreen' => true
+      ];
+      $data = array_merge($data, $newData);
+      $this->iframeObj = new Trinket_SUOT($data);
+    }
+    if ($settings['ide_for_iframe'] == 'godbolt-iframe'){
+      // TODO
+      $newData = [
+        'src' => ['https://trinket.io/embed/pygame?listen=true#code='.$settings['code_sample_urlencoded']],
+        'frameborder' => '0',
+        'marginwidth' => '0',
+        'marginheight' => '0',
+        'allowfullscreen' => true
+      ];
+      $data = array_merge($data, $newData);
+      $this->iframeObj = new Trinket_SUOT($data);
+    }
+    // Chech iframeObj initialization
+    if ($this->iframeObj === null) {
+      write_log("IFRAME OBJECT is null");
+    }
+  }
+
+  // registers the controls used in the editor panel
   protected function _register_controls(){
-    // $this->enqueue_custom_scripts();
+    write_log("START REGISTER CONTROL!!!");
     $this->start_controls_section(
       'section_content',
       [
-        'label' => 'Условие задания',
+        'label' => esc_html__('Условие задания', 'codeassignment'),
       ]
     );
     // $this->add_control(
@@ -101,19 +242,18 @@ class CodeAssignment extends Widget_Base{
     $this->add_control(
       $this->assignment_heading,
       [
-        'label' => 'Название задания',
+        'label' => esc_html__('Название задания', 'codeassignment'),
         'type' => \Elementor\Controls_Manager::TEXT,
-        'default' => 'Название задания'
+        'default' => esc_html__('Название задания', 'codeassignment')
       ]
     );
-
 
     $this->add_control(
       $this->assignment_content,
       [
-        'label' => 'Формулировка задания',
+        'label' => esc_html__('Формулировка задания', 'codeassignment'),
         'type' => \Elementor\Controls_Manager::WYSIWYG,
-        'default' => 'Условие задания.'
+        'default' => esc_html__('Условие задания.', 'codeassignment')
       ]
     );
 
@@ -122,7 +262,7 @@ class CodeAssignment extends Widget_Base{
     $this->start_controls_section(
       'code_section',
       [
-          'label' => 'Секция программного кода',
+          'label' => esc_html__('Секция программного кода', 'codeassignment'),
           'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
       ]
     );
@@ -130,21 +270,39 @@ class CodeAssignment extends Widget_Base{
     $this->add_control(
       'ide_for_iframe',
       [
-          'label' => 'Среда разработки',
+          'label' => esc_html__('Среда разработки', 'codeassignment'),
           'type' => \Elementor\Controls_Manager::SELECT,
           'options' => [
-              'trinket' => 'Trinket',
-              'godbolt' => 'Godbolt',
+              'trinket-iframe' => 'Trinket',
+              'godbolt-iframe' => 'Godbolt',
               // Add more options for other IDEs
           ],
-          'default' => 'trinket',
+          'default' => 'trinket-iframe',
+      ]
+    );
+
+    $this->add_control(
+      'height',
+      [
+        'label' => esc_html__('Высота, px', 'codeassignment'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'default' => '600'
+      ]
+    );
+
+    $this->add_control(
+      'width',
+      [
+        'label' => esc_html__('Ширина, %', 'codeassignment'),
+        'type' => \Elementor\Controls_Manager::NUMBER,
+        'default' => '100'
       ]
     );
     
     $this->add_control(
       'language',
       [
-          'label' => 'Язык программирования',
+          'label' => esc_html__('Язык программирования', 'codeassignment'),
           'type' => \Elementor\Controls_Manager::SELECT,
           'options' => [
               'python' => 'Python',
@@ -152,14 +310,14 @@ class CodeAssignment extends Widget_Base{
               'javascript' => 'JavaScript',
               // Add more options for other languages
           ],
-          'default' => 'python',
+          'default' => 'Python',
       ]
     );
 
     $this->add_control(
       'widget_id',
       [
-          'label' => 'Widget ID (optional)',
+          'label' => esc_html__('Widget ID (optional)', 'codeassignment'),
           'type' => \Elementor\Controls_Manager::TEXT,
           'maxlength' => 20,
           'default' => $this->widget_id, // Set a default id (optional)
@@ -169,53 +327,105 @@ class CodeAssignment extends Widget_Base{
     $this->add_control(
       $this->code_sample,
       [
-          'label' => 'Заготовка кода',
+          'label' => esc_html__('Заготовка кода', 'codeassignment'),
           'type' => \Elementor\Controls_Manager::CODE,
           'language' => 'python', // Specify the programming language for syntax highlighting (optional)
           'rows' => 10, // Specify the number of rows for the code input area (optional)
-          'default' => '', // Set a default code snippet (optional)
+          'default' => 'print("Hello world")', // Set a default code snippet (optional)
+          'placeholder' => esc_html__( 'Enter your code', 'elementor' ),
+          'dynamic' => [
+            'active' => false,
+          ],
       ]
     );
-    
     
     $this->add_control(
       $this->code_solution,
       [
-          'label' => 'Решения',
+          'label' => esc_html__('Решение', 'codeassignment'),
           'type' => \Elementor\Controls_Manager::CODE,
           'language' => 'python', // Specify the programming language for syntax highlighting (optional)
           'rows' => 10, // Specify the number of rows for the code input area (optional)
-          'default' => '', // Set a default code snippet (optional)
+          'default' => 'print("Hello world")', // Set a default code snippet (optional)
+      ]
+    );
+
+    $this->add_control(
+      $this->autograder_input,
+      [
+          'label' => esc_html__('JSON для автогрейдера', 'codeassignment'),
+          'type' => \Elementor\Controls_Manager::CODE,
+          'language' => 'json', // Specify the programming language for syntax highlighting (optional)
+          'rows' => 10, // Specify the number of rows for the code input area (optional)
+          'default' => '{
+            "args": [
+              {
+                "sum1": 1,
+                "sum2": 50
+              },
+              {
+                "sum1": 11,
+                "sum2": 10
+              }
+            ],
+            "timeout": 3,
+            "total_points" : 25,
+            "student_code": "solution",
+            "teacher_code": "answer"
+          }', // Set a default code snippet (optional)
       ]
     );
 
     $this->end_controls_section();
+    write_log("Finished REGISTER CONTROL!!!");
   }
   
   // PHP renderer generates the final HTML
   protected function render(){
+    write_log("START RENDER!!!");
     // widget settings from the elementor sidebar
     $settings = $this->get_settings_for_display();
     $post_id = get_queried_object_id();
 
-    write_log('Current Post ID: ' . $post_id);
-
-    $this->add_inline_editing_attributes($this->assignment_heading, 'advanced');
     // add attributes Key: {Attribute => Value}
+    $this->add_inline_editing_attributes($this->assignment_heading, 'advanced');
     $this->add_render_attribute(
       $this->assignment_heading,
       [
-        'class' => ['code_assignment__label-heading'],
+        'class' => ['code_assignment_heading'],
       ]
     );
+    $this->add_inline_editing_attributes($this->assignment_content, 'advanced');
+    $this->add_render_attribute(
+      $this->assignment_content,
+      [
+        'class' => ['code_assignment_problem_formulation'],
+      ]
+    );
+    // $this->add_inline_editing_attributes('code_assignment_sample', 'advanced');
+    // $this->add_render_attribute(
+    //   'code_assignment_sample',
+    //   [
+    //     'class' => ['code_assignment_sample'],
+    //   ]
+    // );
+    $this->add_inline_editing_attributes($this->code_solution, 'advanced');
+    $this->add_render_attribute(
+      $this->code_solution,
+      [
+        'class' => ['code_assignment_solution'],
+      ]
+    );
+    $this->add_inline_editing_attributes('language', 'advanced');
     $this->add_render_attribute(
       'language',
       [
-        'class' => ['language-'.$settings['language'] ],
+        'class' => ['language-' . $settings['language'], 'line-numbers'],
       ]
     );
+
     global $wpdb;
-    $table_name = $wpdb->prefix . 'students_code_table';
+    $table_name = $wpdb->prefix . 'student_code_table';
     // Retrieve a single row from the table
     $user_id = get_current_user_id();
     $widget_id = $settings['widget_id'];
@@ -226,6 +436,8 @@ class CodeAssignment extends Widget_Base{
         $widget_id
       )
     );
+    write_log("item render:");
+    write_log($item);
     if ($item === null || $item === false) {
       // The query returned an empty result
       // Handle the case when no item is found
@@ -233,21 +445,16 @@ class CodeAssignment extends Widget_Base{
     } else {
       // The query returned a valid result
       // Access the retrieved item's properties
-      $settings['code_sample_urlencoded'] = rawurlencode($item->list_of_codes);
+      $settings['code_sample_urlencoded'] = rawurlencode($item->student_codes);
     }
+
+    // write_log("input generate_iframe_attributes:");
+    // write_log($settings);
+    $this->create_iframe_object($settings);
     
     $this->add_render_attribute(
       'iframe_src',
-      [
-        'src' => ['https://trinket.io/embed/pygame?listen=true#code='.$settings['code_sample_urlencoded']],
-        'id' => [$settings['widget_id']],
-        'width' => ['100%'],
-        'height' => ['356'],
-        'frameborder' => ['0'],
-        'marginwidth' => ['0'],
-        'marginheight' => ['0'],
-        'allowfullscreen' => [true]
-      ]
+      $this->iframeObj->generate_iframe_attributes($settings)
     );
     
     // Access widget parameter settings and pass them to the script snippet
@@ -263,153 +470,77 @@ class CodeAssignment extends Widget_Base{
 
     ?>
     <script type="text/javascript" id="code_assignment_script">
-      jQuery(document).ready(function($) {
-        var widgetData = <?php echo json_encode( $w_data ); ?>;
-        var current_widget_id = null;
-        var last_widget_id = null;
-        var current_code = null;
-        var last_code = null;
-        // should I put html escape to protect from XSS attack?
-        function htmlEscape(input) {
-          // return input.replace(/[&<>"'/]/g, function(match) {
-          //     switch (match) {
-          //         case '&':
-          //             return '&amp;';
-          //         case '<':
-          //             return '&lt;';
-          //         case '>':
-          //             return '&gt;';
-          //         case '"':
-          //             return '&quot;';
-          //         case "'":
-          //             return '&#39;';
-          //         case '/':
-          //             return '&#x2F;';
-          //         default:
-          //             return match;
-          //     }
-          // });
-          return input;
-        }
-        // send code to the server
-        function submitCodeToAPI(){
-          current_widget_id = document.activeElement.getAttribute("id");
-          
-          if (current_widget_id != last_widget_id){
-            current_code = null;
-            last_code = null;
-          }
-          // check is empty?
-          if (current_code != last_code && current_code) {
-            // console.log("INSIDE CONDITION!!!");
-            // Get the value assignment id from POST_ID_CURRENT
-            let post_id = 0;
-            if (typeof POST_ID_CURRENT !== 'undefined' && POST_ID_CURRENT){
-              post_id = POST_ID_CURRENT;
-              console.log("post id is extracted from POST_ID_CURRENT: " + post_id);
-            } else if (elementorFrontendConfig.post.id){
-              post_id = elementorFrontendConfig.post.id;
-              console.log("post id is extracted from elementorFrontendConfig.post.id: " + post_id);
-            } else {
-              console.log("post_id is not defined!");
-            }
-            // Sanitize and escape the code data to prevent XSS attacks
-            let sanitizedCode = htmlEscape(current_code);
-            
-            const data = {
-              post_id: post_id,
-              widget_id: current_widget_id,
-              code: sanitizedCode,
-              ide_for_iframe: widgetData['ide_for_iframe']
-            };
-            console.log("Payload:" + JSON.stringify(data, "I don't understand", 4));
-            const url_to_submit_code = '/wordpress/wp-json/trinket/v1/submit-code';
-            fetch(url_to_submit_code, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-WP-Nonce': widgetData["nonce"], // Make sure to localize this value in your WordPress script
-              },
-              body: JSON.stringify(data),
-            }).then(response => {
-              return response.json();
-            }).then(jsonResponse => {
-              console.log({jsonResponse})
-            }).catch(error => {
-              // Handle any errors
-              console.error("Some error occured: " + error);
-            });
-            // save the last code
-            last_code = current_code;
-            last_widget_id = current_widget_id;
-            ca("vibebp").addNotification({
-              text: "Code is saved",
-            });
-          } else {
-            // console.log('Received message with invalid data or the same code'); // TODO: comment me
-          }
-          last_widget_id = current_widget_id;
-
-        }
-        // Add only one listener to save code
-        window.addEventListener('message', function(event) { // addEventListener
-          // Validate the event source
-          if (event.origin !== 'https://trinket.io') {
-              console.log('Received message from an untrusted source.');
-              return;
-          }
-          console.log(event);
-          current_code = event.data.code;
-          
-          console.log("current_widget_id: " + current_widget_id);
-          console.log("current_code: " + current_code);
-        });
-        setInterval (submitCodeToAPI, widgetData['autosave_time']);
-      });
+      console.log('render() Widget');
     </script>
 
     <div class="code_assignment">
       <div <?php echo $this->get_render_attribute_string($this->assignment_heading); ?>>
-        <?php echo $settings[$this->assignment_heading] ?>
+        <h3><?php echo $settings[$this->assignment_heading] ?></h3>
       </div>
-      <div class="code_assignment__content">
-        <div class="code_assignment__content_formulation">
+      <div <?php echo $this->get_render_attribute_string($this->assignment_content); ?>>
           <?php echo $settings[$this->assignment_content] ?>
-        </div>
-        <iframe 
-            <?php echo $this->get_render_attribute_string('iframe_src'); ?>>
-        </iframe>
-        <div class="code_assignment__content_sample">
-          <pre <?php echo $this->get_render_attribute_string('language'); ?>>
-            <code><?php echo $settings[$this->code_solution] ?></code>
-          </pre>
+      </div>
+      <iframe 
+          <?php echo $this->get_render_attribute_string('iframe_src'); ?>>
+      </iframe>
+      <div <?php echo $this->get_render_attribute_string($this->code_solution); ?>>
+        <pre <?php echo $this->get_render_attribute_string('language'); ?>><code id='prism-code' class='language-python'><?php echo $settings[$this->code_solution] ?></code></pre>
+      </div>
+      
+      <button class="autograder-button" onclick="sendToAutoGrader(this)">
+        Отправить на проверку
+      </button>
+      <div class="loader">
+        <div class="check">
+          <span class="check-one"></span>
+          <span class="check-two"></span>
         </div>
       </div>
     </div>
+    <div class="congratulations-container" id="congratulationsMessage">
+      <div class="congratulations-content">
+          Congratulations! You did a great job!
+      </div>
+    </div>
     <?php
+    write_log("FINISH RENDER!!!");
   }
 
   // JS renderer specifies the data bindings between the widget settings and the HTML elements
+  // This is a preview area. It affects only for new widgets
   protected function _content_template(){
     $this->add_render_attribute('data-custom-data', 'nonce', wp_create_nonce('wp_rest'));
+    write_log("this->iframeObj");
+    write_log(get_object_vars($this));
 
-    // $apply_button = $this->apply_button_value;
-    // write_log('Apply-button'.$apply_button );
-    // if ($apply_button === 'yes') {
       ?>
         <#
           view.addInlineEditingAttributes( 'assignment_heading', 'advanced' );
           view.addRenderAttribute(
             'assignment_heading',
             {
-                'class': [ 'code_assignment__label-heading' ],
+                'class': [ 'code_assignment_heading' ],
             }
           );
-          view.addInlineEditingAttributes( 'language', 'advanced' );
+          view.addInlineEditingAttributes( 'assignment_content', 'advanced' );
           view.addRenderAttribute(
-            'language',
+            'assignment_content',
             {
-                'class': ['language-' + settings.language ],
+                'class': [ 'code_assignment_problem_formulation' ],
+            }
+          );
+          view.addInlineEditingAttributes( 'code_assignment_sample', 'advanced' );
+          view.addRenderAttribute(
+            'code_assignment_sample',
+            {
+                'class': ['language-' + settings.language, 'code_assignment_sample' ],
+            }
+          );
+          view.addInlineEditingAttributes( 'code_solution', 'advanced' );
+          view.addRenderAttribute(
+            'code_solution',
+            {
+                'class': ['code_assignment_solution', 'line-numbers' ],
             }
           );
           let encodedVariable = encodeURIComponent(settings.code_sample);
@@ -417,30 +548,73 @@ class CodeAssignment extends Widget_Base{
           view.addInlineEditingAttributes( 'iframe_src', 'advanced' );
           view.addRenderAttribute(
             'iframe_src',
-            {
-                'id': settings.widget_id,
-                'src': 'https://trinket.io/embed/pygame?listen=true#code=' + encodedVariable,
-                'width': '100%',
-                'height': '356',
-                'frameborder': '0',
-                'marginwidth': '0',
-                'marginheight': '0',
-                'allowfullscreen': true
-            }
+            <?php $this->iframeObj->generate_iframe_attributes_for_elementor_js(); ?>
           );
         #>
+       
         <div class="code_assignment">
-          <div {{{ view.getRenderAttributeString( 'assignment_heading' ) }}}>{{{ settings.assignment_heading }}}</div>
-          <div class="code_assignment__content">
-            <div class="code_assignment__content_formulation"> {{{ settings.assignment_content }}}  </div>
-            <iframe 
-              {{{ view.getRenderAttributeString( 'iframe_src' ) }}}>
-            </iframe>
-            <div class="code_assignment__content_sample">
-              <pre {{{ view.getRenderAttributeString( 'language' ) }}}><code>{{{ settings.code_solution }}}</code></pre>
+          <div {{{ view.getRenderAttributeString( 'assignment_heading' ) }}}>
+            <h3>{{{ settings.assignment_heading }}}</h3>
+          </div>
+          <div {{{ view.getRenderAttributeString( 'assignment_content' ) }}}> 
+              {{{ settings.assignment_content }}} 
+          </div>
+          <!-- TURN OFF TO GET RID OF FOCUS CATCHING -->
+          <!-- <iframe 
+            {{{ view.getRenderAttributeString( 'iframe_src' ) }}}>
+          </iframe> -->
+          <div {{{ view.getRenderAttributeString( 'code_solution' ) }}}>
+            <pre {{{ view.getRenderAttributeString( 'language' ) }}}>
+              <code>
+                {{{ settings.code_sample }}}
+              </code>
+            </pre>
+          </div>
+          <div {{{ view.getRenderAttributeString( 'code_solution' ) }}}>
+            <pre {{{ view.getRenderAttributeString( 'language' ) }}}><code>{{{ settings.code_solution }}}</code></pre>
+          </div>
+          <button class="autograder-button" onclick="sendToAutoGrader(this)">
+            Отправить на проверку
+          </button>
+          <div class="loader">
+            <div class="check">
+              <span class="check-one"></span>
+              <span class="check-two"></span>
             </div>
           </div>
         </div>
+        <script>
+          console.log("Test content_template");
+          function submit_teacher_code() {
+            const data = {
+              post_id: get_assignment_post_id(),
+              widget_id: `{{{ settings.widget_id }}}`,
+              teacher_codes: htmlEscape(`{{{ settings.code_solution }}}`),
+              autograder_input: `{{{ settings.autograder_input }}}`
+            };
+            console.log("Payload:" + JSON.stringify(data, "I don't understand", 4));
+            const url_to_submit_code = '/wordpress/wp-json/code-assignment/v1/save-teacher-code';
+            fetch(url_to_submit_code, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-WP-Nonce': window.vibebp.xnonce, // Make sure to localize this value in your WordPress script
+                },
+                body: JSON.stringify(data),
+            }).then(response => {
+                return response.json();
+            }).then(jsonResponse => {
+                console.log({jsonResponse})
+            }).catch(error => {
+                // Handle any errors
+                console.error("Some error occured: " + error);
+            });
+            wp.data.dispatch("vibebp").addNotification({
+                text: "Teacher's code is saved",
+            });
+        }
+        submit_teacher_code();
+        </script>
 
         <!-- <script>
           jQuery(document).on('click', '.apply-button', function() {

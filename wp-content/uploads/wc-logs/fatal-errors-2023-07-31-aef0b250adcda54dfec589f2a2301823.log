@@ -1,0 +1,135 @@
+2023-07-31T06:09:42+00:00 CRITICAL Uncaught Error: Using $this when not in object context in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:383
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#5 /Users/evgeniisharaborin/Documents/websites/wordpress in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 383
+
+2023-07-31T06:41:48+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:385
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#5 /Users/evgeniisharaborin/Documents/websites/word in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 385
+
+2023-07-31T17:33:04+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:317
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 317
+
+2023-07-31T17:37:38+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:317
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 317
+
+2023-07-31T17:41:49+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:317
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 317
+
+2023-07-31T17:42:16+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:317
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(411): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 317
+
+2023-07-31T17:44:48+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:316
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 316
+
+2023-07-31T17:45:43+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:316
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 316
+
+2023-07-31T17:46:19+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:316
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 316
+
+2023-07-31T17:46:38+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:316
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 316
+
+2023-07-31T17:51:16+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:316
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(410): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 316
+
+2023-07-31T18:42:52+00:00 CRITICAL Uncaught Error: Cannot use string offset as an array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:355
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(406): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 355
+
+2023-07-31T18:45:30+00:00 CRITICAL Uncaught Error: Cannot use string offset as an array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:356
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(407): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 356
+
+2023-07-31T18:46:23+00:00 CRITICAL Uncaught Error: Cannot use string offset as an array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:357
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(408): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 357
+
+2023-07-31T18:46:44+00:00 CRITICAL Uncaught Error: Cannot use string offset as an array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:357
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(408): Callback_processor_SUOT->execute_piston_api(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_REST_Server->serve_request('/code-assignmen...')
+#5 /Us in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 357
+

@@ -1,0 +1,21 @@
+2023-07-29T08:10:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Callback_processor_SUOT::__construct(), 0 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 291 and exactly 1 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:83
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(291): Callback_processor_SUOT->__construct()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_ in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 83
+
+2023-07-29T08:11:04+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Callback_processor_SUOT::__construct(), 0 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 291 and exactly 1 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:83
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(291): Callback_processor_SUOT->__construct()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_ in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 83
+
+2023-07-29T08:11:19+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Callback_processor_SUOT::__construct(), 0 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 281 and exactly 1 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:83
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(281): Callback_processor_SUOT->__construct()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): submit_code_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 83
+

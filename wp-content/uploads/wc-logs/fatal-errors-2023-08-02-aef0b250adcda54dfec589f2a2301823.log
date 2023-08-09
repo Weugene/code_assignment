@@ -1,0 +1,8 @@
+2023-08-02T20:35:34+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:440
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(454): Callback_processor_SUOT->get_type_of_run(Array)
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(547): Callback_processor_SUOT->execute_piston_autograder(Array)
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1181): check_code_callback(Object(WP_REST_Request))
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Serv in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 440
+

@@ -1,7 +1,0 @@
-2023-06-07T17:26:29+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function Firebase\JWT\JWT::encode(), 2 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibe-zoom/includes/class-vibe-zoom-api.php on line 196 and at least 3 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/video-conferencing-with-zoom-api/vendor/firebase/php-jwt/src/JWT.php:184
-Stack trace:
-#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibe-zoom/includes/class-vibe-zoom-api.php(196): Firebase\JWT\JWT::encode(Array, false)
-#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibe-zoom/includes/class-vibe-zoom-api.php(132): Vibe_Zoom_Video_Conferencing_Api->generateJWTKey()
-#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibe-zoom/includes/class-vibe-zoom-api.php(332): Vibe_Zoom_Video_Conferencing_Api->sendRequest('users//meetings', Array, 'POST')
-#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-conten in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/video-conferencing-with-zoom-api/vendor/firebase/php-jwt/src/JWT.php on line 184
-

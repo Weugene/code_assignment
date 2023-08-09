@@ -1254,6 +1254,7 @@ var POST_ID_CURRENT = null;
       },
     },
     t = {};
+    console.log("course_button_loaded.js is 1257 line");
   function n(s) {
     var a = t[s];
     if (void 0 !== a) return a.exports;
@@ -8363,6 +8364,7 @@ var POST_ID_CURRENT = null;
                                 "complete"
                               )
                             : e.update({}, "submitassignment");
+                            console.log("FFFFirst content/assignmentId/");
                         let t = `${window.wplms_course_data.api_url}/user/content/assignmentId/${e.assignment.id}`;
                         "undefined" != typeof localforage &&
                           window.vibebp.api.sw_enabled &&
@@ -8424,30 +8426,40 @@ var POST_ID_CURRENT = null;
             // to have access to the assignment id inside
             POST_ID_CURRENT = s.id;
             var code_scripts = document.querySelectorAll('[id^="code_assignment_script"]');
-            console.log("code_scripts: ");
+            console.log("code_scripts(ID): ");
             console.log(code_scripts);
-            if (s.content && code_scripts.length === 0){
-                const parser = new DOMParser();
-                // Parse the HTML string
-                const htmlDocument = parser.parseFromString(s.content, 'text/html');
-                // Access the parsed HTML document
-                const htmlElement = htmlDocument.documentElement;
-                // Assuming htmlElement is the root HTML element obtained from the parsed HTML
-                const scriptElements = htmlElement.querySelectorAll('script'); 
+            // const node = document.createElement("script");
+            // node.innerHTML = "console.log('Old version')";
+            // node.setAttribute("id", "code_assignment_script");
+            // // document.body.appendChild(node);
+            // postscribe('#code_assignment_script', 'console.log("POSTSCRIBE")');
+            var code_scripts = document.querySelectorAll('.assignment_content_wrapper');
+            // run script inside .assignment_content_wrapper
+            console.log("code_scripts(CLASS): ");
+            console.log(code_scripts);
+            // if (s.content && code_scripts.length === 0){
+            //     const parser = new DOMParser();
+            //     // Parse the HTML string
+            //     const htmlDocument = parser.parseFromString(s.content, 'text/html');
+            //     // Access the parsed HTML document
+            //     const htmlElement = htmlDocument.documentElement;
+            //     // Assuming htmlElement is the root HTML element obtained from the parsed HTML
+            //     const scriptElements = htmlElement.querySelectorAll('script'); 
                 
-                // add only if it does not exist
-                // Loop through each script element
-                scriptElements.forEach((scriptElement, index) => {
-                    const scriptCode = scriptElement.textContent;
-                    eval(scriptCode);
-                    // postscribe(scriptElements, scriptElement.innerHTML);
-                    console.log(scriptCode);
-                    // Set the ID of the script element
-                    scriptElement.id = `code_assignment_script_${index + 1}`;
+            //     // add only if it does not exist
+            //     // Loop through each script element
+            //     scriptElements.forEach((scriptElement, index) => {
+            //         const scriptCode = scriptElement.textContent;
+            //         // eval(scriptCode);
+            //         // postscribe('#code_assignment_script', 'console.log("POSTSCRIBE")');
+            //         // postscribe(scriptElements, scriptCode);
+            //         console.log(scriptCode);
+            //         // Set the ID of the script element
+            //         scriptElement.id = `code_assignment_script_${index + 1}`;
                     
-                    document.body.appendChild(scriptElement);
-                });
-            }
+            //         document.body.appendChild(scriptElement);
+            //     });
+            // }
           return (
             s.hasOwnProperty("end_time") &&
               parseInt(s.end_time) &&
@@ -8595,6 +8607,7 @@ var POST_ID_CURRENT = null;
                                         new Date().getTime() / 1e3
                                       )),
                                         a(n);
+                                        console.log("SSecond content/assignmentId/");
                                       let i = `${window.wplms_course_data.api_url}/user/content/assignmentId/${e.assignment.id}`,
                                         r = `${window.wplms_course_data.api_url}/student/assignments`;
                                       _(r, !0),
@@ -12155,7 +12168,7 @@ var POST_ID_CURRENT = null;
                 {
                   method: "post",
                   headers: window.vibebp.xnonce
-                    ? { "X-WP-Nonce": window.vibebp.xnonce }
+                    ? { "X-WP-Nonce": window.vibebp.xnonce, "XZXZ": 111 }
                     : {},
                   body: JSON.stringify({ token: se.token }),
                 }
@@ -12585,7 +12598,7 @@ var POST_ID_CURRENT = null;
                                   document.body.appendChild(t),
                                   (t.onload = () => {
                                     r++,
-                                      console.log("loaded"),
+                                      console.log("loaded: Weugene"),
                                       r == s.scripts.length &&
                                         document.body.dispatchEvent(
                                           new Event("post-load")

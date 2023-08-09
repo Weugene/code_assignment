@@ -4800,9 +4800,7 @@ if ( ! class_exists( 'BP_Course_New_Rest_User_Controller' ) ) {
 				// write_log("WP content" . $content);
 				$content = Elementor\Plugin::instance()->frontend->get_builder_content($assignment_id);
 				// write_log("ELEMENTOR content" . $content);
-				wp_register_script( 'script-postscribe', 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js', [ 'elementor-frontend' ], '2.8.0', true );
-				wp_register_script( 'script-input-limiter', plugins_url( 'code_assignment/input_limiter.js'), [ 'elementor-frontend' ], '1.0.0', true );
-			
+
 	            $data=array(
 					'id'=>$assignment_id,
 					'title'=>get_the_title($assignment_id),

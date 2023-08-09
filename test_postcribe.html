@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postscribe Example</title>
+</head>
+<body>
+  <h1>Postscribe Example</h1>
+
+  <!-- Placeholder for the dynamically inserted script -->
+  <script id="scriptContainer"></script>
+
+  <!-- Include the Postscribe library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"></script>
+
+  <script type="text/javascript">
+    // Dynamically insert JavaScript using Postscribe
+    postscribe('#scriptContainer', 'alert("Hello, world!");');
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+2023-07-28T12:28:37+00:00 CRITICAL Uncaught TypeError: Argument 1 passed to create_teachers_code_table_if_not_exists() must be of the type string, object given, called in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php on line 1148 and defined in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:48
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1148): create_teachers_code_table_if_not_exists(Object(WP_REST_Request))
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api.php(410): WP_ in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 48
+
+2023-07-28T12:29:20+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function logged_users_permission_callback(), 0 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 109 and exactly 1 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:89
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(109): logged_users_permission_callback()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1148): teachers_permission_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 89
+
+2023-07-28T12:30:04+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function logged_users_permission_callback(), 0 passed in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 109 and exactly 1 expected in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:89
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php(109): logged_users_permission_callback()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1148): teachers_permission_callback(Object(WP_REST_Request))
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/code-assignmen...', Array, NULL)
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-includes/rest-api/class-wp-rest-server.php(442): WP in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 89
+

@@ -1,4 +1,0 @@
-2023-06-05T17:11:21+00:00 CRITICAL require(): Failed opening required '/Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignmentcode_assignment_api.php' (include_path='.:/Applications/MAMP/bin/php/php7.4.33/lib/php') in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment.php on line 18
-
-2023-06-05T17:11:34+00:00 CRITICAL Cannot redeclare create_trinket_table_if_not_exists() (previously declared in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php:28) in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/code_assignment/code_assignment_api.php on line 28
-
