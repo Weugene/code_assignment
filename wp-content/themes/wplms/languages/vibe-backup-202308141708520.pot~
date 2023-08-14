@@ -1,18 +1,17 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WPLMS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 17:08+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2021-09-28 19:08+0530\n"
+"PO-Revision-Date: 2021-09-28 19:08+0530\n"
 "Last-Translator: Vibethemes <vibethemes@gmail.com>\n"
 "Language-Team: English (United States)\n"
-"Language: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Loco https://localise.biz/\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x\n"
@@ -1218,8 +1217,8 @@ msgstr ""
 #: groups/create.php:157
 #, php-format
 msgid ""
-"<strong>Attention Site Admin:</strong> Group forums require the <a "
-"href=\"%s\">correct setup and configuration</a> of a bbPress installation."
+"<strong>Attention Site Admin:</strong> Group forums require the <a href=\"%s"
+"\">correct setup and configuration</a> of a bbPress installation."
 msgstr ""
 
 # @ wplms_modern
@@ -3000,9 +2999,9 @@ msgid ""
 "Contact the administrator of this site for help on getting the plugin "
 "installed."
 msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s plugins."
-" Contact the administrator of this site for help on getting the plugins "
-"installed."
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -3026,9 +3025,9 @@ msgstr[1] ""
 #: includes/init.php:1415
 #, php-format
 msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s plugin."
-" Contact the administrator of this site for help on getting the plugin "
-"activated."
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
 msgid_plural ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugins. Contact the administrator of this site for help on getting the "
@@ -4494,8 +4493,8 @@ msgstr ""
 # @ vibe
 #: includes/widgets/instagram.php:102
 msgid ""
-"Instagram Username (<small>If blank then Instagram popular images are "
-"shown</small>):"
+"Instagram Username (<small>If blank then Instagram popular images are shown</"
+"small>):"
 msgstr ""
 
 # @ vibe
@@ -5180,9 +5179,9 @@ msgstr ""
 #: members/single/profile/change-avatar.php:55
 msgid ""
 "Your avatar will be used on your profile and throughout the site. To change "
-"your avatar, please create an account with <a href=\"http://gravatar.com\">"
-"Gravatar</a> using the same email address as you used to register with this "
-"site."
+"your avatar, please create an account with <a href=\"http://gravatar.com"
+"\">Gravatar</a> using the same email address as you used to register with "
+"this site."
 msgstr ""
 
 # @ buddypress
@@ -5282,8 +5281,8 @@ msgstr ""
 # @ wplms_modern
 #: members/single/settings/general.php:39
 msgid ""
-"Current Password <span>(required to update email or change current password)"
-"</span>"
+"Current Password <span>(required to update email or change current "
+"password)</span>"
 msgstr ""
 
 # @ wplms_modern
@@ -5393,14 +5392,17 @@ msgid "Add New Listing Taxonomy"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:45
+msgctxt ""
 msgid "Import Home page"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:46
+msgctxt ""
 msgid "Import Customizer"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:47
+msgctxt ""
 msgid "Import Elementor Template"
 msgstr ""
 
@@ -6292,8 +6294,8 @@ msgstr ""
 #: registration/activate.php:52
 #, php-format
 msgid ""
-"Your account was activated successfully! You can now <a href=\"%s\">log "
-"in</a> with the username and password you provided when you signed up."
+"Your account was activated successfully! You can now <a href=\"%s\">log in</"
+"a> with the username and password you provided when you signed up."
 msgstr ""
 
 # @ wplms_modern
@@ -6606,8 +6608,8 @@ msgstr ""
 #: setup/installer/envato_setup.php:2934 setup/welcome.php:348
 #, php-format
 msgid ""
-"%s - We recommend setting memory to at least 128MB. See: <a href=\"%s\">"
-"Increasing memory allocated to PHP</a>"
+"%s - We recommend setting memory to at least 128MB. See: <a href=\"%s"
+"\">Increasing memory allocated to PHP</a>"
 msgstr ""
 
 # @ vibe
@@ -7940,8 +7942,8 @@ msgstr ""
 #: vibe-options.php:455
 #, php-format
 msgid ""
-"Blog creation : Members{Loggedin Members},Teachers {Teachers, Admins,Editors}"
-", %s screenshot %s"
+"Blog creation : Members{Loggedin Members},Teachers {Teachers, Admins,"
+"Editors}, %s screenshot %s"
 msgstr ""
 
 # @ wplms_modern

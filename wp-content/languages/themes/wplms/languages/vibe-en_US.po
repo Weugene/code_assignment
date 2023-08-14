@@ -1,18 +1,17 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: WPLMS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 17:08+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2022-01-20 21:30+0530\n"
+"PO-Revision-Date: 2022-01-20 21:30+0530\n"
 "Last-Translator: Vibethemes <vibethemes@gmail.com>\n"
 "Language-Team: English (United States)\n"
-"Language: \n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Loco https://localise.biz/\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x\n"
@@ -952,7 +951,7 @@ msgid "My Topics <span>%s</span>"
 msgstr ""
 
 # @ wplms_modern
-#: forums/index.php:63 groups/single/forum.php:36 includes/actions.php:848
+#: forums/index.php:63 groups/single/forum.php:36 includes/actions.php:846
 #: members/single/blogs.php:19 members/single/forums.php:17
 #: members/single/friends.php:20 members/single/groups.php:20
 #: templates/directory/blogs/index.php:103
@@ -1218,8 +1217,8 @@ msgstr ""
 #: groups/create.php:157
 #, php-format
 msgid ""
-"<strong>Attention Site Admin:</strong> Group forums require the <a "
-"href=\"%s\">correct setup and configuration</a> of a bbPress installation."
+"<strong>Attention Site Admin:</strong> Group forums require the <a href=\"%s"
+"\">correct setup and configuration</a> of a bbPress installation."
 msgstr ""
 
 # @ wplms_modern
@@ -1652,26 +1651,26 @@ msgstr ""
 msgid "<a href=\"%s\" class=\"vbpregister\" title=\""
 msgstr ""
 
-#: header-mooc.php:81 includes/actions.php:334
+#: header-mooc.php:81 includes/actions.php:332
 msgctxt "all courses in course nav search in categories"
 msgid "All"
 msgstr ""
 
-#: header-mooc.php:91 includes/actions.php:343
+#: header-mooc.php:91 includes/actions.php:341
 msgctxt "search placeholder"
 msgid "Search courses.."
 msgstr ""
 
-#: includes/actions.php:174
+#: includes/actions.php:172
 msgid "Migrate to WPLMS version 4.1"
 msgstr ""
 
-#: includes/actions.php:174
+#: includes/actions.php:172
 msgid "Start Migration"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:252 includes/widgets/custom_bp_widgets.php:39
+#: includes/actions.php:250 includes/widgets/custom_bp_widgets.php:39
 #: templates/login/bigdrop_login.php:15 templates/login/default_login.php:15
 #: templates/login/full_login.php:15 templates/login/modern.php:15
 #: templates/login/pop_login.php:15
@@ -1679,7 +1678,7 @@ msgid "View profile"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:253 includes/widgets/custom_bp_widgets.php:40
+#: includes/actions.php:251 includes/widgets/custom_bp_widgets.php:40
 #: templates/login/bigdrop_login.php:17 templates/login/default_login.php:17
 #: templates/login/full_login.php:17 templates/login/modern.php:17
 #: templates/login/pop_login.php:17
@@ -1687,7 +1686,7 @@ msgid "Log Out"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:253 includes/widgets/custom_bp_widgets.php:40
+#: includes/actions.php:251 includes/widgets/custom_bp_widgets.php:40
 #: templates/login/bigdrop_login.php:17 templates/login/default_login.php:17
 #: templates/login/full_login.php:17 templates/login/modern.php:17
 #: templates/login/pop_login.php:17
@@ -1695,7 +1694,7 @@ msgid "LOGOUT"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:255 includes/widgets/custom_bp_widgets.php:42
+#: includes/actions.php:253 includes/widgets/custom_bp_widgets.php:42
 #: templates/login/bigdrop_login.php:23 templates/login/default_login.php:19
 #: templates/login/default_login.php:26 templates/login/full_login.php:23
 #: templates/login/modern.php:23 templates/login/pop_login.php:23
@@ -1703,7 +1702,7 @@ msgid "Access admin panel"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:263 includes/widgets/custom_bp_widgets.php:53
+#: includes/actions.php:261 includes/widgets/custom_bp_widgets.php:53
 #: includes/widgets/custom_widgets.php:51
 #: includes/widgets/custom_widgets.php:82 single.php:121 single.php:147
 #: templates/login/bigdrop_login.php:34 templates/login/default_login.php:37
@@ -1713,7 +1712,7 @@ msgid "Courses"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:268 includes/widgets/custom_bp_widgets.php:58
+#: includes/actions.php:266 includes/widgets/custom_bp_widgets.php:58
 #: templates/login/bigdrop_login.php:39 templates/login/default_login.php:42
 #: templates/login/full_login.php:39 templates/login/modern.php:39
 #: templates/login/pop_login.php:39
@@ -1721,7 +1720,7 @@ msgid "Stats"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:275 includes/widgets/custom_bp_widgets.php:65
+#: includes/actions.php:273 includes/widgets/custom_bp_widgets.php:65
 #: templates/login/bigdrop_login.php:46 templates/login/default_login.php:49
 #: templates/login/full_login.php:46 templates/login/modern.php:46
 #: templates/login/pop_login.php:46
@@ -1729,7 +1728,7 @@ msgid "Inbox"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:283 includes/widgets/custom_bp_widgets.php:71
+#: includes/actions.php:281 includes/widgets/custom_bp_widgets.php:71
 #: templates/login/bigdrop_login.php:54 templates/login/default_login.php:57
 #: templates/login/full_login.php:54 templates/login/modern.php:54
 #: templates/login/pop_login.php:54
@@ -1737,7 +1736,7 @@ msgid "Notifications"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:290 includes/widgets/custom_bp_widgets.php:78
+#: includes/actions.php:288 includes/widgets/custom_bp_widgets.php:78
 #: templates/login/bigdrop_login.php:61 templates/login/default_login.php:64
 #: templates/login/full_login.php:61 templates/login/modern.php:61
 #: templates/login/pop_login.php:62
@@ -1745,7 +1744,7 @@ msgid "Groups"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:297 includes/widgets/custom_bp_widgets.php:85
+#: includes/actions.php:295 includes/widgets/custom_bp_widgets.php:85
 #: setup/welcome.php:396 templates/login/bigdrop_login.php:68
 #: templates/login/default_login.php:71 templates/login/full_login.php:68
 #: templates/login/modern.php:68 templates/login/pop_login.php:69
@@ -1753,35 +1752,35 @@ msgid "Settings"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:359 includes/actions.php:463 includes/actions.php:478
-#: includes/actions.php:1259 includes/notes-discussions.php:119
+#: includes/actions.php:357 includes/actions.php:461 includes/actions.php:476
+#: includes/actions.php:1257 includes/notes-discussions.php:119
 #: includes/notes-discussions.php:417 includes/notes-discussions.php:435
 #: includes/notes-discussions.php:481 includes/notes-discussions.php:578
 #: includes/notes-discussions.php:599 includes/notes-discussions.php:622
 #: includes/notes-discussions.php:648 includes/notes-discussions.php:671
 #: includes/notes-discussions.php:694
 #: setup/installer/envato-setup-export.php:105
-#: setup/installer/envato_setup.php:635
+#: setup/installer/envato_setup.php:659
 msgid "Security check Failed. Contact Administrator."
 msgstr ""
 
-#: includes/actions.php:717
+#: includes/actions.php:715
 msgctxt "captcha mismatch"
 msgid "Captcha validation failed"
 msgstr ""
 
-#: includes/actions.php:798
+#: includes/actions.php:796
 msgctxt "status"
 msgid "Hide Timeline"
 msgstr ""
 
-#: includes/actions.php:802
+#: includes/actions.php:800
 msgctxt "status"
 msgid "Go fullscreen"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:852 templates/directory/course/index.php:95
+#: includes/actions.php:850 templates/directory/course/index.php:95
 #: templates/directory/course/indexd2.php:84
 #: templates/directory/course/indexd3.php:71
 #: templates/directory/course/indexd4.php:64
@@ -1790,255 +1789,255 @@ msgid "Select Order"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:856
+#: includes/actions.php:854
 msgid "Draft courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:857
+#: includes/actions.php:855
 msgid "Submitted for Approval"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:858
+#: includes/actions.php:856
 msgid "Published Courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:862
+#: includes/actions.php:860
 msgctxt "Course Status filter in Profile My courses section"
 msgid "Pursuing courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:863
+#: includes/actions.php:861
 msgctxt "Course Status filter in Profile My courses section"
 msgid "Finished Courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:864
+#: includes/actions.php:862
 msgctxt "Course Status filter in Profile My courses section"
 msgid "Active courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:865
+#: includes/actions.php:863
 msgctxt "Course Status filter in Profile My courses section"
 msgid "Expired courses"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:869
+#: includes/actions.php:867
 msgctxt "filter in Profile My courses section"
 msgid "Newly Published"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:870
+#: includes/actions.php:868
 msgctxt "filter in Profile My courses section"
 msgid "Alphabetical"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:871
+#: includes/actions.php:869
 msgctxt "filter in Profile My courses section"
 msgid "Start Date"
 msgstr ""
 
-#: includes/actions.php:1034
+#: includes/actions.php:1032
 msgid "by "
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1117
+#: includes/actions.php:1115
 msgid "Become an Instructor"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1195
+#: includes/actions.php:1193
 msgid "UNITS"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1197
+#: includes/actions.php:1195
 msgid "QUESTIONS"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1200
+#: includes/actions.php:1198
 #, php-format
 msgid "DIRECT ACCESS TO %s IS NOT ALLOWED"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1348
+#: includes/actions.php:1346
 msgid "COURSE : "
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1393
+#: includes/actions.php:1391
 msgid "Your account is now active!"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1501 includes/actions.php:1514
-#: includes/actions.php:1536
+#: includes/actions.php:1499 includes/actions.php:1512
+#: includes/actions.php:1534
 msgid "My Orders"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1533 includes/actions.php:1589
+#: includes/actions.php:1531 includes/actions.php:1587
 msgid "Edit Account Details"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1628 includes/actions.php:1641
+#: includes/actions.php:1626 includes/actions.php:1639
 #: paid-memberships-pro/pages/cancel.php:56
 msgid "My Memberships"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1688 includes/actions.php:1769
+#: includes/actions.php:1686 includes/actions.php:1767
 msgid "Display Order"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1692 includes/actions.php:1773
+#: includes/actions.php:1690 includes/actions.php:1771
 msgid "Thumbnail"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1696 includes/actions.php:1778
+#: includes/actions.php:1694 includes/actions.php:1776
 msgid "Upload/Add image"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1697 includes/actions.php:1779
+#: includes/actions.php:1695 includes/actions.php:1777
 msgid "Remove image"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1716 includes/actions.php:1803
+#: includes/actions.php:1714 includes/actions.php:1801
 msgid "Choose an image"
 msgstr ""
 
 # @ vibe
-#: includes/actions.php:1718 includes/actions.php:1805
+#: includes/actions.php:1716 includes/actions.php:1803
 msgid "Use image"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:2043
+#: includes/actions.php:2041
 msgid "Related Courses"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:2105
+#: includes/actions.php:2103
 msgid "Course Curriculum Not Set"
 msgstr ""
 
-#: includes/actions.php:2236
+#: includes/actions.php:2234
 msgid "Unit"
 msgstr ""
 
-#: includes/actions.php:2260 includes/actions.php:2313
+#: includes/actions.php:2258 includes/actions.php:2311
 #, php-format
 msgid "Next %s will be available in %s"
 msgstr ""
 
-#: includes/actions.php:2319 includes/actions.php:2326
+#: includes/actions.php:2317 includes/actions.php:2324
 #, php-format
 msgid "Requested %s can not be accessed."
 msgstr ""
 
-#: includes/actions.php:2386
+#: includes/actions.php:2384
 msgctxt "ajax signon message"
 msgid "Missing data."
 msgstr ""
 
-#: includes/actions.php:2393
+#: includes/actions.php:2391
 msgctxt "ajax signon message"
 msgid "Missing security."
 msgstr ""
 
-#: includes/actions.php:2403
+#: includes/actions.php:2401
 msgctxt "ajax signon message"
 msgid "Invalid username/email."
 msgstr ""
 
-#: includes/actions.php:2449
+#: includes/actions.php:2447
 msgctxt "ajax signon message"
 msgid "Invalid password."
 msgstr ""
 
-#: includes/actions.php:2488 includes/actions.php:2499
+#: includes/actions.php:2486 includes/actions.php:2497
 msgctxt "back to login in login panel"
 msgid "back to login"
 msgstr ""
 
-#: includes/actions.php:2501
+#: includes/actions.php:2499
 msgctxt "fotgot password email placeholder"
 msgid "Enter registered email id"
 msgstr ""
 
-#: includes/actions.php:2502
+#: includes/actions.php:2500
 msgctxt "forgot password form submit label"
 msgid "Get reset password link"
 msgstr ""
 
-#: includes/actions.php:2512
+#: includes/actions.php:2510
 msgctxt "forgot password email message"
 msgid "Missing email."
 msgstr ""
 
-#: includes/actions.php:2517
+#: includes/actions.php:2515
 msgctxt "forgot password email message"
 msgid "Missing security."
 msgstr ""
 
-#: includes/actions.php:2522
+#: includes/actions.php:2520
 msgctxt "forgot password email message"
 msgid "No registered user found with this mail id !"
 msgstr ""
 
-#: includes/actions.php:2538
+#: includes/actions.php:2536
 msgid "Password reset is not allowed for this user"
 msgstr ""
 
-#: includes/actions.php:2541
+#: includes/actions.php:2539
 msgid "Password reset is not allowed."
 msgstr ""
 
-#: includes/actions.php:2571
+#: includes/actions.php:2569
 msgid "The e-mail could not be sent."
 msgstr ""
 
-#: includes/actions.php:2571
+#: includes/actions.php:2569
 msgid "Possible reason: your host may have disabled the mail() function."
 msgstr ""
 
-#: includes/actions.php:2573
+#: includes/actions.php:2571
 msgctxt "forgot password mail message"
 msgid "Please check your email for password recovery !"
 msgstr ""
 
 # @ wplms_modern
-#: includes/actions.php:2585
+#: includes/actions.php:2583
 msgid "Hit enter to search..."
 msgstr ""
 
-#: includes/actions.php:2610
+#: includes/actions.php:2608
 msgctxt "custom tabs for tabbed layout"
 msgid "home"
 msgstr ""
 
-#: includes/actions.php:2611
+#: includes/actions.php:2609
 msgctxt "custom tabs for tabbed layout"
 msgid "curriculum"
 msgstr ""
 
-#: includes/actions.php:2616
+#: includes/actions.php:2614
 msgctxt "custom tabs for tabbed layout"
 msgid "reviews"
 msgstr ""
@@ -2291,7 +2290,7 @@ msgid "Enter URL for social icon."
 msgstr ""
 
 # @ vibe
-#: includes/extras.php:244 includes/extras.php:351
+#: includes/extras.php:244 includes/extras.php:354
 msgid "Share on "
 msgstr ""
 
@@ -2306,27 +2305,27 @@ msgstr ""
 msgid "User ID"
 msgstr ""
 
-#: includes/extras.php:272
+#: includes/extras.php:275
 msgctxt "When user has not even once logged in the website"
 msgid "N.A."
 msgstr ""
 
 # @ vibe
-#: includes/extras.php:279
+#: includes/extras.php:282
 msgid "Online"
 msgstr ""
 
 # @ vibe
-#: includes/extras.php:281
+#: includes/extras.php:284
 msgid "Offline"
 msgstr ""
 
-#: includes/extras.php:281
+#: includes/extras.php:284
 msgid "Since: "
 msgstr ""
 
 # @ vibe
-#: includes/extras.php:363 includes/func.php:1714
+#: includes/extras.php:366 includes/func.php:1714
 msgid "ID"
 msgstr ""
 
@@ -3000,9 +2999,9 @@ msgid ""
 "Contact the administrator of this site for help on getting the plugin "
 "installed."
 msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s plugins."
-" Contact the administrator of this site for help on getting the plugins "
-"installed."
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -3026,9 +3025,9 @@ msgstr[1] ""
 #: includes/init.php:1415
 #, php-format
 msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s plugin."
-" Contact the administrator of this site for help on getting the plugin "
-"activated."
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
 msgid_plural ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugins. Contact the administrator of this site for help on getting the "
@@ -4494,8 +4493,8 @@ msgstr ""
 # @ vibe
 #: includes/widgets/instagram.php:102
 msgid ""
-"Instagram Username (<small>If blank then Instagram popular images are "
-"shown</small>):"
+"Instagram Username (<small>If blank then Instagram popular images are shown</"
+"small>):"
 msgstr ""
 
 # @ vibe
@@ -5180,9 +5179,9 @@ msgstr ""
 #: members/single/profile/change-avatar.php:55
 msgid ""
 "Your avatar will be used on your profile and throughout the site. To change "
-"your avatar, please create an account with <a href=\"http://gravatar.com\">"
-"Gravatar</a> using the same email address as you used to register with this "
-"site."
+"your avatar, please create an account with <a href=\"http://gravatar.com"
+"\">Gravatar</a> using the same email address as you used to register with "
+"this site."
 msgstr ""
 
 # @ buddypress
@@ -5282,8 +5281,8 @@ msgstr ""
 # @ wplms_modern
 #: members/single/settings/general.php:39
 msgid ""
-"Current Password <span>(required to update email or change current password)"
-"</span>"
+"Current Password <span>(required to update email or change current "
+"password)</span>"
 msgstr ""
 
 # @ wplms_modern
@@ -5393,14 +5392,17 @@ msgid "Add New Listing Taxonomy"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:45
+msgctxt ""
 msgid "Import Home page"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:46
+msgctxt ""
 msgid "Import Customizer"
 msgstr ""
 
 #: options/fields/demo_switcher/field_demo_switcher.php:47
+msgctxt ""
 msgid "Import Elementor Template"
 msgstr ""
 
@@ -6292,8 +6294,8 @@ msgstr ""
 #: registration/activate.php:52
 #, php-format
 msgid ""
-"Your account was activated successfully! You can now <a href=\"%s\">log "
-"in</a> with the username and password you provided when you signed up."
+"Your account was activated successfully! You can now <a href=\"%s\">log in</"
+"a> with the username and password you provided when you signed up."
 msgstr ""
 
 # @ wplms_modern
@@ -6539,116 +6541,116 @@ msgstr ""
 msgid "Unit Timings"
 msgstr ""
 
-#: setup/installer/envato_setup.php:659 setup/installer/envato_setup.php:679
-#: setup/installer/envato_setup.php:691
+#: setup/installer/envato_setup.php:683 setup/installer/envato_setup.php:703
+#: setup/installer/envato_setup.php:715
 msgid "This is the MegaMenu sidebar"
 msgstr ""
 
-#: setup/installer/envato_setup.php:668
+#: setup/installer/envato_setup.php:692
 msgid "This is the MegaMenu2 sidebar"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1117 setup/installer/envato_setup.php:1349
-#: setup/installer/envato_setup.php:1474 setup/installer/envato_setup.php:5357
-#: setup/installer/envato_setup.php:5487
+#: setup/installer/envato_setup.php:1141 setup/installer/envato_setup.php:1373
+#: setup/installer/envato_setup.php:1498 setup/installer/envato_setup.php:5382
+#: setup/installer/envato_setup.php:5512
 msgid "Continue"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1375
+#: setup/installer/envato_setup.php:1399
 msgid "Member Profile"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1376
+#: setup/installer/envato_setup.php:1400
 msgid "Member profile layout for displaying member profiles"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1379
+#: setup/installer/envato_setup.php:1403
 msgid "Member Card"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1380
+#: setup/installer/envato_setup.php:1404
 msgid "Member cards displaying member in directory"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1383
+#: setup/installer/envato_setup.php:1407
 msgid "Group Layout"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1384
+#: setup/installer/envato_setup.php:1408
 msgid "Group Layouts for displaying individual groups"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1387
+#: setup/installer/envato_setup.php:1411
 msgid "Group Card"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1388
+#: setup/installer/envato_setup.php:1412
 msgid "Group cards displaying group in directory"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1391
+#: setup/installer/envato_setup.php:1415
 msgid "Course Layout"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1392
+#: setup/installer/envato_setup.php:1416
 msgid "Course Layout displaying courses"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1395
+#: setup/installer/envato_setup.php:1419
 msgid "Course Card"
 msgstr ""
 
-#: setup/installer/envato_setup.php:1396
+#: setup/installer/envato_setup.php:1420
 msgid "Course cards for displaying courses in directory"
 msgstr ""
 
 # @ vibe
-#: setup/installer/envato_setup.php:2934 setup/welcome.php:348
+#: setup/installer/envato_setup.php:2958 setup/welcome.php:348
 #, php-format
 msgid ""
-"%s - We recommend setting memory to at least 128MB. See: <a href=\"%s\">"
-"Increasing memory allocated to PHP</a>"
+"%s - We recommend setting memory to at least 128MB. See: <a href=\"%s"
+"\">Increasing memory allocated to PHP</a>"
 msgstr ""
 
 # @ vibe
-#: setup/installer/envato_setup.php:2945 setup/welcome.php:363
+#: setup/installer/envato_setup.php:2969 setup/welcome.php:363
 msgid "WP Max Upload Size"
 msgstr ""
 
 # @ vibe
-#: setup/installer/envato_setup.php:2949 setup/welcome.php:368
+#: setup/installer/envato_setup.php:2973 setup/welcome.php:368
 msgid "PHP Post Max Size"
 msgstr ""
 
 # @ vibe
-#: setup/installer/envato_setup.php:2954 setup/welcome.php:372
+#: setup/installer/envato_setup.php:2978 setup/welcome.php:372
 msgid "PHP Time Limit"
 msgstr ""
 
 # @ vibe
-#: setup/installer/envato_setup.php:2957 setup/welcome.php:376
+#: setup/installer/envato_setup.php:2981 setup/welcome.php:376
 msgid "PHP Max Input Vars"
 msgstr ""
 
-#: setup/installer/envato_setup.php:2967 setup/installer/envato_setup.php:3008
+#: setup/installer/envato_setup.php:2991 setup/installer/envato_setup.php:3032
 msgid "Passed"
 msgstr ""
 
-#: setup/installer/envato_setup.php:2967 setup/installer/envato_setup.php:3008
+#: setup/installer/envato_setup.php:2991 setup/installer/envato_setup.php:3032
 msgid "Failed"
 msgstr ""
 
-#: setup/installer/envato_setup.php:2998
+#: setup/installer/envato_setup.php:3022
 msgctxt "recommended label"
 msgid "[Recommended]"
 msgstr ""
 
-#: setup/installer/envato_setup.php:3006
+#: setup/installer/envato_setup.php:3030
 msgctxt "installer label"
 msgid "File Permissions Check"
 msgstr ""
 
-#: setup/installer/envato_setup.php:3264
+#: setup/installer/envato_setup.php:3288
 msgctxt "wplms"
 msgid ""
 "Unable to load file from server, reload this page. If issue persists, "
@@ -6656,36 +6658,36 @@ msgid ""
 "server."
 msgstr ""
 
-#: setup/installer/envato_setup.php:3463
+#: setup/installer/envato_setup.php:3487
 msgid "Waiting for sync "
 msgstr ""
 
-#: setup/installer/envato_setup.php:5191
+#: setup/installer/envato_setup.php:5216
 msgid "Drop files here"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5192
+#: setup/installer/envato_setup.php:5217
 msgctxt "Uploader: Drop files here - or - Select Files"
 msgid "or"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5193
+#: setup/installer/envato_setup.php:5218
 msgid "Select Files"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5200
+#: setup/installer/envato_setup.php:5225
 msgid "Please do not close the window until process is completed"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5319
+#: setup/installer/envato_setup.php:5344
 msgid "File couldn't be unzipped properly"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5964
+#: setup/installer/envato_setup.php:5989
 msgid "Security check failed contact administrator"
 msgstr ""
 
-#: setup/installer/envato_setup.php:5985
+#: setup/installer/envato_setup.php:6010
 msgid "File uploaded and unzipped successfully"
 msgstr ""
 
@@ -7265,7 +7267,7 @@ msgstr ""
 msgid "All Groups <span>%s</span>"
 msgstr ""
 
-#: templates/group/blank.php:38
+#: templates/group/blank.php:54
 msgid "Create a new group layout."
 msgstr ""
 
@@ -7284,7 +7286,7 @@ msgstr ""
 msgid "Create an Account"
 msgstr ""
 
-#: templates/profile/blank.php:40
+#: templates/profile/blank.php:62
 msgid "Create a Member Profile layout in WP admin - VibeBp - Member Profiles"
 msgstr ""
 
@@ -7940,8 +7942,8 @@ msgstr ""
 #: vibe-options.php:455
 #, php-format
 msgid ""
-"Blog creation : Members{Loggedin Members},Teachers {Teachers, Admins,Editors}"
-", %s screenshot %s"
+"Blog creation : Members{Loggedin Members},Teachers {Teachers, Admins,"
+"Editors}, %s screenshot %s"
 msgstr ""
 
 # @ wplms_modern
