@@ -1,0 +1,72 @@
+2023-08-14T05:53:04+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:53:34+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:53:43+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:54:15+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:54:25+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:55:58+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:56:32+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(750): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(449): Elementor\Widget_Base->print_content()
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(1354): Elementor\Element_Base->print_element()
+#5 /Users/evgeniisha in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
+2023-08-14T05:56:58+00:00 CRITICAL Uncaught Error: Call to undefined function groups_get_groups() in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php:125
+Stack trace:
+#0 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/controls-stack.php(2268): VibeBP_Groups->render()
+#1 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(609): Elementor\Controls_Stack->render_by_mode()
+#2 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/widget-base.php(733): Elementor\Widget_Base->render_content()
+#3 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Widget_Base->get_raw_data(true)
+#4 /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/elementor/includes/base/element-base.php(536): Elementor\Element_Base->get_raw_data(true)
+#5 /Users/evgen in /Users/evgeniisharaborin/Documents/websites/wordpress/wp-content/plugins/vibebp/includes/elementor/profile/groups.php on line 125
+
