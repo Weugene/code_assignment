@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: wplms\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-11 21:06+0530\n"
-"PO-Revision-Date: 2023-08-13 15:26+0000\n"
+"PO-Revision-Date: 2023-08-14 19:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: Русский\n"
 "MIME-Version: 1.0\n"
@@ -198,7 +198,7 @@ msgstr "Назначение"
 
 #: includes/assignments/assignment_functions.php:276
 msgid " submitted by student "
-msgstr " представлено студентом"
+msgstr " отправлено студентом"
 
 #: includes/assignments/assignment_functions.php:277
 msgid "Assignment submitted by Student"
@@ -212,7 +212,7 @@ msgstr "Неверный ID"
 
 #: includes/assignments/assignment_functions.php:302
 msgid " previous submissions removed ! Reloading page ..."
-msgstr " предыдущие сообщения удалены! Перезагружаю страницу..."
+msgstr " предыдущие сообщения удалены! Страница перезагружается..."
 
 #: includes/assignments/assignment_functions.php:304
 #: includes/assignments/assignments.php:1759
@@ -238,7 +238,7 @@ msgstr " Выбран неверный пользователь."
 #: includes/assignments/assignment_functions.php:330
 #: includes/assignments/assignments.php:117
 msgid " Incorrect Assignment"
-msgstr " Неверное назначение"
+msgstr " Неверное задание"
 
 #: includes/assignments/assignment_functions.php:342
 msgid "Assignment Reset for Selected User"
@@ -291,7 +291,7 @@ msgstr "ПРОДОЛЖИТЕЛЬНОСТЬ :"
 #: includes/vibe-course-module/includes/bp-course-ajax.php:871
 #: includes/vibe-course-module/includes/bp-course-template.php:3389
 msgid " out of "
-msgstr " снаружи"
+msgstr " из"
 
 #: includes/assignments/assignment_functions.php:427
 #: includes/vibe-course-module/includes/bp-course-ajax.php:871
@@ -318,7 +318,7 @@ msgstr "Скачать вложение"
 #, php-format
 msgctxt "Assignment submission by User"
 msgid "%s submission by %s"
-msgstr "%s представление %s"
+msgstr "%s отправление %s"
 
 #: includes/assignments/assignments.php:201
 msgid "Enter marks out of "
@@ -606,7 +606,7 @@ msgstr "Загружаемый файл должен быть допустимо
 #: includes/assignments/assignments.php:1577
 #: includes/assignments/assignments.php:2167
 msgid ", and under "
-msgstr ", и под"
+msgstr ", и менее"
 
 #: includes/assignments/assignments.php:1577
 #: includes/assignments/assignments.php:2167
@@ -1306,7 +1306,7 @@ msgstr "Курсы"
 #: includes/vibe-customtypes/custom-post-types.php:199
 #: includes/vibe-customtypes/custom-post-types.php:200
 msgid "Quizzes"
-msgstr "викторины"
+msgstr "Квизы"
 
 #: includes/class.setup.php:67
 #: includes/vibe-customtypes/custom-post-types.php:339
@@ -2625,7 +2625,7 @@ msgstr "Отправная точка"
 
 #: includes/create-course/course_tabs.php:1049
 msgid "PREVIOUS UNIT"
-msgstr "ПРЕДЫДУЩИЙ БЛОК"
+msgstr "ПРЕДЫДУЩИЙ РАЗДЕЛ"
 
 #: includes/create-course/course_tabs.php:1049
 msgid "STARTING POINT"
@@ -2740,7 +2740,7 @@ msgid ""
 "course) than this gets the Course certificate."
 msgstr ""
 "Любой пользователь, набравший больше баллов (средневзвешенное количество "
-"тестов/заданий в курсе), чем это, получает сертификат курса."
+"квизов/заданий в курсе), чем это, получает сертификат курса."
 
 #: includes/create-course/course_tabs.php:1120
 #: includes/vibe-customtypes/custom-post-types.php:454
@@ -2789,7 +2789,7 @@ msgid ""
 "course) than this gets the Course Badge."
 msgstr ""
 "Любой пользователь, набравший больше баллов (средневзвешенное количество "
-"викторин/заданий в курсе), чем это, получает значок курса."
+"квизов/заданий в курсе), чем это, получает значок курса."
 
 #: includes/create-course/course_tabs.php:1157
 #: includes/vibe-customtypes/custom_meta_boxes.php:335
@@ -2927,7 +2927,7 @@ msgstr "УСТАНОВИТЬ УЧЕБНУЮ ПРОГРАММУ"
 
 #: includes/create-course/course_tabs.php:1276
 msgid "Add Units and Quizzes"
-msgstr "Добавьте модули и викторины"
+msgstr "Добавьте Юниты и Квизов"
 
 #: includes/create-course/course_tabs.php:1287
 msgctxt "curriculum_element"
@@ -4723,7 +4723,7 @@ msgstr "Черновик найден"
 
 #: includes/theme/class.course.component.php:669
 msgid "Delete all curriculum including quizzes/units/assignments as well?"
-msgstr "Удалить всю учебную программу, включая тесты/модули/задания?"
+msgstr "Удалить всю учебную программу, включая квизы/юниты/задания?"
 
 #: includes/theme/class.course.component.php:670
 msgid "Mark Resolved"
@@ -4783,7 +4783,7 @@ msgstr "Задания не найдены!"
 
 #: includes/theme/class.course.component.php:685
 msgid "No quizzes found!"
-msgstr "Тесты не найдены!"
+msgstr "Квизы не найдены!"
 
 #: includes/theme/class.course.component.php:686
 msgid "No units found!"
@@ -5241,7 +5241,7 @@ msgstr "У вас есть несколько вопросов без ответ
 
 #: includes/theme/class.course.component.php:814
 msgid "Total Marks"
-msgstr "Всего оценок"
+msgstr "Максимальная Оценка"
 
 #: includes/theme/class.course.component.php:815
 msgid "Unattempted"
@@ -5757,12 +5757,12 @@ msgstr "Нет ограничения по времени"
 #: includes/theme/class.course.component.php:961
 msgctxt "course status"
 msgid "Previous Unit"
-msgstr "Предыдущий блок"
+msgstr "Предыдущий раздел"
 
 #: includes/theme/class.course.component.php:962
 msgctxt "course status"
 msgid "Next Unit"
-msgstr "Следующая единица"
+msgstr "Следующий раздел"
 
 #: includes/theme/class.course.component.php:963
 msgctxt "course status"
@@ -7238,7 +7238,7 @@ msgstr "Курсы"
 #: includes/vibe-course-module/includes/api/v4/class-api-user-controller.php:5065
 msgctxt "api"
 msgid "Quizzes"
-msgstr "викторины"
+msgstr "Квизы"
 
 #: includes/vibe-course-module/includes/api/v3/class-api-user-controller.php:768
 #: includes/vibe-course-module/includes/api/v3/class-api-user-controller.php:3827
@@ -7613,7 +7613,7 @@ msgstr "Ответил на комментарий."
 #, php-format
 msgctxt "API message"
 msgid " %s replied on your comment on unit %s "
-msgstr " %s ответил на ваш комментарий к устройству %s"
+msgstr " %s ответил на ваш комментарий к юниту %s"
 
 #: includes/vibe-course-module/includes/api/v3/class-api-user-controller.php:3144
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:5327
@@ -8306,7 +8306,7 @@ msgstr "Недействительный тест"
 
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:4236
 msgid "No quizzes published by instructor."
-msgstr "Тесты, опубликованные инструктором, отсутствуют."
+msgstr "Квизы, опубликованные инструктором, отсутствуют."
 
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:4309
 msgid "No units published by instructor."
@@ -8665,13 +8665,13 @@ msgstr "Дата/время окончания"
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:5779
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2320
 msgid "Question scores (* for static quizzes only)"
-msgstr "Баллы за вопросы (* только для статических тестов)"
+msgstr "Баллы за вопросы (* только для статических квизов)"
 
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:5780
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2321
 msgid "Question Answers (* for static quizzes only, useful for surveys)"
 msgstr ""
-"Вопросы и ответы (* только для статических тестов, полезно для опросов)"
+"Вопросы и ответы (* только для статических квизов, полезно для опросов)"
 
 #: includes/vibe-course-module/includes/api/v4/class-api-instructor-controller.php:5781
 msgid "Score Percentage"
@@ -8804,11 +8804,11 @@ msgstr "Активность BuddyPress не активна."
 
 #: includes/vibe-course-module/includes/api/v4/class-api-student-controller.php:525
 msgid "No Quizzes found, matching your criteria."
-msgstr "Тесты, соответствующие вашим критериям, не найдены."
+msgstr "Квизы, соответствующие вашим критериям, не найдены."
 
 #: includes/vibe-course-module/includes/api/v4/class-api-student-controller.php:528
 msgid "No Quizzes found."
-msgstr "Викторины не найдены."
+msgstr "Квизы не найдены."
 
 #: includes/vibe-course-module/includes/api/v4/class-api-student-controller.php:729
 msgctxt "certificate status"
@@ -8867,7 +8867,7 @@ msgstr "Объявления и новости"
 
 #: includes/vibe-course-module/includes/api/v4/class-api-student-controller.php:1016
 msgid "QnA"
-msgstr "QnA"
+msgstr "Вопросы и Ответы"
 
 #: includes/vibe-course-module/includes/api/v4/class-api-student-controller.php:1023
 msgctxt "student course view in pwa"
@@ -9169,7 +9169,7 @@ msgstr "Предыдущая викторина"
 #: includes/vibe-course-module/includes/bp-course-actions.php:363
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2590
 msgid "Previous Unit"
-msgstr "Предыдущий блок"
+msgstr "Предыдущий раздел"
 
 #: includes/vibe-course-module/includes/bp-course-actions.php:366
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2593
@@ -9189,7 +9189,7 @@ msgstr "Следующая викторина"
 #: includes/vibe-course-module/includes/bp-course-actions.php:458
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2646
 msgid "Next Unit"
-msgstr "Следующая единица"
+msgstr "Следующий раздел"
 
 #: includes/vibe-course-module/includes/bp-course-actions.php:451
 #: includes/vibe-course-module/includes/bp-course-ajax.php:2649
@@ -9748,17 +9748,17 @@ msgstr "%1$s просмотрел %2$s, %3$s на сайте %4$s"
 #: includes/vibe-course-module/includes/bp-course-activity.php:840
 #, php-format
 msgid "%1$s reviewed the %2$s, %3$s"
-msgstr "%1$s просмотрел %2$s, %3$s"
+msgstr "%1$s оценил(а) %2$s, %3$s"
 
 #: includes/vibe-course-module/includes/bp-course-activity.php:848
 #, php-format
 msgid "%1$s answered the %2$s, %3$s, on the site %4$s"
-msgstr "%1$s ответил на %2$s, %3$s на сайте %4$s"
+msgstr "%1$s ответил(а) на %2$s, %3$s на сайте %4$s"
 
 #: includes/vibe-course-module/includes/bp-course-activity.php:850
 #, php-format
 msgid "%1$s answered the %2$s, %3$s"
-msgstr "%1$s ответил на %2$s, %3$s"
+msgstr "%1$s ответил(а) на %2$s, %3$s"
 
 #: includes/vibe-course-module/includes/bp-course-activity.php:857
 #, php-format
@@ -9888,7 +9888,7 @@ msgstr "КУРС ПОМЕТЕН ЗАВЕРШЕННЫМ"
 #, php-format
 msgctxt "Course submission by User in course - admin - submissions"
 msgid "%s submission by %s"
-msgstr "%s представление %s"
+msgstr "%s отправление %s"
 
 #: includes/vibe-course-module/includes/bp-course-ajax.php:871
 msgid "MARKS: "
@@ -9917,7 +9917,7 @@ msgstr "Отметить курс как завершенный"
 
 #: includes/vibe-course-module/includes/bp-course-ajax.php:913
 msgid " Incorrect Quiz Id."
-msgstr " Неверный идентификатор теста."
+msgstr " Неверный ID квиза."
 
 #: includes/vibe-course-module/includes/bp-course-ajax.php:964
 #: includes/vibe-course-module/includes/bp-course-ajax.php:1024
@@ -11194,7 +11194,7 @@ msgstr "Сертификат недействителен для пользов�
 #: includes/vibe-course-module/includes/bp-course-functions.php:2136
 #, php-format
 msgid "(%s) Seats full"
-msgstr "(%s) Места заняты"
+msgstr "(%s) Нет свободных мест"
 
 #: includes/vibe-course-module/includes/bp-course-functions.php:2273
 msgid "Evaluate course submissions"
@@ -11271,7 +11271,7 @@ msgstr "Достижения"
 
 #: includes/vibe-course-module/includes/bp-course-loader.php:260
 msgid "My Quizzes"
-msgstr "Мои викторины"
+msgstr "Мои Квизы"
 
 #: includes/vibe-course-module/includes/bp-course-loader.php:270
 msgid "My Assignments"
@@ -11299,7 +11299,7 @@ msgstr "Управление объектами"
 
 #: includes/vibe-course-module/includes/bp-course-loader.php:332
 msgid "Manage Quizzes"
-msgstr "Управление викторинами"
+msgstr "Управление Квизами"
 
 #: includes/vibe-course-module/includes/bp-course-loader.php:342
 msgid "Manage Assignments"
@@ -11326,7 +11326,7 @@ msgid ""
 msgstr ""
 "%sПеренос шаблонов электронной почты WPLMS в электронную почту BuddyPress.%s "
 "Почтовые шаблоны %s будут перенесены. См. %s дополнительную информацию и "
-"руководство%s %s Перенесите все шаблоны электронной почты в BuddyPress %s %s"
+"инструкции%s %s Перенесите все шаблоны электронной почты в BuddyPress %s %s"
 
 #: includes/vibe-course-module/includes/bp-course-mailer.php:250
 msgctxt "Migrate WPLMS emails to BuddyPress success message"
@@ -11898,7 +11898,7 @@ msgstr "Ответ опубликован на ваш комментарий в 
 #: includes/vibe-course-module/includes/bp-course-mailer.php:719
 #, php-format
 msgid "%s replied on your comment in Unit %s : %s "
-msgstr "%s ответил на ваш комментарий в Unit %s : %s"
+msgstr "%s ответил на ваш комментарий в юните %s : %s"
 
 #: includes/vibe-course-module/includes/bp-course-mailer.php:722
 msgid "Instructor : Student added a comment on Unit"
@@ -12326,8 +12326,7 @@ msgstr "Отправка контактной формы"
 #: includes/vibe-course-module/includes/bp-course-mailer.php:869
 #, php-format
 msgid " User contacted via contact form on your site <br> %s "
-msgstr ""
-" С пользователем связались через контактную форму на вашем сайте <br> %s"
+msgstr "Пользователь связался через контактную форму на вашем сайте <br> %s"
 
 #: includes/vibe-course-module/includes/bp-course-mailer.php:872
 msgid ""
@@ -12348,8 +12347,8 @@ msgid ""
 " You have successfully finished the course %s. Now please take a moment and "
 "review this course. "
 msgstr ""
-" Вы успешно закончили курс %s. Теперь, пожалуйста, найдите минутку и "
-"просмотрите этот курс."
+" Вы успешно закончили курс %s. Поздравляю! Мы были бы очень рады Вашей "
+"оценке данного курса."
 
 #: includes/vibe-course-module/includes/bp-course-mailer.php:877
 msgid "Question feedback email."
@@ -12724,7 +12723,7 @@ msgstr "Вы добавили комментарий в Unit"
 #: includes/vibe-course-module/includes/bp-course-notifications.php:1641
 #, php-format
 msgid "%s replied on your comment in unit \"%s\" : %s "
-msgstr "%s ответил на ваш комментарий в блоке \"%s\": %s"
+msgstr "%s ответил на ваш комментарий в юните \"%s\": %s"
 
 #: includes/vibe-course-module/includes/bp-course-notifications.php:1643
 msgid "Reply on your comment"
@@ -13263,7 +13262,7 @@ msgstr "Учащийся %s добавил комментарий к разде�
 #: includes/vibe-course-module/includes/bp-course-notifications.php:2760
 #, php-format
 msgid "%s replied on your comment in unit \"%s\" in Course : %s"
-msgstr "%s ответил на ваш комментарий в блоке \"%s\" курса: %s"
+msgstr "%s ответил на ваш комментарий в юните \"%s\" курса: %s"
 
 #: includes/vibe-course-module/includes/bp-course-notifications.php:2763
 #, php-format
@@ -13519,7 +13518,7 @@ msgstr "У вас есть несколько вопросов без ответ
 #: includes/vibe-course-module/includes/bp-course-quiz.php:300
 msgctxt "react quiz"
 msgid "Total Marks"
-msgstr "Всего оценок"
+msgstr "Максимальная Оценка"
 
 #: includes/vibe-course-module/includes/bp-course-quiz.php:301
 msgctxt "react quiz"
@@ -13713,7 +13712,7 @@ msgstr "Посмотреть объяснение ответа"
 #: includes/vibe-course-module/includes/bp-course-template.php:3302
 #: includes/vibe-customtypes/metaboxes/meta_box.php:664
 msgid "Total Marks :"
-msgstr "Всего оценок:"
+msgstr "Максимальная Оценка:"
 
 #: includes/vibe-course-module/includes/bp-course-template.php:3103
 #: includes/vibe-course-module/includes/bp-course-template.php:3105
@@ -13864,7 +13863,7 @@ msgstr "Выберите викторину, чтобы начать тур"
 #: includes/vibe-course-module/includes/bp-course-tour.php:646
 msgctxt "no course found messsage in popup"
 msgid "No quizzes found"
-msgstr "Тесты не найдены"
+msgstr "Квизы не найдены"
 
 #: includes/vibe-course-module/includes/bp-course-widgets.php:43
 #: includes/vibe-course-module/includes/bp-course-widgets.php:45
@@ -14407,7 +14406,7 @@ msgstr " События"
 
 #: includes/vibe-course-module/includes/templates/course/single/front.php:33
 msgid " STUDENTS ENROLLED"
-msgstr " ЗАЧИСЛЕННЫХ СТУДЕНТОВ"
+msgstr " ЗАЧИСЛЕННЫЕ СТУДЕНТЫ"
 
 #: includes/vibe-course-module/includes/templates/course/single/front.php:64
 msgid "READ MORE"
@@ -14651,7 +14650,7 @@ msgstr "Все теги"
 
 #: includes/vibe-customtypes/custom-post-types.php:202
 msgid "All Quizzes"
-msgstr "Все викторины"
+msgstr "Все Квизы"
 
 #: includes/vibe-customtypes/custom-post-types.php:225
 msgid "Add New Quiz type"
@@ -15083,8 +15082,8 @@ msgid ""
 "Evalute Courses based on Quizzes scores available in Course (* Requires at "
 "least 1 Quiz in course)"
 msgstr ""
-"Оценивайте курсы на основе результатов викторин, доступных в курсе (* "
-"требуется как минимум 1 викторина в курсе)"
+"Оценивайте курсы на основе результатов квизов, доступных в курсе (* "
+"требуется как минимум 1 квиз в курсе)"
 
 #: includes/vibe-customtypes/custom_meta_boxes.php:306
 msgid "Date from which Course Begins"
@@ -15195,7 +15194,7 @@ msgstr "Параметр «Продолжительность капания»"
 msgid ""
 "Set Course Curriculum, prepare units and quizzes before setting up curriculum"
 msgstr ""
-"Установите учебный план курса, подготовьте разделы и тесты перед настройкой "
+"Установите учебный план курса, подготовьте юниты и квизы перед настройкой "
 "учебного плана"
 
 #: includes/vibe-customtypes/custom_meta_boxes.php:448
@@ -16023,7 +16022,7 @@ msgstr "Пользователь"
 #: includes/vibe-customtypes/includes/api/class-apps.php:635
 msgctxt "app table label"
 msgid "Access Token"
-msgstr "Токен доступа"
+msgstr "Токен Доступа"
 
 #: includes/vibe-customtypes/includes/api/class-apps.php:599
 #: includes/vibe-customtypes/includes/api/class-apps.php:635
@@ -16178,8 +16177,8 @@ msgid ""
 "Export connected modules, like units,quizzes,assignments with courses, "
 "questions with quizzes etc."
 msgstr ""
-"Экспортируйте связанные модули, такие как модули, викторины, задания с "
-"курсами, вопросы с викторинами и т. д."
+"Экспортируйте связанные модули, такие как юниты, квизы, задания с курсами, "
+"вопросы с квизами и т. д."
 
 #: includes/vibe-customtypes/includes/class.export.php:75
 msgid "Export Users"
@@ -16393,7 +16392,7 @@ msgstr "Длительность курса"
 #: includes/vibe-customtypes/includes/course_settings.php:327
 msgctxt "label in details array"
 msgid "* Course Location (if enabled)"
-msgstr "* Местоположение курса (если включено)"
+msgstr "* Где проходит курс (если включено)"
 
 #: includes/vibe-customtypes/includes/course_settings.php:331
 msgctxt "label in details array"
@@ -16479,13 +16478,12 @@ msgstr " Все пользователи курса"
 msgctxt "privacy option for course details"
 msgid " All Course pursuing users (excludes finished/not started)"
 msgstr ""
-" Все курсы, преследующие пользователей (за исключением завершенных/не "
-"начатых)"
+" Все курсы, начатые пользователями (за исключением завершенных/не начатых)"
 
 #: includes/vibe-customtypes/includes/course_settings.php:409
 msgctxt "privacy option for course details"
 msgid " All instructors + Admins"
-msgstr " Все преподаватели + администраторы"
+msgstr " Все преподаватели + Администраторы"
 
 #: includes/vibe-customtypes/includes/course_settings.php:443
 msgctxt "Course Detail Sidebar Number of Units"
@@ -16500,12 +16498,12 @@ msgstr "Завершено единиц"
 #: includes/vibe-customtypes/includes/course_settings.php:472
 msgctxt "Course Detail Sidebar Number of Quizzes"
 msgid "Number of Quizzes"
-msgstr "Количество викторин"
+msgstr "Количество Квизов"
 
 #: includes/vibe-customtypes/includes/course_settings.php:474
 msgctxt "Course Detail Sidebar Number of Quizzes Completed"
 msgid "Quizzes Completed"
-msgstr "Тесты завершены"
+msgstr "Завершенные Квизы"
 
 #: includes/vibe-customtypes/includes/course_settings.php:502
 msgctxt "Course Detail Sidebar Unit Duration"
@@ -17983,7 +17981,7 @@ msgstr "Включить блокировку викторины в прилож
 
 #: includes/vibe-customtypes/includes/musettings.php:249
 msgid "Avoid cheating in quizzes by enabling this option."
-msgstr "Избегайте мошенничества в викторинах, включив эту опцию."
+msgstr "Избегайте мошенничества в квизах, включив эту опцию."
 
 #: includes/vibe-customtypes/includes/musettings.php:252
 msgid "App Version"
@@ -18124,7 +18122,7 @@ msgstr "Включить функцию назначения"
 
 #: includes/vibe-customtypes/includes/musettings.php:457
 msgid "Will allow instructor to assign quizzes/assignments to users"
-msgstr "Позволит инструктору назначать тесты / задания пользователям"
+msgstr "Позволит инструктору назначать квизы / задания пользователям"
 
 #: includes/vibe-customtypes/includes/musettings.php:460
 msgid "Gamification"
@@ -18617,7 +18615,7 @@ msgid ""
 "all the units and quizzes."
 msgstr ""
 "Скрывает кнопку «Завершить курс» и автоматически запускается после "
-"завершения всех модулей и тестов."
+"завершения всех юнитов и тестов."
 
 #: includes/vibe-customtypes/includes/musettings.php:809
 msgid "Skip Course status page"
@@ -19767,7 +19765,7 @@ msgstr "Создавайте вопросы с помощью ИИ"
 
 #: includes/vibe-customtypes/includes/musettings.php:2669
 msgid " Pre Course Quiz"
-msgstr " Викторина перед курсом"
+msgstr " Предкурсовая викторина"
 
 #: includes/vibe-customtypes/includes/musettings.php:2670
 msgid "Take a Pre Test to enroll users in courses"
@@ -20733,7 +20731,7 @@ msgstr "Пожалуйста, ознакомьтесь с Условиями и�
 
 #: includes/vibe-customtypes/includes/tips.php:1324
 msgid " I agree to these Terms and Conditions"
-msgstr " Я согласен с этими Условиями"
+msgstr " Я согласен с этими условиями"
 
 #: includes/vibe-customtypes/includes/tips.php:1466
 msgctxt "wplms"
@@ -20876,7 +20874,7 @@ msgstr ""
 #: includes/vibe-customtypes/includes/tips.php:2563
 #: includes/vibe-customtypes/includes/tips.php:2580
 msgid "Access Date"
-msgstr "Дата доступа"
+msgstr "Дата Доступа"
 
 #: includes/vibe-customtypes/includes/tips.php:2564
 #: includes/vibe-customtypes/includes/tips.php:2581
@@ -20886,7 +20884,7 @@ msgstr "Дата, когда объект доступен"
 #: includes/vibe-customtypes/includes/tips.php:2569
 #: includes/vibe-customtypes/includes/tips.php:2587
 msgid "Access Time"
-msgstr "Время доступа"
+msgstr "Время Доступа"
 
 #: includes/vibe-customtypes/includes/tips.php:2570
 #: includes/vibe-customtypes/includes/tips.php:2588
@@ -22612,7 +22610,7 @@ msgstr "Объявление Виджет для Dashboard"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/announcements.php:16
 msgid " DASHBOARD : Instructor announcement Widget"
-msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Виджет объявлений инструктора"
+msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Виджет Объявлений Инструктора"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/announcements.php:53
 #: includes/wplms-dashboard/includes/widgets/instructor/announcements.php:128
@@ -22831,7 +22829,7 @@ msgstr "Виджет линии для панели инструментов"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/break.php:15
 msgid " DASHBOARD : Line Break"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: разрыв строки"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Разрыв Строки"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/break.php:43
 msgid "Line Break : New Line"
@@ -22843,7 +22841,7 @@ msgstr "Простая статистика для инструкторов"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/dash_instructor_stats.php:15
 msgid " DASHBOARD : Instructor Simple Stats"
-msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Простая статистика инструктора"
+msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Простая Статистика Инструктора"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/dash_instructor_stats.php:401
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_commissions.php:328
@@ -22893,7 +22891,7 @@ msgstr "Виджет Instructing Modules для Dashboard"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructing_modules.php:15
 msgid " DASHBOARD : Instructing Modules"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Модули инструкций"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Модули Инструкторов"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructing_modules.php:40
 msgid "Attachment"
@@ -22958,7 +22956,7 @@ msgstr "Статистика комиссии WooCommerce для инструк�
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_commissions.php:16
 msgid " DASHBOARD : Instructor Commission Stats"
-msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Статистика комиссии инструктора"
+msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Статистика Комиссии Инструктора"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_commissions.php:42
 msgid "Commissions Calculated"
@@ -22975,7 +22973,7 @@ msgstr "Виджет статистики инструктора"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_stats.php:16
 msgid " DASHBOARD : Instructor Stats"
-msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Статистика инструктора"
+msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Статистика Инструктора"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_stats.php:46
 msgid "Show graph"
@@ -23028,7 +23026,7 @@ msgstr "Виджет «Студенты-инструкторы»"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_students.php:15
 msgid " DASHBOARD : Instructor Students"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Студенты-инструкторы"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Студенты-Инструкторы"
 
 #: includes/wplms-dashboard/includes/widgets/instructor/instructor_students.php:40
 msgid "No Student"
@@ -23050,7 +23048,7 @@ msgstr "Последние действия от студента"
 
 #: includes/wplms-dashboard/includes/widgets/student/activity_widget.php:18
 msgid " DASHBOARD : Recent Activity"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: недавняя активность"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Недавняя Активность"
 
 #: includes/wplms-dashboard/includes/widgets/student/activity_widget.php:39
 msgid "No Unread messages found"
@@ -23136,7 +23134,7 @@ msgstr "Контактная форма Виджет"
 
 #: includes/wplms-dashboard/includes/widgets/student/contact_users.php:16
 msgid " DASHBOARD : Contact Form"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: контактная форма"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Контактная Форма"
 
 #: includes/wplms-dashboard/includes/widgets/student/contact_users.php:40
 msgid "Select user groups"
@@ -23204,7 +23202,7 @@ msgstr "Успеваемость учащихся на курсах"
 
 #: includes/wplms-dashboard/includes/widgets/student/course_progress.php:29
 msgid " DASHBOARD : Course Progress"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Ход выполнения курса"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Прогресс по Курсу"
 
 #: includes/wplms-dashboard/includes/widgets/student/course_progress.php:80
 msgid "No enrolled Courses!"
@@ -23219,12 +23217,11 @@ msgid ""
 "My Courses, Units, Quizzes, Assignments, Finished Courses widget for "
 "Dashboard"
 msgstr ""
-"Мои курсы, модули, викторины, задания, виджет «Завершенные курсы» для панели "
-"инструментов"
+"Мои Курсы, Юниты, Квизы, Задания, виджет «Завершенные Курсы» для Дашборда"
 
 #: includes/wplms-dashboard/includes/widgets/student/my_modules.php:15
 msgid " DASHBOARD : My Modules Widget"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: виджет «Мои модули»"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Виджет «Мои Модули»"
 
 #: includes/wplms-dashboard/includes/widgets/student/my_modules.php:41
 msgid "Downloads"
@@ -23236,7 +23233,7 @@ msgstr "Показать мои курсы"
 
 #: includes/wplms-dashboard/includes/widgets/student/my_modules.php:303
 msgid "Show My Quizzes"
-msgstr "Показать мои викторины"
+msgstr "Показать Мои Квизы"
 
 #: includes/wplms-dashboard/includes/widgets/student/my_modules.php:307
 msgid "Show My Assignments"
@@ -23261,7 +23258,7 @@ msgstr "Новости для членов"
 
 #: includes/wplms-dashboard/includes/widgets/student/news.php:18
 msgid " DASHBOARD : Member News"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Новости участников"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Новости Участников"
 
 #: includes/wplms-dashboard/includes/widgets/student/news.php:101
 msgid "Maximum Number of New blocks in carousel"
@@ -23273,7 +23270,7 @@ msgstr "Виджет «Примечания и обсуждения» для п�
 
 #: includes/wplms-dashboard/includes/widgets/student/notes_discussions.php:15
 msgid " DASHBOARD : Notes & Discussion"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Примечания и обсуждение"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Примечание и Обсуждение"
 
 #: includes/wplms-dashboard/includes/widgets/student/notes_discussions.php:41
 msgid "Not Data"
@@ -23313,7 +23310,7 @@ msgstr "Простая статистика для студентов"
 
 #: includes/wplms-dashboard/includes/widgets/student/student_simple_stats.php:15
 msgid " DASHBOARD : Simple Stats"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Простая статистика"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Простая Статистика"
 
 #: includes/wplms-dashboard/includes/widgets/student/student_simple_stats.php:309
 msgid "Finished Courses/Total Courses"
@@ -23337,7 +23334,7 @@ msgstr "Виджет статистики учащихся"
 
 #: includes/wplms-dashboard/includes/widgets/student/student_stats.php:15
 msgid " DASHBOARD : Student Stats"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Статистика учащихся"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Статистика Учащихся"
 
 #: includes/wplms-dashboard/includes/widgets/student/student_stats.php:280
 #: includes/wplms-dashboard/includes/widgets/student/student_stats.php:299
@@ -23373,7 +23370,7 @@ msgstr "Текстовый виджет для панели инструмент
 
 #: includes/wplms-dashboard/includes/widgets/student/text_widget.php:15
 msgid " DASHBOARD : Text Widget"
-msgstr " ПРИБОРНАЯ ПАНЕЛЬ: текстовый виджет"
+msgstr " ПРИБОРНАЯ ПАНЕЛЬ: Текстовый Виджет"
 
 #: includes/wplms-dashboard/includes/widgets/student/text_widget.php:82
 msgid "Text Content"
@@ -23385,7 +23382,7 @@ msgstr "Виджет списка дел"
 
 #: includes/wplms-dashboard/includes/widgets/student/todo_task.php:14
 msgid " DASHBOARD : To Do Tasks"
-msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: выполнять задачи"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Список Задач"
 
 #: includes/wplms-dashboard/includes/widgets/student/todo_task.php:42
 msgid "SAVE"

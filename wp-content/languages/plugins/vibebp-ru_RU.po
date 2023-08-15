@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: vibebp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-10 18:05+0530\n"
-"PO-Revision-Date: 2023-08-14 16:51+0000\n"
+"PO-Revision-Date: 2023-08-14 19:23+0000\n"
 "Last-Translator: \n"
-"Language-Team: Russian\n"
+"Language-Team: Русский\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -704,7 +704,7 @@ msgstr "Допустимый размер файла: %s"
 #: includes/elementor/profile/friends.php:87
 #: includes/elementor/profile/groups.php:76
 msgid "Alphabetical"
-msgstr "Алфавитный"
+msgstr "А-Я"
 
 #: includes/class.register.php:1055
 msgid "Amount"
@@ -4833,7 +4833,7 @@ msgstr "Адрес электронной почты"
 #: includes/class.register.php:888
 msgctxt "login"
 msgid "Active"
-msgstr "Активный"
+msgstr "Активные"
 
 #: includes/class.register.php:972
 msgctxt "login"
@@ -4904,7 +4904,7 @@ msgstr "Разрешенные типы файлов"
 #: includes/class.register.php:985
 msgctxt "login"
 msgid "Alphabetical"
-msgstr "Алфавитный"
+msgstr "А-Я"
 
 #: includes/class.register.php:378
 msgctxt "login"
@@ -5116,7 +5116,7 @@ msgstr "Прямо сейчас"
 #: includes/class.register.php:422
 msgctxt "login"
 msgid "Labels"
-msgstr "Этикетки"
+msgstr "Метки"
 
 #: includes/class.register.php:918 includes/class.register.php:982
 msgctxt "login"
@@ -5231,17 +5231,17 @@ msgstr "Новое сообщение"
 #: includes/class.register.php:890
 msgctxt "login"
 msgid "Newest"
-msgstr "Новейшие"
+msgstr "Сначала новые"
 
 #: includes/class.register.php:855 includes/class.register.php:871
 msgctxt "login"
 msgid "Newest First"
-msgstr "Новички вперед"
+msgstr "Новые Сначала"
 
 #: includes/class.register.php:893
 msgctxt "login"
 msgid "Newest first"
-msgstr "Новички вперед"
+msgstr "Новые сначала"
 
 #: includes/class.register.php:920 includes/class.register.php:984
 msgctxt "login"
@@ -6855,7 +6855,7 @@ msgstr "Темный режим"
 #: includes/class.register.php:372
 msgctxt "profile"
 msgid "Light mode"
-msgstr "Легкий режим"
+msgstr "Светлый режим"
 
 #: includes/class.layouts.php:382
 msgid "Profile Card"

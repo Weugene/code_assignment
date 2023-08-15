@@ -1,0 +1,882 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vibe Calendar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-10 11:39+0000\n"
+"PO-Revision-Date: 2023-08-14 19:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: vibecal"
+
+#: class.init.php:365
+msgid "Accept"
+msgstr "Принять"
+
+#: class.init.php:363
+msgid "Accepted"
+msgstr "Принято"
+
+#: class.settings.php:330
+msgid "Add"
+msgstr "Добавлять"
+
+#: class.init.php:345
+msgid "Add Event"
+msgstr "Добавить событие"
+
+#: class.settings.php:422
+msgid "Add Field"
+msgstr "Добавить поле"
+
+#: class.settings.php:221
+msgid "Add More"
+msgstr "Добавить больше"
+
+#: class.init.php:347
+msgid "Add New"
+msgstr "Добавить новое"
+
+#: class.init.php:435
+msgid "Add New Event"
+msgstr "Добавить новое событие"
+
+#: class.settings.php:370 class.settings.php:435
+msgid "Add new option"
+msgstr "Добавить новую опцию"
+
+#: class.settings.php:486
+msgid "Add Search block"
+msgstr "Добавить блок поиска"
+
+#: class.settings.php:307
+msgid "Add Searchable Instructor Field"
+msgstr "Добавить поле инструктора с возможностью поиска"
+
+#: class.init.php:405
+msgid "Added"
+msgstr "Добавлен"
+
+#: class.api.php:1172 class.api.php:1181
+msgctxt "Added new label"
+msgid "Added new label"
+msgstr "Добавлен новый ярлык"
+
+#: class.init.php:76
+msgid "Administrator"
+msgstr "Администратор"
+
+#: class.init.php:308
+msgid "Anyone can join"
+msgstr "Каждый может присоединиться"
+
+#: class.api.php:1302
+msgctxt "API request"
+msgid "Sorry no results found!Try another search keyword!"
+msgstr ""
+"Извините, ничего не найдено!Попробуйте другое ключевое слово для поиска!"
+
+#: class.elementor.php:96
+msgid "APR"
+msgstr "АПР"
+
+#: class.elementor.php:100
+msgid "AUG"
+msgstr "АВГ"
+
+#: class.init.php:157 class.init.php:214
+msgid "Calendar"
+msgstr "Календарь"
+
+#: class.settings.php:34 class.settings.php:38 class.settings.php:38
+msgid "Calendar "
+msgstr "Календарь"
+
+#. Description of the plugin
+msgid "Calendar for VibeBP Framework"
+msgstr "Календарь для VibeBP Framework"
+
+#: class.api.php:356 class.api.php:374 class.api.php:456 class.api.php:902
+#: class.api.php:1554 class.api.php:1593
+msgid "Can not make changes."
+msgstr "Не могу внести изменения."
+
+#: class.elementor.php:109 class.init.php:354
+msgid "Cancel"
+msgstr "Отмена"
+
+#: class.init.php:126
+msgid "Connect to Course"
+msgstr "Подключиться к курсу"
+
+#: class.init.php:114
+msgid "Connect to Group"
+msgstr "Подключиться к группе"
+
+#: class.elementor.php:29
+msgid "Controls"
+msgstr "Элементы управления"
+
+#: class.actions.php:42
+msgid "Course connected with Calendar event"
+msgstr "Курс, связанный с событием календаря"
+
+#: class.init.php:90
+msgid "Course events"
+msgstr "События курса"
+
+#: class.actions.php:43
+#, php-format
+msgid "Course is connected with Calendar event %s"
+msgstr "Курс связан с событием календаря %s"
+
+#: class.init.php:352
+msgid "Create Event"
+msgstr "Создать событие"
+
+#: class.init.php:411
+msgid "Create Event with Google Meet"
+msgstr "Создать мероприятие с помощью Google Meet"
+
+#: class.api.php:480 class.api.php:801 class.api.php:843 class.api.php:947
+#: class.api.php:1030 class.api.php:1139 class.api.php:1188 class.api.php:1268
+msgctxt "Data missing"
+msgid "Data missing"
+msgstr "Данные отсутствуют"
+
+#: class.api.php:601 class.api.php:755 class.api.php:1517 class.api.php:1581
+#: class.api.php:1605
+msgctxt "Data missing!"
+msgid "Data missing!"
+msgstr "Данные отсутствуют!"
+
+#: class.api.php:474
+msgctxt "Date is not valid"
+msgid "Date is not valid"
+msgstr "Дата недействительна"
+
+#: class.init.php:237 class.init.php:370
+msgid "Day"
+msgstr "День"
+
+#: class.elementor.php:104
+msgid "DEC"
+msgstr "ДЕК"
+
+#: class.init.php:367
+msgid "Delete"
+msgstr "Удалить"
+
+#: class.init.php:403
+msgid "Device"
+msgstr "Устройство"
+
+#: class.init.php:319
+msgid "disable"
+msgstr "запрещать"
+
+#: class.init.php:346
+msgid "Edit Event"
+msgstr "Редактировать событие"
+
+#: class.elementor.php:42
+msgctxt "elementor widget"
+msgid "Grid"
+msgstr "Сетка"
+
+#: class.elementor.php:41
+msgctxt "elementor widget"
+msgid "List"
+msgstr "Список"
+
+#: class.elementor.php:43
+msgctxt "elementor widget"
+msgid "Monthly Calendar"
+msgstr "Ежемесячный календарь"
+
+#: class.elementor.php:44
+msgctxt "elementor widget"
+msgid "Weekly Calendar"
+msgstr "Еженедельный календарь"
+
+#: class.init.php:318
+msgid "enable"
+msgstr "позволить"
+
+#: class.init.php:93
+msgid "Enable Course specific events"
+msgstr "Включить специальные события курса"
+
+#: class.settings.php:46
+msgid "Enable Google Event Create"
+msgstr "Включить создание событий Google"
+
+#: class.init.php:85
+msgid "Enable Group specific events"
+msgstr "Включить групповые события"
+
+#: class.init.php:294
+msgid "End"
+msgstr "Конец"
+
+#: class.elementor.php:111 class.init.php:350 class.init.php:361
+msgid "Ends"
+msgstr "Заканчивается"
+
+#: class.init.php:262
+msgid "Enter a  description about the event."
+msgstr "Введите описание события."
+
+#: class.init.php:351
+msgid "Enter Description"
+msgstr "Введите описание"
+
+#: class.init.php:348
+msgid "Enter Title"
+msgstr "Введите название"
+
+#: class.api.php:1081
+msgctxt "Error occured"
+msgid "Error occured"
+msgstr "Произошла ошибка"
+
+#: class.init.php:275
+msgid "Event Color"
+msgstr "Цвет события"
+
+#: class.init.php:282
+msgid "Event color."
+msgstr "Цвет события."
+
+#: class.init.php:410
+msgid "Event Creation not yet enabled"
+msgstr "Создание события еще не включено"
+
+#: class.api.php:1625
+msgid "Event deleted."
+msgstr "Мероприятие удалено."
+
+#: class.init.php:255
+msgid "Event Description"
+msgstr "Описание события"
+
+#: class.api.php:1645
+msgid "Event hidden from calendar."
+msgstr "Событие скрыто в календаре."
+
+#: class.init.php:272
+msgid "Event Labels."
+msgstr "Ярлыки событий."
+
+#: class.init.php:265
+msgid "Event Labels:"
+msgstr "Ярлыки событий:"
+
+#: class.init.php:408
+msgid "Event synced"
+msgstr "Событие синхронизировано"
+
+#: class.init.php:492
+msgctxt "Event tab"
+msgid "Events"
+msgstr "События"
+
+#: class.init.php:246 class.init.php:252
+msgid "Event Title"
+msgstr "Название события"
+
+#: class.init.php:303
+msgid "Event Type"
+msgstr "Тип события"
+
+#: class.api.php:1523
+msgctxt "EventOn Plugin not active!"
+msgid "EventOn Plugin not active!"
+msgstr "Плагин EventOn не активен!"
+
+#: class.init.php:59 class.init.php:432 class.init.php:434 class.init.php:436
+msgid "Events"
+msgstr "События"
+
+#: class.api.php:588 class.api.php:676 class.api.php:741 class.api.php:1506
+msgctxt "Events found"
+msgid "Events found"
+msgstr "Найдено событий"
+
+#: class.init.php:392
+msgid "Everyday"
+msgstr "Каждый день"
+
+#: class.init.php:376
+msgid "Exit from event"
+msgstr "Выход из мероприятия"
+
+#: class.elementor.php:94
+msgid "FEB"
+msgstr "февраль"
+
+#: class.init.php:399
+msgid "FRI"
+msgstr "ПТ"
+
+#: class.settings.php:57
+msgid "Get your Project API Key"
+msgstr "Получите API-ключ вашего проекта"
+
+#: class.settings.php:64
+msgid "Get your Project Client ID"
+msgstr "Получите свой идентификатор клиента проекта"
+
+#: class.init.php:409
+msgid "Google Meet"
+msgstr "Гугл встречи"
+
+#: class.settings.php:53
+msgid "Google Project API Key"
+msgstr "Ключ API проекта Google"
+
+#: class.settings.php:60
+msgid "Google Project Client ID"
+msgstr "Идентификатор клиента проекта Google"
+
+#: class.actions.php:59
+msgid "Group connected with Calendar event"
+msgstr "Группа, связанная с событием календаря"
+
+#: class.init.php:82
+msgid "Group events"
+msgstr "Групповые мероприятия"
+
+#: class.actions.php:60
+#, php-format
+msgid "Group is connected with Calendar event %s"
+msgstr "Группа связана с событием календаря %s"
+
+#: class.init.php:391
+msgid "Hide event"
+msgstr "Скрыть событие"
+
+#. URI of the plugin
+msgid "https://vibebp.com"
+msgstr "https://vibebp.com"
+
+#. Author URI of the plugin
+msgid "https://vibethemes.com"
+msgstr "https://vibethemes.com"
+
+#: class.init.php:75
+msgid "Instructor"
+msgstr "Инструктор"
+
+#: class.api.php:1618
+msgid "Insufficient permissions to delete event"
+msgstr "Недостаточно прав для удаления события"
+
+#: class.api.php:1075
+msgctxt "Invitation accepted"
+msgid "Invitation accepted"
+msgstr "Приглашение принято"
+
+#: class.api.php:1115
+msgctxt "Invitation deleted"
+msgid "Invitation deleted"
+msgstr "Приглашение удалено"
+
+#: class.api.php:1087
+msgctxt "Invitation not accepted"
+msgid "Invitation not accepted"
+msgstr "Приглашение не принято"
+
+#: class.api.php:941 class.api.php:1018 class.api.php:1133
+msgctxt "Invitation not active"
+msgid "Invitation not active"
+msgstr "Приглашение не активно"
+
+#: class.api.php:1120
+msgctxt "Invitation not deleted"
+msgid "Invitation not deleted"
+msgstr "Приглашение не удалено"
+
+#: class.api.php:1101
+msgctxt "Invitation not rejected"
+msgid "Invitation not rejected"
+msgstr "Приглашение не отклонено"
+
+#: class.api.php:1096
+msgctxt "Invitation rejected"
+msgid "Invitation rejected"
+msgstr "Приглашение отклонено"
+
+#: class.api.php:935
+msgctxt "Invitation send"
+msgid "Invitation send"
+msgstr "Приглашение отправить"
+
+#: class.api.php:866 class.api.php:1006
+msgctxt "Invitations Found"
+msgid "Invitations Found"
+msgstr "Приглашения найдены"
+
+#: class.api.php:1012
+msgctxt "Invitations not found"
+msgid "Invitations not found"
+msgstr "Приглашения не найдены"
+
+#: class.api.php:1024
+msgctxt "Invitations not found for filter"
+msgid "Invitations not found for filter"
+msgstr "Приглашения не найдены для фильтра"
+
+#: class.init.php:307
+msgid "Invite Only"
+msgstr "Только по приглашению"
+
+#: class.init.php:385
+msgid "Invited"
+msgstr "Приглашенный"
+
+#: class.init.php:383
+msgid "Invited By"
+msgstr "По приглашению"
+
+#: class.init.php:377
+msgid "Inviter"
+msgstr "Пригласитель"
+
+#: class.settings.php:50
+msgid "It will Google Event with Google Meet for event in event edit page."
+msgstr ""
+"Это будет событие Google с Google Meet для события на странице "
+"редактирования события."
+
+#: class.elementor.php:93
+msgid "JAN"
+msgstr "ЯНВ"
+
+#: class.init.php:402
+msgid "Join"
+msgstr "Присоединиться"
+
+#: class.init.php:381
+msgid "Join Url"
+msgstr "Присоединиться URL"
+
+#: class.elementor.php:99
+msgid "JUL"
+msgstr "ИЮЛЬ"
+
+#: class.elementor.php:98
+msgid "JUN"
+msgstr "ИЮНЬ"
+
+#: class.settings.php:330
+msgid "Label"
+msgstr "Этикетка"
+
+#: class.api.php:1164
+msgctxt "Label already exist"
+msgid "Label already exist"
+msgstr "Ярлык уже существует"
+
+#: class.api.php:1564
+msgctxt "Label assigned"
+msgid "Label assigned"
+msgstr "Ярлык присвоен"
+
+#: class.api.php:1569
+msgctxt "Label not exist"
+msgid "Label not exist"
+msgstr "Ярлык не существует"
+
+#: class.api.php:1249
+msgctxt "Label Not Found"
+msgid "Label Not Found"
+msgstr "Ярлык не найден"
+
+#: class.api.php:1600
+msgctxt "Label removed"
+msgid "Label removed"
+msgstr "Ярлык удален"
+
+#: class.api.php:1262
+msgctxt "Labels Not Found"
+msgid "Labels Not Found"
+msgstr "Ярлыки не найдены"
+
+#: class.api.php:1256
+msgctxt "Labels Removed"
+msgid "Label Removed"
+msgstr "Ярлык удален"
+
+#: class.init.php:372
+msgid "List"
+msgstr "Список"
+
+#: class.init.php:358
+msgid "Load more events"
+msgstr "Загрузить больше событий"
+
+#: class.init.php:103
+msgid "Location"
+msgstr "Расположение"
+
+#: class.init.php:342
+msgctxt "login"
+msgid "Alphabetical"
+msgstr "Алфавитный"
+
+#: class.init.php:341
+msgctxt "login"
+msgid "Recent"
+msgstr "Недавний"
+
+#: class.elementor.php:95
+msgid "MAR"
+msgstr "МАР"
+
+#: class.elementor.php:97
+msgid "MAY"
+msgstr "МОЖЕТ"
+
+#: class.init.php:401
+msgid "Meeting"
+msgstr "Встреча"
+
+#: class.elementor.php:108
+msgid "Message subject"
+msgstr "Тема сообщения"
+
+#: class.init.php:374
+msgid "Missing data"
+msgstr "Недостающие данные"
+
+#: class.init.php:395
+msgid "MON"
+msgstr "ПН"
+
+#: class.init.php:235 class.init.php:368
+msgid "Month"
+msgstr "Месяц"
+
+#: class.init.php:355
+msgid "More"
+msgstr "Более"
+
+#: class.init.php:168
+msgid "My Events"
+msgstr "Мои события"
+
+#: class.init.php:178
+msgid "My Invites"
+msgstr "Мои приглашения"
+
+#: class.init.php:389
+msgid "No events found!"
+msgstr "События не найдены!"
+
+#: class.api.php:595 class.api.php:749 class.api.php:1511
+msgctxt "No events found!"
+msgid "No events found!"
+msgstr "События не найдены!"
+
+#: class.init.php:379
+msgid "No Invites Found"
+msgstr "Приглашения не найдены"
+
+#: class.api.php:795
+msgctxt "No Participants found"
+msgid "No Participants found"
+msgstr "Участники не найдены"
+
+#: class.api.php:1401
+msgctxt "no results in search api request"
+msgid "Sorry not results found!Try another search keyword!"
+msgstr ""
+"К сожалению, результаты не найдены!Попробуйте другое ключевое слово для "
+"поиска!"
+
+#: class.api.php:837
+msgctxt "No Taxonomy found"
+msgid "No Taxonomy found"
+msgstr "Таксономия не найдена"
+
+#: class.init.php:406
+msgid "Not Added"
+msgstr "Не добавлено"
+
+#: class.api.php:338
+msgid "Not saved."
+msgstr "Не сохранено."
+
+#: class.api.php:1127
+msgctxt "Not Valid Action"
+msgid "Not Valid Action"
+msgstr "Недопустимое действие"
+
+#: class.elementor.php:103
+msgid "NOV"
+msgstr "НОЯБРЬ"
+
+#: class.elementor.php:102
+msgid "OCT"
+msgstr "ОКТ"
+
+#: class.init.php:359
+msgid "Participants"
+msgstr "Участники"
+
+#: class.api.php:789
+msgctxt "Participants found"
+msgid "Participants found"
+msgstr "Участники найдены"
+
+#: class.init.php:362
+msgid "Pending"
+msgstr "В ожидании"
+
+#: class.api.php:1575
+msgctxt "Please create some labels!"
+msgid "Please create some labels!"
+msgstr "Пожалуйста, создайте ярлыки!"
+
+#: class.init.php:315
+msgid "Recurring Event"
+msgstr "Повторяющееся событие"
+
+#: class.init.php:366
+msgid "Reject"
+msgstr "Отклонять"
+
+#: class.init.php:364
+msgid "Rejected"
+msgstr "Отклоненный"
+
+#: class.init.php:400
+msgid "SAT"
+msgstr "СИДЕЛ"
+
+#: class.init.php:353
+msgid "Save"
+msgstr "Сохранять"
+
+#: class.settings.php:88
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: class.settings.php:511
+msgid "Search Course"
+msgstr "Поиск курса"
+
+#: class.init.php:357
+msgid "Search Users"
+msgstr "Поиск пользователей"
+
+#: class.init.php:356
+msgid "Search users..."
+msgstr "Поиск пользователей..."
+
+#: class.init.php:388
+msgid "Search..."
+msgstr "Поиск..."
+
+#: class.settings.php:666
+msgid "Security check Failed. Contact Administrator !"
+msgstr "Проверка безопасности не удалась. Свяжитесь с Администратором!"
+
+#: class.elementor.php:112
+msgid "See details"
+msgstr "Смотрите подробности"
+
+#: class.settings.php:291
+msgid "Select a page"
+msgstr "Выберите страницу"
+
+#: class.settings.php:519
+msgid "Select Category"
+msgstr "выберите категорию"
+
+#: class.settings.php:527
+msgid "Select Levels"
+msgstr "Выберите уровни"
+
+#: class.settings.php:523
+msgid "Select Location"
+msgstr "Выберите местоположение"
+
+#: class.settings.php:583
+msgid "Select search option"
+msgstr "Выберите вариант поиска"
+
+#: class.init.php:387
+msgid "Select sharing type"
+msgstr "Выберите тип обмена"
+
+#: class.settings.php:531
+msgid "Select Text"
+msgstr "Выберите текст"
+
+#: class.settings.php:515
+msgid "Select Times"
+msgstr "Выберите время"
+
+#: class.init.php:378
+msgid "Send Invite"
+msgstr "Отправить приглашение"
+
+#: class.init.php:384
+msgid "Send Invites"
+msgstr "Отправить приглашения"
+
+#: class.elementor.php:101
+msgid "SEP"
+msgstr "Сентябрь"
+
+#: class.settings.php:422
+msgid "Set Field key"
+msgstr "Установить ключ поля"
+
+#: class.settings.php:422
+msgid "Set Field label"
+msgstr "Установить метку поля"
+
+#: class.init.php:404
+msgid "Set Language"
+msgstr "Установить язык"
+
+#: class.settings.php:682
+msgid "Settings Saved."
+msgstr "Настройки сохранены."
+
+#: class.init.php:386
+msgid "Shared with"
+msgstr "Совместно с"
+
+#: class.elementor.php:37
+msgid "Show Events"
+msgstr "Показать события"
+
+#: class.api.php:1298 class.api.php:1397
+msgid "Sorry Something went wrong or invalid post type"
+msgstr "Извините, что-то пошло не так или неверный тип сообщения"
+
+#: class.init.php:285 class.init.php:349
+msgid "Start"
+msgstr "Начинать"
+
+#: class.init.php:380
+msgid "Start Url"
+msgstr "Стартовый URL"
+
+#: class.elementor.php:110 class.init.php:360
+msgid "Starts"
+msgstr "Старт"
+
+#: class.init.php:77
+msgid "Students"
+msgstr "Студенты"
+
+#: class.api.php:442
+msgid "Successfully saved !"
+msgstr "Успешно сохранено!"
+
+#: class.api.php:469
+msgctxt "Successfully updated!"
+msgid "Successfully updated!"
+msgstr "Успешно обновлено!"
+
+#: class.init.php:394
+msgid "SUN"
+msgstr "СОЛНЦЕ"
+
+#: class.init.php:407
+msgid "Sync Showing event with Google Calendar"
+msgstr "Синхронизировать отображение события с Google Календарем"
+
+#: class.api.php:831
+msgctxt "Taxonomy found"
+msgid "Taxonomy found"
+msgstr "Таксономия найдена"
+
+#: class.init.php:398
+msgid "THU"
+msgstr "ЧТ"
+
+#: class.init.php:382
+msgid "TimeZone"
+msgstr "Часовой пояс"
+
+#: class.init.php:371
+msgid "Today"
+msgstr "Сегодня"
+
+#: class.elementor.php:53
+msgid "Total Number of Events in View"
+msgstr "Общее количество событий в поле зрения"
+
+#: class.init.php:396
+msgid "TUE"
+msgstr "ВТ"
+
+#: class.init.php:375
+msgid "Type here"
+msgstr "Введите здесь"
+
+#: class.elementor.php:107
+msgid "Type message"
+msgstr "Введите сообщение"
+
+#: class.init.php:373
+msgid "Unlimited"
+msgstr "Неограниченный"
+
+#: class.settings.php:196
+msgid "Upload"
+msgstr "Загрузить"
+
+#: class.settings.php:196
+msgid "Upload file"
+msgstr "Загрузить файл"
+
+#: class.settings.php:330
+msgid "Value"
+msgstr "Ценить"
+
+#. Name of the plugin
+#: class.elementor.php:13
+msgid "Vibe Calendar"
+msgstr "Календарь Vibe"
+
+#: class.init.php:433
+msgid "Vibe-Events"
+msgstr "Vibe-события"
+
+#. Author of the plugin
+msgid "VibeThemes"
+msgstr "VibeТемы"
+
+#: class.init.php:390
+msgid "View"
+msgstr "Вид"
+
+#: class.init.php:397
+msgid "WED"
+msgstr "СРД"
+
+#: class.init.php:236 class.init.php:369
+msgid "Week"
+msgstr "Неделя"
+
+#: class.init.php:393
+msgid "Week days"
+msgstr "Будни"
+
+#: class.init.php:71
+msgid "Who can create events"
+msgstr "Кто может создавать события"

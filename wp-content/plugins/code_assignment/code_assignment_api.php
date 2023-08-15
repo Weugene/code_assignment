@@ -23,7 +23,7 @@
 
 }
 
-write_log("Count me");
+
 // 
 add_action( 'rest_api_init', function () {
     register_rest_route( 'code-assignment/v1', '/save-teacher-code/', array(
@@ -42,6 +42,7 @@ add_action( 'rest_api_init', function () {
         'permission_callback' => 'logged_users_permission_callback',
     ) );
 } );
+
 
 // Allow only for authorized users with proper payload
 function logged_users_permission_callback( $request ) {

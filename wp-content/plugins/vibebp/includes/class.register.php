@@ -53,7 +53,6 @@ class VibeBP_Register{
 
     function check_flatpickr_script_lang(){
         global $wp_scripts;
-        write_log("check_flatpickr_script_lang:" . vibebp_get_flatpickrLang());
     
         if( ((!empty($wp_scripts->queue) && in_array('vibebp-flatpickr',$wp_scripts->queue)) || !empty($wp_scripts->done) && in_array('vibebp-flatpickr',$wp_scripts->done))  && vibebp_get_flatpickrLang() && vibebp_get_flatpickrLang()!='en'){
             
