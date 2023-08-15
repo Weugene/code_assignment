@@ -1,0 +1,1190 @@
+# Copyright (c) 2019 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vibe Helpdesk\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/vibebp/issues\n"
+"POT-Creation-Date: 2023-03-17 08:32+0530\n"
+"PO-Revision-Date: 2023-08-15 05:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: vibebp\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;_ex\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/autoupdate.php:384
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr ""
+
+#: includes/autoupdate.php:384 includes/autoupdate.php:549
+msgid "Try again"
+msgstr ""
+
+#: includes/autoupdate.php:425
+msgid "An unknown error occurred"
+msgstr ""
+
+#: includes/autoupdate.php:461
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+
+#: includes/autoupdate.php:462
+msgid "Plugin reactivated successfully. "
+msgstr ""
+
+#: includes/autoupdate.php:484
+msgid " Plugin Updates"
+msgstr ""
+
+#: includes/autoupdate.php:523
+msgid "Username: "
+msgstr ""
+
+#: includes/autoupdate.php:527
+msgid "Email: "
+msgstr ""
+
+#: includes/autoupdate.php:533
+msgid "Key: "
+msgstr ""
+
+#: includes/autoupdate.php:539
+msgid "<p>Your plugin update is <span style=\"color:green\">active</span></p>"
+msgstr ""
+
+#: includes/autoupdate.php:543
+msgid ""
+"<p>Your input is <span style=\"color:red\">not valid</span>, automatic "
+"updates is <span style=\"color:red\">not active</span>.</p>"
+msgstr ""
+
+#: includes/autoupdate.php:544
+msgid "Edit Key"
+msgstr ""
+
+#: includes/autoupdate.php:548
+msgid "<p>Unable to validate update activation.</p>"
+msgstr ""
+
+#: includes/autoupdate.php:554
+msgid "Add Purchase Code"
+msgstr ""
+
+#: includes/autoupdate.php:641
+msgid "User name"
+msgstr ""
+
+#: includes/autoupdate.php:647
+msgid "Email"
+msgstr ""
+
+#: includes/autoupdate.php:656
+msgid "Themeforest/CodeCanyon Purchase Key ( for Auto-Updates )"
+msgstr ""
+
+#: includes/bbp-private-replies-4x.php:122
+msgid "This reply has been marked as private."
+msgstr ""
+
+#: includes/class.api.php:278
+msgid "Info not updated!"
+msgstr ""
+
+#: includes/class.api.php:282
+msgid "Info updated!"
+msgstr ""
+
+#: includes/class.api.php:291
+msgid "Unable to chage forum subscription status."
+msgstr ""
+
+#: includes/class.api.php:297 includes/class.topics-api.php:319
+msgid "Unable to add subscription"
+msgstr ""
+
+#: includes/class.api.php:303 includes/class.topics-api.php:325
+msgid "Unable to remove subscription"
+msgstr ""
+
+#: includes/class.api.php:369
+msgid "Replies not found!"
+msgstr ""
+
+#: includes/class.api.php:450
+msgid "Forum Created"
+msgstr ""
+
+#: includes/class.api.php:453
+msgid "Forum not Created"
+msgstr ""
+
+#: includes/class.api.php:463 includes/class.api.php:605
+#: includes/class.api.php:691 includes/class.api.php:776
+#: includes/class.topics-api.php:483 includes/class.topics-api.php:592
+msgid "BB-Press Plugin not active!"
+msgstr ""
+
+#: includes/class.api.php:469 includes/class.api.php:619
+#: includes/class.api.php:698 includes/class.api.php:783
+#: includes/class.topics-api.php:490 includes/class.topics-api.php:600
+msgid "Authorization error!"
+msgstr ""
+
+#: includes/class.api.php:508
+msgid "Reply Created"
+msgstr ""
+
+#: includes/class.api.php:524 includes/class.api.php:657
+msgid "Reply Updated."
+msgstr ""
+
+#: includes/class.api.php:594
+msgid "Reply not Created"
+msgstr ""
+
+#: includes/class.api.php:612 includes/class.api.php:684
+#: includes/class.topics-api.php:585
+msgid "Passing Arguments not valid!"
+msgstr ""
+
+#: includes/class.api.php:663
+msgid "Reply not Updated."
+msgstr ""
+
+#: includes/class.api.php:670
+msgid "You are not a valid user to update this reply"
+msgstr ""
+
+#: includes/class.api.php:677 includes/class.api.php:727
+msgid "Reply not Exist."
+msgstr ""
+
+#: includes/class.api.php:705
+msgid "Insufficient data"
+msgstr ""
+
+#: includes/class.api.php:735
+msgid "Reply trash successfull"
+msgstr ""
+
+#: includes/class.api.php:741
+msgid "Reply untrash successfull"
+msgstr ""
+
+#: includes/class.api.php:747
+msgid "Reply delete successfull"
+msgstr ""
+
+#: includes/class.api.php:761
+msgid "Not Deleted!"
+msgstr ""
+
+#: includes/class.api.php:768
+msgid "You are not a valid user to delete this reply"
+msgstr ""
+
+#: includes/class.api.php:820
+msgid "SLA counting available!"
+msgstr ""
+
+#: includes/class.api.php:827
+msgid "SLA counting unavailable!"
+msgstr ""
+
+#: includes/class.api.php:833
+msgid "BB-press not active!"
+msgstr ""
+
+#: includes/class.api.php:846
+msgid "Topic labels found"
+msgstr ""
+
+#: includes/class.api.php:851
+msgid "Topic labels not found"
+msgstr ""
+
+#: includes/class.api.php:881
+msgid "Label assigned"
+msgstr ""
+
+#: includes/class.api.php:887
+msgid "This Label not present in Admin-panel"
+msgstr ""
+
+#: includes/class.api.php:893
+msgid "Labels not present in Admin-panel"
+msgstr ""
+
+#: includes/class.api.php:901
+msgid "Label unassigned"
+msgstr ""
+
+#: includes/class.api.php:908
+msgid "Action not determined"
+msgstr ""
+
+#: includes/class.api.php:915
+msgid "Can not assign label"
+msgstr ""
+
+#: includes/class.api.php:921 includes/class.api.php:1030
+#: includes/class.api.php:1085
+msgid "Data missing"
+msgstr ""
+
+#: includes/class.api.php:939
+msgid "Not valid data"
+msgstr ""
+
+#: includes/class.api.php:950
+msgid "Topic marked as resolved!"
+msgstr ""
+
+#: includes/class.api.php:957
+msgid "Topic marked as unresolved!"
+msgstr ""
+
+#: includes/class.api.php:961
+msgid "Action missing!"
+msgstr ""
+
+#: includes/class.api.php:1000
+msgid "Agents assigned"
+msgstr ""
+
+#: includes/class.api.php:1011
+msgid "Agents unassigned"
+msgstr ""
+
+#: includes/class.api.php:1017
+msgid "Action not matched"
+msgstr ""
+
+#: includes/class.api.php:1024
+msgid "Not capable"
+msgstr ""
+
+#: includes/class.api.php:1073
+msgid "Saved as canned response"
+msgstr ""
+
+#: includes/class.api.php:1079
+msgid "Not saved as canned response"
+msgstr ""
+
+#: includes/class.api.php:1111
+msgid "Canned responses found"
+msgstr ""
+
+#: includes/class.api.php:1117
+msgid "Canned responses not found"
+msgstr ""
+
+#: includes/class.api.php:1127
+msgid "Response not deleted!"
+msgstr ""
+
+#: includes/class.api.php:1135
+msgid "Response Deleted!"
+msgstr ""
+
+#: includes/class.forums-api.php:101
+msgid "No component forum"
+msgstr ""
+
+#: includes/class.forums-api.php:114
+msgid "Forums not found!"
+msgstr ""
+
+#: includes/class.forums-api.php:171
+msgid "No forums found."
+msgstr ""
+
+#: includes/class.forums-api.php:234
+msgid "Your forum needs a title."
+msgstr ""
+
+#: includes/class.forums-api.php:239
+msgid "Your title is too long."
+msgstr ""
+
+#: includes/class.forums-api.php:252
+msgid "Your forum description cannot be empty."
+msgstr ""
+
+#: includes/class.forums-api.php:267
+msgid "Your forum must have a parent."
+msgstr ""
+
+#: includes/class.forums-api.php:272
+msgid "This forum is a category. No forums can be created in this forum."
+msgstr ""
+
+#: includes/class.forums-api.php:277
+msgid "This forum has been closed to new forums."
+msgstr ""
+
+#: includes/class.forums-api.php:282
+msgid ""
+"This forum is private and you do not have the capability to read or create "
+"new forums in it."
+msgstr ""
+
+#: includes/class.forums-api.php:287
+msgid ""
+"This forum is hidden and you do not have the capability to read or create "
+"new forums in it."
+msgstr ""
+
+#: includes/class.forums-api.php:292
+msgid "Slow down; you move too fast."
+msgstr ""
+
+#: includes/class.forums-api.php:310
+msgid "This forum already exists."
+msgstr ""
+
+#: includes/class.forums-api.php:317
+msgid "Your forum cannot be created at this time."
+msgstr ""
+
+#: includes/class.forums-api.php:339
+#, php-format
+msgid "The following problem(s) occurred: %s"
+msgstr ""
+
+#: includes/class.forums-api.php:366
+msgid "New forum created"
+msgstr ""
+
+#: includes/class.init.php:63
+msgid "Discussion"
+msgstr ""
+
+#: includes/class.init.php:126
+msgid "HelpDesk"
+msgstr ""
+
+#: includes/class.init.php:137 includes/class.init.php:209
+msgid "Assign Tickets"
+msgstr ""
+
+#: includes/class.init.php:143
+msgid "Unresolved Tickets"
+msgstr ""
+
+#: includes/class.init.php:149
+msgid "Resolved Tickets"
+msgstr ""
+
+#: includes/class.init.php:155 includes/class.init.php:433
+msgid "Canned Responses"
+msgstr ""
+
+#: includes/class.init.php:161
+msgid "My Information"
+msgstr ""
+
+#: includes/class.init.php:164
+msgid "Assigned "
+msgstr ""
+
+#: includes/class.init.php:165
+msgid "Unassigned"
+msgstr ""
+
+#: includes/class.init.php:169
+msgid "My Stats"
+msgstr ""
+
+#: includes/class.init.php:170
+msgid "As Agent"
+msgstr ""
+
+#: includes/class.init.php:171
+msgid "As Supervisor"
+msgstr ""
+
+#: includes/class.init.php:174
+msgid "Daily"
+msgstr ""
+
+#: includes/class.init.php:175
+msgid "Weekly"
+msgstr ""
+
+#: includes/class.init.php:176
+msgid "Yearly"
+msgstr ""
+
+#: includes/class.init.php:179
+msgid "January"
+msgstr ""
+
+#: includes/class.init.php:180
+msgid "February"
+msgstr ""
+
+#: includes/class.init.php:181
+msgid "March"
+msgstr ""
+
+#: includes/class.init.php:182
+msgid "April"
+msgstr ""
+
+#: includes/class.init.php:183
+msgid "May"
+msgstr ""
+
+#: includes/class.init.php:184
+msgid "June"
+msgstr ""
+
+#: includes/class.init.php:185
+msgid "July"
+msgstr ""
+
+#: includes/class.init.php:186
+msgid "August"
+msgstr ""
+
+#: includes/class.init.php:187
+msgid "September"
+msgstr ""
+
+#: includes/class.init.php:188
+msgid "October"
+msgstr ""
+
+#: includes/class.init.php:189
+msgid "November"
+msgstr ""
+
+#: includes/class.init.php:190
+msgid "Decemeber"
+msgstr ""
+
+#: includes/class.init.php:199 includes/class.init.php:263
+msgid "Recent"
+msgstr ""
+
+#: includes/class.init.php:200 includes/class.init.php:262
+msgid "Alphabetical"
+msgstr ""
+
+#: includes/class.init.php:201
+msgid "Most Shared"
+msgstr ""
+
+#: includes/class.init.php:204
+msgid "Select option"
+msgstr ""
+
+#: includes/class.init.php:205
+msgid "Search Forums"
+msgstr ""
+
+#: includes/class.init.php:206
+msgid "Assigned Tickets"
+msgstr ""
+
+#: includes/class.init.php:207
+msgid "Unassigned Tickets"
+msgstr ""
+
+#: includes/class.init.php:208
+msgid "Recently Assigned Tickets"
+msgstr ""
+
+#: includes/class.init.php:210
+msgid "All Forums"
+msgstr ""
+
+#: includes/class.init.php:211
+msgid "New Topic"
+msgstr ""
+
+#: includes/class.init.php:212
+msgid "No Topics found !"
+msgstr ""
+
+#: includes/class.init.php:213
+msgid "No Forums found !"
+msgstr ""
+
+#: includes/class.init.php:214
+msgid "No replies found !"
+msgstr ""
+
+#: includes/class.init.php:215
+msgid "Subscribe"
+msgstr ""
+
+#: includes/class.init.php:216
+msgid "Subscribed"
+msgstr ""
+
+#: includes/class.init.php:217
+msgid "Resolved"
+msgstr ""
+
+#: includes/class.init.php:218
+msgid "Assign Label"
+msgstr ""
+
+#: includes/class.init.php:219 includes/class.settings.php:155
+msgid "Labels"
+msgstr ""
+
+#: includes/class.init.php:220
+msgid "Submit"
+msgstr ""
+
+#: includes/class.init.php:221
+msgid "Save As Canned Response"
+msgstr ""
+
+#: includes/class.init.php:222
+msgid "Enter Canned Title"
+msgstr ""
+
+#: includes/class.init.php:223
+msgid "Enter Canned Content"
+msgstr ""
+
+#: includes/class.init.php:224
+msgid "Enable canned"
+msgstr ""
+
+#: includes/class.init.php:225
+msgid "Search Canned Responses"
+msgstr ""
+
+#: includes/class.init.php:226
+msgid "Cancel"
+msgstr ""
+
+#: includes/class.init.php:227 includes/functions.php:111
+msgid "Topic title"
+msgstr ""
+
+#: includes/class.init.php:228 includes/class.settings.php:119
+msgid "Select forum"
+msgstr ""
+
+#: includes/class.init.php:229
+msgid "Topic content"
+msgstr ""
+
+#: includes/class.init.php:230
+msgid "Search topics"
+msgstr ""
+
+#: includes/class.init.php:231
+msgid "Search replies"
+msgstr ""
+
+#: includes/class.init.php:232 includes/class.init.php:240
+msgid "Load More"
+msgstr ""
+
+#: includes/class.init.php:233
+msgid "Set as private reply"
+msgstr ""
+
+#: includes/class.init.php:234
+msgid "Back to forums"
+msgstr ""
+
+#: includes/class.init.php:235
+msgid "Back to topics"
+msgstr ""
+
+#: includes/class.init.php:236
+msgid "Search Forum"
+msgstr ""
+
+#: includes/class.init.php:237
+msgid "Search Users"
+msgstr ""
+
+#: includes/class.init.php:238
+msgid "Assigned Agents"
+msgstr ""
+
+#: includes/class.init.php:239
+msgid "No Canned Reponses Found!"
+msgstr ""
+
+#: includes/class.init.php:241
+msgid "New"
+msgstr ""
+
+#: includes/class.init.php:242
+msgid "Search Responses"
+msgstr ""
+
+#: includes/class.init.php:243
+msgid "Select Priority"
+msgstr ""
+
+#: includes/class.init.php:244
+msgid "No info found!"
+msgstr ""
+
+#: includes/class.init.php:245
+msgid "Topic Notes"
+msgstr ""
+
+#: includes/class.init.php:246
+msgid "No notes found!"
+msgstr ""
+
+#: includes/class.init.php:247
+msgid "User Information"
+msgstr ""
+
+#: includes/class.init.php:248
+msgid "Add Topic Note"
+msgstr ""
+
+#: includes/class.init.php:249
+msgid "Show User Info"
+msgstr ""
+
+#: includes/class.init.php:250
+msgid "Hide User Info"
+msgstr ""
+
+#: includes/class.init.php:251
+msgid "Select As"
+msgstr ""
+
+#: includes/class.init.php:252
+msgid "Helpdesk Stats"
+msgstr ""
+
+#: includes/class.init.php:253
+msgid "Total Topics"
+msgstr ""
+
+#: includes/class.init.php:254
+msgid "Resolved Topics"
+msgstr ""
+
+#: includes/class.init.php:255
+msgid "Unresolved Topics"
+msgstr ""
+
+#: includes/class.init.php:256
+msgid "Select Start"
+msgstr ""
+
+#: includes/class.init.php:257
+msgid "Select End"
+msgstr ""
+
+#: includes/class.init.php:258
+msgid "Select max one month for week and daily!"
+msgstr ""
+
+#: includes/class.init.php:259
+msgid "Select Dates"
+msgstr ""
+
+#: includes/class.init.php:260
+msgid "Sorty by"
+msgstr ""
+
+#: includes/class.init.php:261
+msgid "Most Active"
+msgstr ""
+
+#: includes/class.init.php:264
+msgid "Create Forum"
+msgstr ""
+
+#: includes/class.init.php:265
+msgid "New Forum"
+msgstr ""
+
+#: includes/class.init.php:266
+msgid "Selected access"
+msgstr ""
+
+#: includes/class.init.php:267
+msgid "Hidden forum"
+msgstr ""
+
+#: includes/class.init.php:268
+msgid "Topic count"
+msgstr ""
+
+#: includes/class.init.php:269
+msgid "Posts count"
+msgstr ""
+
+#: includes/class.init.php:270
+msgid "Create Topic"
+msgstr ""
+
+#: includes/class.init.php:271
+msgid "New reply"
+msgstr ""
+
+#: includes/class.init.php:272
+msgid "Post reply"
+msgstr ""
+
+#: includes/class.init.php:273
+msgid "Load previous replies"
+msgstr ""
+
+#: includes/class.init.php:362
+msgid "Agent Labels"
+msgstr ""
+
+#: includes/class.init.php:383 includes/class.init.php:395
+msgid "None"
+msgstr ""
+
+#: includes/class.init.php:411
+msgid "Saved"
+msgstr ""
+
+#: includes/class.init.php:414
+msgid "Not Saved"
+msgstr ""
+
+#: includes/class.init.php:417
+msgid "Security Failed"
+msgstr ""
+
+#: includes/class.init.php:429 includes/class.init.php:430
+#: includes/class.init.php:431
+msgid "Canned Response"
+msgstr ""
+
+#: includes/class.init.php:432
+msgid "Add New Canned Response"
+msgstr ""
+
+#: includes/class.init.php:452
+msgid "Priorities"
+msgstr ""
+
+#: includes/class.init.php:453
+msgid "Priority"
+msgstr ""
+
+#: includes/class.init.php:454
+msgid "Search Priority Category"
+msgstr ""
+
+#: includes/class.init.php:455
+msgid "Popular Priority"
+msgstr ""
+
+#: includes/class.init.php:456
+msgid "All Events Priority"
+msgstr ""
+
+#: includes/class.init.php:492 includes/class.init.php:502
+msgid "Priority Color"
+msgstr ""
+
+#: includes/class.settings.php:38
+msgid "Helpdesk"
+msgstr ""
+
+#: includes/class.settings.php:47
+msgid "Helpdesk General Settings"
+msgstr ""
+
+#: includes/class.settings.php:50 includes/class.settings.php:173
+msgid "General Settings"
+msgstr ""
+
+#: includes/class.settings.php:82
+#, php-format
+msgid "Topic %s is %s"
+msgstr ""
+
+#: includes/class.settings.php:94 includes/class.settings.php:95
+#, php-format
+msgid "Topic <a href=\"%s\" target=\"_blank\">%s</a> is %s to you by %s"
+msgstr ""
+
+#: includes/class.settings.php:108
+msgid "Helpdesk Topic assign process"
+msgstr ""
+
+#: includes/class.settings.php:132
+msgid "Agents"
+msgstr ""
+
+#: includes/class.settings.php:137
+msgid "Agent User Role"
+msgstr ""
+
+#: includes/class.settings.php:140
+msgid "User role who are classified as agents"
+msgstr ""
+
+#: includes/class.settings.php:144
+msgid "Supervisor Ticket User Role"
+msgstr ""
+
+#: includes/class.settings.php:147
+msgid "User role who are can assign tickets to agents"
+msgstr ""
+
+#: includes/class.settings.php:160
+msgid "Select Topic Labels"
+msgstr ""
+
+#: includes/class.settings.php:178
+msgid "Who can create a new Forum"
+msgstr ""
+
+#: includes/class.settings.php:181
+msgid "Who can create new Forum."
+msgstr ""
+
+#: includes/class.settings.php:184
+msgid "Private BBPress"
+msgstr ""
+
+#: includes/class.settings.php:188
+msgid "Forums are not publically accessible."
+msgstr ""
+
+#: includes/class.settings.php:191
+msgid "Global Parent BBPress Forum"
+msgstr ""
+
+#: includes/class.settings.php:195
+msgid "Global parent forum for all sub forums created programmatically"
+msgstr ""
+
+#: includes/class.topics-api.php:116 includes/class.topics-api.php:336
+msgid "Topics not found!"
+msgstr ""
+
+#: includes/class.topics-api.php:280
+msgid "Note not added!"
+msgstr ""
+
+#: includes/class.topics-api.php:285
+msgid "Note added!"
+msgstr ""
+
+#: includes/class.topics-api.php:297
+msgid "Note not deleted!"
+msgstr ""
+
+#: includes/class.topics-api.php:302
+msgid "Note deleted!"
+msgstr ""
+
+#: includes/class.topics-api.php:312
+msgid "Unable to chage topic subscription status."
+msgstr ""
+
+#: includes/class.topics-api.php:377
+msgid "Unable to set Fovorite"
+msgstr ""
+
+#: includes/class.topics-api.php:385
+msgid "Topic Set as Fovorite"
+msgstr ""
+
+#: includes/class.topics-api.php:400
+msgid "Unable to set Unfavorite"
+msgstr ""
+
+#: includes/class.topics-api.php:408
+msgid "Topic Set as Unfavorite"
+msgstr ""
+
+#: includes/class.topics-api.php:434
+msgid "Topic not Exist."
+msgstr ""
+
+#: includes/class.topics-api.php:442
+msgid "Topic trash successfull"
+msgstr ""
+
+#: includes/class.topics-api.php:448
+msgid "Topic untrash successfull"
+msgstr ""
+
+#: includes/class.topics-api.php:454
+msgid "Topic delete successfull"
+msgstr ""
+
+#: includes/class.topics-api.php:468
+msgid "Not success"
+msgstr ""
+
+#: includes/class.topics-api.php:475
+msgid "You are not a valid user to delete this topic"
+msgstr ""
+
+#: includes/class.topics-api.php:544
+msgid "Topic Updated"
+msgstr ""
+
+#: includes/class.topics-api.php:570
+msgid "Topic Created"
+msgstr ""
+
+#: includes/class.topics-api.php:574
+msgid "Topic not Created"
+msgstr ""
+
+#: includes/class.touchpoints.php:155
+msgid "Forum subscription"
+msgstr ""
+
+#: includes/class.touchpoints.php:167
+msgid "Topic subscription"
+msgstr ""
+
+#: includes/class.touchpoints.php:182
+msgid "New Topic created in forum"
+msgstr ""
+
+#: includes/class.touchpoints.php:183 includes/class.touchpoints.php:323
+#, php-format
+msgid "New Topic created in forum %s"
+msgstr ""
+
+#: includes/class.touchpoints.php:184 includes/class.touchpoints.php:321
+#, php-format
+msgid "New Topic %s created by %s in forum %s"
+msgstr ""
+
+#: includes/class.touchpoints.php:188
+msgid "New Reply created in topic"
+msgstr ""
+
+#: includes/class.touchpoints.php:189 includes/class.touchpoints.php:228
+#: includes/class.touchpoints.php:399
+#, php-format
+msgid "%s posted reply on topic %s"
+msgstr ""
+
+#: includes/class.touchpoints.php:190 includes/class.touchpoints.php:226
+#, php-format
+msgid "%s posted reply on topic %s in forum %s : %s"
+msgstr ""
+
+#: includes/class.touchpoints.php:223 includes/class.touchpoints.php:291
+msgid "This is a private reply"
+msgstr ""
+
+#: includes/class.touchpoints.php:395
+#, php-format
+msgid "New topic %s created in forum %s"
+msgstr ""
+
+#: includes/functions.php:34
+msgid "Forum title"
+msgstr ""
+
+#: includes/functions.php:40 includes/functions.php:117
+msgid "Enter a Forum title"
+msgstr ""
+
+#: includes/functions.php:41 includes/functions.php:118
+msgid ""
+"This is the title of the forum, the most relevant detail to recognise the "
+"forum."
+msgstr ""
+
+#: includes/functions.php:45
+msgid "Forum Type"
+msgstr ""
+
+#: includes/functions.php:51
+msgid "Forum"
+msgstr ""
+
+#: includes/functions.php:51
+msgid "Category of Forums/Topics"
+msgstr ""
+
+#: includes/functions.php:52 includes/functions.php:63
+#: includes/functions.php:74
+msgid "This is the status of the forum"
+msgstr ""
+
+#: includes/functions.php:56
+msgid "Forum Status"
+msgstr ""
+
+#: includes/functions.php:62 includes/functions.php:139
+msgid "Open"
+msgstr ""
+
+#: includes/functions.php:62 includes/functions.php:139
+msgid "Closed"
+msgstr ""
+
+#: includes/functions.php:67
+msgid "Forum Visbility"
+msgstr ""
+
+#: includes/functions.php:73
+msgid "Public"
+msgstr ""
+
+#: includes/functions.php:73
+msgid "Private"
+msgstr ""
+
+#: includes/functions.php:73
+msgid "Hidden"
+msgstr ""
+
+#: includes/functions.php:78
+msgid "Parent Forum"
+msgstr ""
+
+#: includes/functions.php:85
+msgid "Select a parent forum for this forum"
+msgstr ""
+
+#: includes/functions.php:89
+msgid "Detailed Description of the Forum"
+msgstr ""
+
+#: includes/functions.php:97 includes/functions.php:162
+msgid "Enter full description for the forum."
+msgstr ""
+
+#: includes/functions.php:122
+msgid "Topic Type"
+msgstr ""
+
+#: includes/functions.php:128
+msgid "Normla Topic"
+msgstr ""
+
+#: includes/functions.php:128
+msgid "Sticky Topic"
+msgstr ""
+
+#: includes/functions.php:128
+msgid "Super Sticky Topic"
+msgstr ""
+
+#: includes/functions.php:129
+msgid "This is the type of the forum"
+msgstr ""
+
+#: includes/functions.php:133
+msgid "Topic Status"
+msgstr ""
+
+#: includes/functions.php:139
+msgid "Span"
+msgstr ""
+
+#: includes/functions.php:139
+msgid "Trash"
+msgstr ""
+
+#: includes/functions.php:139
+msgid "Pending"
+msgstr ""
+
+#: includes/functions.php:140
+msgid "This is the status of the topic"
+msgstr ""
+
+#: includes/functions.php:144
+msgid "Topic Forum "
+msgstr ""
+
+#: includes/functions.php:154
+msgid "Detailed Description of the Topic"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:13
+msgid "Helpdesk Resolution Chart Widget for Dashboard"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:15
+msgid " DASHBOARD : Helpdesk Resolution Chart"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:58
+msgid "Helpdesk Resolution Chart"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:67
+#: includes/widgets/helpdesk-stats.php:67
+msgid "Title:"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:71
+#: includes/widgets/helpdesk-stats.php:71
+msgid "Select Width"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:73
+#: includes/widgets/helpdesk-stats.php:73
+msgid "One Fourth"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:74
+#: includes/widgets/helpdesk-stats.php:74
+msgid "One Third"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:75
+#: includes/widgets/helpdesk-stats.php:75
+msgid "One Half"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:76
+#: includes/widgets/helpdesk-stats.php:76
+msgid "Two Third"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:77
+#: includes/widgets/helpdesk-stats.php:77
+msgid "Three Fourth"
+msgstr ""
+
+#: includes/widgets/helpdesk-chart.php:78
+#: includes/widgets/helpdesk-stats.php:78
+msgid "Full"
+msgstr ""
+
+#: includes/widgets/helpdesk-stats.php:13
+msgid "Helpdesk Statistics Widget for Dashboard"
+msgstr ""
+
+#: includes/widgets/helpdesk-stats.php:15
+msgid " DASHBOARD : Helpdesk Statistics"
+msgstr ""
+
+#: includes/widgets/helpdesk-stats.php:58
+msgid "Helpdesk statistics"
+msgstr ""

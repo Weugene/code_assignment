@@ -1,0 +1,1201 @@
+# Copyright (c) 2019 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vibe Helpdesk\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/vibebp/issues\n"
+"POT-Creation-Date: 2023-03-17 08:32+0530\n"
+"PO-Revision-Date: 2023-08-15 05:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: vibebp\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n;_ex\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/widgets/helpdesk-chart.php:15
+msgid " DASHBOARD : Helpdesk Resolution Chart"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: таблица разрешений службы поддержки"
+
+#: includes/widgets/helpdesk-stats.php:15
+msgid " DASHBOARD : Helpdesk Statistics"
+msgstr " ИНФОРМАЦИОННАЯ ПАНЕЛЬ: Статистика службы поддержки"
+
+#: includes/autoupdate.php:484
+msgid " Plugin Updates"
+msgstr " Обновления плагинов"
+
+#: includes/class.touchpoints.php:189 includes/class.touchpoints.php:228
+#: includes/class.touchpoints.php:399
+#, php-format
+msgid "%s posted reply on topic %s"
+msgstr "%s опубликовал ответ в теме %s"
+
+#: includes/class.touchpoints.php:190 includes/class.touchpoints.php:226
+#, php-format
+msgid "%s posted reply on topic %s in forum %s : %s"
+msgstr "%s отправил ответ на тему %s на форуме %s : %s"
+
+#: includes/autoupdate.php:548
+msgid "<p>Unable to validate update activation.</p>"
+msgstr "<p>Не удалось проверить активацию обновления.</p>"
+
+#: includes/autoupdate.php:543
+msgid ""
+"<p>Your input is <span style=\"color:red\">not valid</span>, automatic "
+"updates is <span style=\"color:red\">not active</span>.</p>"
+msgstr ""
+"<p>Ваш ввод <span style=\"color:red\">недействителен</span> , автоматические "
+"обновления <span style=\"color:red\">не активны</span> .</p>"
+
+#: includes/autoupdate.php:539
+msgid "<p>Your plugin update is <span style=\"color:green\">active</span></p>"
+msgstr ""
+"<p>Обновление вашего плагина <span style=\"color:green\">активно</span></p>"
+
+#: includes/class.api.php:961
+msgid "Action missing!"
+msgstr "Действие отсутствует!"
+
+#: includes/class.api.php:908
+msgid "Action not determined"
+msgstr "Действие не определено"
+
+#: includes/class.api.php:1017
+msgid "Action not matched"
+msgstr "Действие не соответствует"
+
+#: includes/class.init.php:432
+msgid "Add New Canned Response"
+msgstr "Добавить новый готовый ответ"
+
+#: includes/autoupdate.php:554
+msgid "Add Purchase Code"
+msgstr "Добавить код покупки"
+
+#: includes/class.init.php:248
+msgid "Add Topic Note"
+msgstr "Добавить примечание к теме"
+
+#: includes/class.init.php:362
+msgid "Agent Labels"
+msgstr "Метки агента"
+
+#: includes/class.settings.php:137
+msgid "Agent User Role"
+msgstr "Роль пользователя агента"
+
+#: includes/class.settings.php:132
+msgid "Agents"
+msgstr "Агенты"
+
+#: includes/class.api.php:1000
+msgid "Agents assigned"
+msgstr "Агенты назначены"
+
+#: includes/class.api.php:1011
+msgid "Agents unassigned"
+msgstr "Агенты не назначены"
+
+#: includes/class.init.php:456
+msgid "All Events Priority"
+msgstr "Приоритет всех событий"
+
+#: includes/class.init.php:210
+msgid "All Forums"
+msgstr "Все форумы"
+
+#: includes/class.init.php:200 includes/class.init.php:262
+msgid "Alphabetical"
+msgstr "Алфавитный"
+
+#: includes/autoupdate.php:384
+msgid "An Unexpected HTTP Error occurred during the API request."
+msgstr "Во время запроса API произошла непредвиденная ошибка HTTP."
+
+#: includes/autoupdate.php:425
+msgid "An unknown error occurred"
+msgstr "Произошла неизвестная ошибка"
+
+#: includes/class.init.php:182
+msgid "April"
+msgstr "апрель"
+
+#: includes/class.init.php:170
+msgid "As Agent"
+msgstr "Как агент"
+
+#: includes/class.init.php:171
+msgid "As Supervisor"
+msgstr "Как руководитель"
+
+#: includes/class.init.php:218
+msgid "Assign Label"
+msgstr "Назначить ярлык"
+
+#: includes/class.init.php:137 includes/class.init.php:209
+msgid "Assign Tickets"
+msgstr "Назначить билеты"
+
+#: includes/class.init.php:164
+msgid "Assigned "
+msgstr "Назначенный"
+
+#: includes/class.init.php:238
+msgid "Assigned Agents"
+msgstr "Назначенные агенты"
+
+#: includes/class.init.php:206
+msgid "Assigned Tickets"
+msgstr "Назначенные билеты"
+
+#: includes/class.init.php:186
+msgid "August"
+msgstr "Август"
+
+#: includes/class.api.php:469 includes/class.api.php:619
+#: includes/class.api.php:698 includes/class.api.php:783
+#: includes/class.topics-api.php:490 includes/class.topics-api.php:600
+msgid "Authorization error!"
+msgstr "Ошибка авторизации!"
+
+#: includes/class.init.php:234
+msgid "Back to forums"
+msgstr "Назад к форумам"
+
+#: includes/class.init.php:235
+msgid "Back to topics"
+msgstr "Назад к темам"
+
+#: includes/class.api.php:833
+msgid "BB-press not active!"
+msgstr "BB-пресс не активен!"
+
+#: includes/class.api.php:463 includes/class.api.php:605
+#: includes/class.api.php:691 includes/class.api.php:776
+#: includes/class.topics-api.php:483 includes/class.topics-api.php:592
+msgid "BB-Press Plugin not active!"
+msgstr "Плагин BB-Press не активен!"
+
+#: includes/class.api.php:915
+msgid "Can not assign label"
+msgstr "Не могу присвоить ярлык"
+
+#: includes/class.init.php:226
+msgid "Cancel"
+msgstr "Отмена"
+
+#: includes/class.init.php:429 includes/class.init.php:430
+#: includes/class.init.php:431
+msgid "Canned Response"
+msgstr "Готовый ответ"
+
+#: includes/class.init.php:155 includes/class.init.php:433
+msgid "Canned Responses"
+msgstr "Готовые ответы"
+
+#: includes/class.api.php:1111
+msgid "Canned responses found"
+msgstr "Найдены готовые ответы"
+
+#: includes/class.api.php:1117
+msgid "Canned responses not found"
+msgstr "Готовые ответы не найдены"
+
+#: includes/functions.php:51
+msgid "Category of Forums/Topics"
+msgstr "Категория форумов/тем"
+
+#: includes/functions.php:62 includes/functions.php:139
+msgid "Closed"
+msgstr "Закрыто"
+
+#: includes/class.init.php:264
+msgid "Create Forum"
+msgstr "Создать форум"
+
+#: includes/class.init.php:270
+msgid "Create Topic"
+msgstr "Создать тему"
+
+#: includes/class.init.php:174
+msgid "Daily"
+msgstr "Ежедневно"
+
+#: includes/class.api.php:921 includes/class.api.php:1030
+#: includes/class.api.php:1085
+msgid "Data missing"
+msgstr "Данные отсутствуют"
+
+#: includes/class.init.php:190
+msgid "Decemeber"
+msgstr "декабрь"
+
+#: includes/functions.php:89
+msgid "Detailed Description of the Forum"
+msgstr "Подробное описание форума"
+
+#: includes/functions.php:154
+msgid "Detailed Description of the Topic"
+msgstr "Подробное описание темы"
+
+#: includes/class.init.php:63
+msgid "Discussion"
+msgstr "Обсуждение"
+
+#: includes/autoupdate.php:544
+msgid "Edit Key"
+msgstr "Изменить ключ"
+
+#: includes/autoupdate.php:647
+msgid "Email"
+msgstr "Электронная почта"
+
+#: includes/autoupdate.php:527
+msgid "Email: "
+msgstr "Электронная почта:"
+
+#: includes/class.init.php:224
+msgid "Enable canned"
+msgstr "Включить стандартные"
+
+#: includes/functions.php:40 includes/functions.php:117
+msgid "Enter a Forum title"
+msgstr "Введите название форума"
+
+#: includes/class.init.php:223
+msgid "Enter Canned Content"
+msgstr "Введите готовый контент"
+
+#: includes/class.init.php:222
+msgid "Enter Canned Title"
+msgstr "Введите готовый заголовок"
+
+#: includes/functions.php:97 includes/functions.php:162
+msgid "Enter full description for the forum."
+msgstr "Введите полное описание форума."
+
+#: includes/class.init.php:180
+msgid "February"
+msgstr "февраль"
+
+#: includes/functions.php:51
+msgid "Forum"
+msgstr "Форум"
+
+#: includes/class.api.php:450
+msgid "Forum Created"
+msgstr "Форум создан"
+
+#: includes/class.api.php:453
+msgid "Forum not Created"
+msgstr "Форум не создан"
+
+#: includes/functions.php:56
+msgid "Forum Status"
+msgstr "Статус форума"
+
+#: includes/class.touchpoints.php:155
+msgid "Forum subscription"
+msgstr "Подписка на форум"
+
+#: includes/functions.php:34
+msgid "Forum title"
+msgstr "Название форума"
+
+#: includes/functions.php:45
+msgid "Forum Type"
+msgstr "Тип форума"
+
+#: includes/functions.php:67
+msgid "Forum Visbility"
+msgstr "Видимость форума"
+
+#: includes/class.settings.php:188
+msgid "Forums are not publically accessible."
+msgstr "Форумы не являются общедоступными."
+
+#: includes/class.forums-api.php:114
+msgid "Forums not found!"
+msgstr "Форумы не найдены!"
+
+#: includes/widgets/helpdesk-chart.php:78
+#: includes/widgets/helpdesk-stats.php:78
+msgid "Full"
+msgstr "Полный"
+
+#: includes/class.settings.php:50 includes/class.settings.php:173
+msgid "General Settings"
+msgstr "общие настройки"
+
+#: includes/class.settings.php:191
+msgid "Global Parent BBPress Forum"
+msgstr "Глобальный родительский форум BBPress"
+
+#: includes/class.settings.php:195
+msgid "Global parent forum for all sub forums created programmatically"
+msgstr ""
+"Глобальный родительский форум для всех подфорумов, созданных программно"
+
+#: includes/class.init.php:126
+msgid "HelpDesk"
+msgstr "Служба поддержки"
+
+#: includes/class.settings.php:38
+msgid "Helpdesk"
+msgstr "Служба поддержки"
+
+#: includes/class.settings.php:47
+msgid "Helpdesk General Settings"
+msgstr "Общие настройки службы поддержки"
+
+#: includes/widgets/helpdesk-chart.php:58
+msgid "Helpdesk Resolution Chart"
+msgstr "Таблица разрешений службы поддержки"
+
+#: includes/widgets/helpdesk-chart.php:13
+msgid "Helpdesk Resolution Chart Widget for Dashboard"
+msgstr "Виджет диаграммы разрешений службы поддержки для панели инструментов"
+
+#: includes/widgets/helpdesk-stats.php:58
+msgid "Helpdesk statistics"
+msgstr "Статистика службы поддержки"
+
+#: includes/widgets/helpdesk-stats.php:13
+msgid "Helpdesk Statistics Widget for Dashboard"
+msgstr "Виджет статистики службы поддержки для панели инструментов"
+
+#: includes/class.init.php:252
+msgid "Helpdesk Stats"
+msgstr "Статистика службы поддержки"
+
+#: includes/class.settings.php:108
+msgid "Helpdesk Topic assign process"
+msgstr "Процесс назначения темы службы поддержки"
+
+#: includes/functions.php:73
+msgid "Hidden"
+msgstr "Скрытый"
+
+#: includes/class.init.php:267
+msgid "Hidden forum"
+msgstr "Скрытый форум"
+
+#: includes/class.init.php:250
+msgid "Hide User Info"
+msgstr "Скрыть информацию о пользователе"
+
+#: includes/class.api.php:278
+msgid "Info not updated!"
+msgstr "Информация не обновляется!"
+
+#: includes/class.api.php:282
+msgid "Info updated!"
+msgstr "Информация обновлена!"
+
+#: includes/class.api.php:705
+msgid "Insufficient data"
+msgstr "Недостаточные данные"
+
+#: includes/class.init.php:179
+msgid "January"
+msgstr "январь"
+
+#: includes/class.init.php:185
+msgid "July"
+msgstr "Июль"
+
+#: includes/class.init.php:184
+msgid "June"
+msgstr "Июнь"
+
+#: includes/autoupdate.php:533
+msgid "Key: "
+msgstr "Ключ:"
+
+#: includes/class.api.php:881
+msgid "Label assigned"
+msgstr "Ярлык присвоен"
+
+#: includes/class.api.php:901
+msgid "Label unassigned"
+msgstr "Ярлык не назначен"
+
+#: includes/class.init.php:219 includes/class.settings.php:155
+msgid "Labels"
+msgstr "Этикетки"
+
+#: includes/class.api.php:893
+msgid "Labels not present in Admin-panel"
+msgstr "Ярлыков нет в админ-панели"
+
+#: includes/class.init.php:232 includes/class.init.php:240
+msgid "Load More"
+msgstr "Загрузи больше"
+
+#: includes/class.init.php:273
+msgid "Load previous replies"
+msgstr "Загрузить предыдущие ответы"
+
+#: includes/class.init.php:181
+msgid "March"
+msgstr "Маршировать"
+
+#: includes/class.init.php:183
+msgid "May"
+msgstr "Может"
+
+#: includes/class.init.php:261
+msgid "Most Active"
+msgstr "Наиболее активно"
+
+#: includes/class.init.php:201
+msgid "Most Shared"
+msgstr "Самые популярные"
+
+#: includes/class.init.php:161
+msgid "My Information"
+msgstr "Моя информация"
+
+#: includes/class.init.php:169
+msgid "My Stats"
+msgstr "Моя статистика"
+
+#: includes/class.init.php:241
+msgid "New"
+msgstr "Новый"
+
+#: includes/class.init.php:265
+msgid "New Forum"
+msgstr "Новый форум"
+
+#: includes/class.forums-api.php:366
+msgid "New forum created"
+msgstr "Создан новый форум"
+
+#: includes/class.init.php:271
+msgid "New reply"
+msgstr "Новый ответ"
+
+#: includes/class.touchpoints.php:188
+msgid "New Reply created in topic"
+msgstr "В теме создан новый ответ"
+
+#: includes/class.init.php:211
+msgid "New Topic"
+msgstr "Новая тема"
+
+#: includes/class.touchpoints.php:184 includes/class.touchpoints.php:321
+#, php-format
+msgid "New Topic %s created by %s in forum %s"
+msgstr "Новая тема %s создана пользователем %s на форуме %s"
+
+#: includes/class.touchpoints.php:395
+#, php-format
+msgid "New topic %s created in forum %s"
+msgstr "Новая тема %s создана на форуме %s"
+
+#: includes/class.touchpoints.php:182
+msgid "New Topic created in forum"
+msgstr "На форуме создана новая тема"
+
+#: includes/class.touchpoints.php:183 includes/class.touchpoints.php:323
+#, php-format
+msgid "New Topic created in forum %s"
+msgstr "Новая тема создана на форуме %s"
+
+#: includes/class.init.php:239
+msgid "No Canned Reponses Found!"
+msgstr "Готовые ответы не найдены!"
+
+#: includes/class.forums-api.php:101
+msgid "No component forum"
+msgstr "Форум без компонентов"
+
+#: includes/class.init.php:213
+msgid "No Forums found !"
+msgstr "Форумы не найдены!"
+
+#: includes/class.forums-api.php:171
+msgid "No forums found."
+msgstr "Форумы не найдены."
+
+#: includes/class.init.php:244
+msgid "No info found!"
+msgstr "Информация не найдена!"
+
+#: includes/class.init.php:246
+msgid "No notes found!"
+msgstr "Заметки не найдены!"
+
+#: includes/class.init.php:214
+msgid "No replies found !"
+msgstr "Ответов не найдено!"
+
+#: includes/class.init.php:212
+msgid "No Topics found !"
+msgstr "Темы не найдены!"
+
+#: includes/class.init.php:383 includes/class.init.php:395
+msgid "None"
+msgstr "Никто"
+
+#: includes/functions.php:128
+msgid "Normla Topic"
+msgstr "Нормальная тема"
+
+#: includes/class.api.php:1024
+msgid "Not capable"
+msgstr "Не способен"
+
+#: includes/class.api.php:761
+msgid "Not Deleted!"
+msgstr "Не удалено!"
+
+#: includes/class.init.php:414
+msgid "Not Saved"
+msgstr "Не сохранено"
+
+#: includes/class.api.php:1079
+msgid "Not saved as canned response"
+msgstr "Не сохранен как готовый ответ"
+
+#: includes/class.topics-api.php:468
+msgid "Not success"
+msgstr "Не успех"
+
+#: includes/class.api.php:939
+msgid "Not valid data"
+msgstr "Недействительные данные"
+
+#: includes/class.topics-api.php:285
+msgid "Note added!"
+msgstr "Примечание добавлено!"
+
+#: includes/class.topics-api.php:302
+msgid "Note deleted!"
+msgstr "Примечание удалено!"
+
+#: includes/class.topics-api.php:280
+msgid "Note not added!"
+msgstr "Примечание не добавлено!"
+
+#: includes/class.topics-api.php:297
+msgid "Note not deleted!"
+msgstr "Примечание не удалено!"
+
+#: includes/class.init.php:189
+msgid "November"
+msgstr "ноябрь"
+
+#: includes/class.init.php:188
+msgid "October"
+msgstr "Октябрь"
+
+#: includes/widgets/helpdesk-chart.php:73
+#: includes/widgets/helpdesk-stats.php:73
+msgid "One Fourth"
+msgstr "Одна четвертая"
+
+#: includes/widgets/helpdesk-chart.php:75
+#: includes/widgets/helpdesk-stats.php:75
+msgid "One Half"
+msgstr "Одна половина"
+
+#: includes/widgets/helpdesk-chart.php:74
+#: includes/widgets/helpdesk-stats.php:74
+msgid "One Third"
+msgstr "Треть"
+
+#: includes/functions.php:62 includes/functions.php:139
+msgid "Open"
+msgstr "Открыть"
+
+#: includes/functions.php:78
+msgid "Parent Forum"
+msgstr "Родительский форум"
+
+#: includes/class.api.php:612 includes/class.api.php:684
+#: includes/class.topics-api.php:585
+msgid "Passing Arguments not valid!"
+msgstr "Передача аргументов недействительна!"
+
+#: includes/functions.php:139
+msgid "Pending"
+msgstr "В ожидании"
+
+#: includes/autoupdate.php:462
+msgid "Plugin reactivated successfully. "
+msgstr "Плагин повторно активирован."
+
+#: includes/class.init.php:455
+msgid "Popular Priority"
+msgstr "Популярный приоритет"
+
+#: includes/class.init.php:272
+msgid "Post reply"
+msgstr "Ответить"
+
+#: includes/class.init.php:269
+msgid "Posts count"
+msgstr "Количество сообщений"
+
+#: includes/class.init.php:452
+msgid "Priorities"
+msgstr "Приоритеты"
+
+#: includes/class.init.php:453
+msgid "Priority"
+msgstr "приоритет"
+
+#: includes/class.init.php:492 includes/class.init.php:502
+msgid "Priority Color"
+msgstr "Приоритетный цвет"
+
+#: includes/functions.php:73
+msgid "Private"
+msgstr "Частный"
+
+#: includes/class.settings.php:184
+msgid "Private BBPress"
+msgstr "Частный BBPress"
+
+#: includes/functions.php:73
+msgid "Public"
+msgstr "Общественный"
+
+#: includes/class.init.php:199 includes/class.init.php:263
+msgid "Recent"
+msgstr "Недавний"
+
+#: includes/class.init.php:208
+msgid "Recently Assigned Tickets"
+msgstr "Недавно назначенные билеты"
+
+#: includes/class.api.php:369
+msgid "Replies not found!"
+msgstr "Ответы не найдены!"
+
+#: includes/class.api.php:508
+msgid "Reply Created"
+msgstr "Ответ создан"
+
+#: includes/class.api.php:747
+msgid "Reply delete successfull"
+msgstr "Ответ удалить успешно"
+
+#: includes/class.api.php:594
+msgid "Reply not Created"
+msgstr "Ответ не создан"
+
+#: includes/class.api.php:677 includes/class.api.php:727
+msgid "Reply not Exist."
+msgstr "Ответ не существует."
+
+#: includes/class.api.php:663
+msgid "Reply not Updated."
+msgstr "Ответ не обновлен."
+
+#: includes/class.api.php:735
+msgid "Reply trash successfull"
+msgstr "Ответить на мусор успешно"
+
+#: includes/class.api.php:741
+msgid "Reply untrash successfull"
+msgstr "Ответить успешно"
+
+#: includes/class.api.php:524 includes/class.api.php:657
+msgid "Reply Updated."
+msgstr "Ответ обновлен."
+
+#: includes/class.init.php:217
+msgid "Resolved"
+msgstr "Решено"
+
+#: includes/class.init.php:149
+msgid "Resolved Tickets"
+msgstr "Решенные тикеты"
+
+#: includes/class.init.php:254
+msgid "Resolved Topics"
+msgstr "Решенные темы"
+
+#: includes/class.api.php:1135
+msgid "Response Deleted!"
+msgstr "Ответ удален!"
+
+#: includes/class.api.php:1127
+msgid "Response not deleted!"
+msgstr "Ответ не удален!"
+
+#: includes/class.init.php:221
+msgid "Save As Canned Response"
+msgstr "Сохранить как готовый ответ"
+
+#: includes/class.init.php:411
+msgid "Saved"
+msgstr "Сохранено"
+
+#: includes/class.api.php:1073
+msgid "Saved as canned response"
+msgstr "Сохранено как готовый ответ"
+
+#: includes/class.init.php:225
+msgid "Search Canned Responses"
+msgstr "Поиск готовых ответов"
+
+#: includes/class.init.php:236
+msgid "Search Forum"
+msgstr "Поиск по форуму"
+
+#: includes/class.init.php:205
+msgid "Search Forums"
+msgstr "Поиск по форуму"
+
+#: includes/class.init.php:454
+msgid "Search Priority Category"
+msgstr "Категория приоритета поиска"
+
+#: includes/class.init.php:231
+msgid "Search replies"
+msgstr "Поиск ответов"
+
+#: includes/class.init.php:242
+msgid "Search Responses"
+msgstr "Поиск ответов"
+
+#: includes/class.init.php:230
+msgid "Search topics"
+msgstr "Темы поиска"
+
+#: includes/class.init.php:237
+msgid "Search Users"
+msgstr "Поиск пользователей"
+
+#: includes/class.init.php:417
+msgid "Security Failed"
+msgstr "Ошибка безопасности"
+
+#: includes/functions.php:85
+msgid "Select a parent forum for this forum"
+msgstr "Выберите родительский форум для этого форума"
+
+#: includes/class.init.php:251
+msgid "Select As"
+msgstr "Выбрать как"
+
+#: includes/class.init.php:259
+msgid "Select Dates"
+msgstr "Выберите даты"
+
+#: includes/class.init.php:257
+msgid "Select End"
+msgstr "Выберите Конец"
+
+#: includes/class.init.php:228 includes/class.settings.php:119
+msgid "Select forum"
+msgstr "Выберите форум"
+
+#: includes/class.init.php:258
+msgid "Select max one month for week and daily!"
+msgstr "Выберите максимум один месяц для недели и дня!"
+
+#: includes/class.init.php:204
+msgid "Select option"
+msgstr "Выберите опцию"
+
+#: includes/class.init.php:243
+msgid "Select Priority"
+msgstr "Выберите приоритет"
+
+#: includes/class.init.php:256
+msgid "Select Start"
+msgstr "Выберите Пуск"
+
+#: includes/class.settings.php:160
+msgid "Select Topic Labels"
+msgstr "Выберите ярлыки темы"
+
+#: includes/widgets/helpdesk-chart.php:71
+#: includes/widgets/helpdesk-stats.php:71
+msgid "Select Width"
+msgstr "Выберите ширину"
+
+#: includes/class.init.php:266
+msgid "Selected access"
+msgstr "Выбранный доступ"
+
+#: includes/class.init.php:187
+msgid "September"
+msgstr "Сентябрь"
+
+#: includes/class.init.php:233
+msgid "Set as private reply"
+msgstr "Установить как частный ответ"
+
+#: includes/class.init.php:249
+msgid "Show User Info"
+msgstr "Показать информацию о пользователе"
+
+#: includes/class.api.php:820
+msgid "SLA counting available!"
+msgstr "Возможен подсчет SLA!"
+
+#: includes/class.api.php:827
+msgid "SLA counting unavailable!"
+msgstr "Подсчет SLA недоступен!"
+
+#: includes/class.forums-api.php:292
+msgid "Slow down; you move too fast."
+msgstr "Замедлять; ты двигаешься слишком быстро."
+
+#: includes/class.init.php:260
+msgid "Sorty by"
+msgstr "Сортировать по"
+
+#: includes/functions.php:139
+msgid "Span"
+msgstr "Охватывать"
+
+#: includes/functions.php:128
+msgid "Sticky Topic"
+msgstr "Прикрепленная тема"
+
+#: includes/class.init.php:220
+msgid "Submit"
+msgstr "Представлять на рассмотрение"
+
+#: includes/class.init.php:215
+msgid "Subscribe"
+msgstr "Подписаться"
+
+#: includes/class.init.php:216
+msgid "Subscribed"
+msgstr "Подписан"
+
+#: includes/functions.php:128
+msgid "Super Sticky Topic"
+msgstr "Супер липкая тема"
+
+#: includes/class.settings.php:144
+msgid "Supervisor Ticket User Role"
+msgstr "Роль пользователя билета супервизора"
+
+#: includes/class.forums-api.php:339
+#, php-format
+msgid "The following problem(s) occurred: %s"
+msgstr "Возникли следующие проблемы: %s"
+
+#: includes/autoupdate.php:461
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+"Плагин был обновлен, но не может быть повторно активирован. Пожалуйста, "
+"повторно активируйте его вручную."
+
+#: includes/autoupdate.php:656
+msgid "Themeforest/CodeCanyon Purchase Key ( for Auto-Updates )"
+msgstr "Ключ покупки Themeforest/CodeCanyon (для автоматических обновлений)"
+
+#: includes/class.forums-api.php:310
+msgid "This forum already exists."
+msgstr "Этот форум уже существует."
+
+#: includes/class.forums-api.php:277
+msgid "This forum has been closed to new forums."
+msgstr "Этот форум закрыт для новых форумов."
+
+#: includes/class.forums-api.php:272
+msgid "This forum is a category. No forums can be created in this forum."
+msgstr "Этот форум является категорией. В этом форуме нельзя создавать форумы."
+
+#: includes/class.forums-api.php:287
+msgid ""
+"This forum is hidden and you do not have the capability to read or create "
+"new forums in it."
+msgstr ""
+"Этот форум скрыт, и у вас нет возможности читать или создавать в нем новые "
+"форумы."
+
+#: includes/class.forums-api.php:282
+msgid ""
+"This forum is private and you do not have the capability to read or create "
+"new forums in it."
+msgstr ""
+"Этот форум является частным, и у вас нет возможности читать или создавать в "
+"нем новые форумы."
+
+#: includes/class.touchpoints.php:223 includes/class.touchpoints.php:291
+msgid "This is a private reply"
+msgstr "Это частный ответ"
+
+#: includes/functions.php:52 includes/functions.php:63
+#: includes/functions.php:74
+msgid "This is the status of the forum"
+msgstr "это состояние форума"
+
+#: includes/functions.php:140
+msgid "This is the status of the topic"
+msgstr "это статус темы"
+
+#: includes/functions.php:41 includes/functions.php:118
+msgid ""
+"This is the title of the forum, the most relevant detail to recognise the "
+"forum."
+msgstr "Это название форума, наиболее важная деталь для распознавания форума."
+
+#: includes/functions.php:129
+msgid "This is the type of the forum"
+msgstr "это тип форума"
+
+#: includes/class.api.php:887
+msgid "This Label not present in Admin-panel"
+msgstr "Этот ярлык отсутствует в админ-панели"
+
+#: includes/bbp-private-replies-4x.php:122
+msgid "This reply has been marked as private."
+msgstr "Этот ответ помечен как частный."
+
+#: includes/widgets/helpdesk-chart.php:77
+#: includes/widgets/helpdesk-stats.php:77
+msgid "Three Fourth"
+msgstr "Три четвертых"
+
+#: includes/widgets/helpdesk-chart.php:67
+#: includes/widgets/helpdesk-stats.php:67
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: includes/class.settings.php:82
+#, php-format
+msgid "Topic %s is %s"
+msgstr "Тема %s – это %s"
+
+#: includes/class.settings.php:94 includes/class.settings.php:95
+#, php-format
+msgid "Topic <a href=\"%s\" target=\"_blank\">%s</a> is %s to you by %s"
+msgstr "Тема <a href=\"%s\" target=\"_blank\">%s</a> принадлежит вам %s от %s"
+
+#: includes/class.init.php:229
+msgid "Topic content"
+msgstr "Содержание темы"
+
+#: includes/class.init.php:268
+msgid "Topic count"
+msgstr "Количество тем"
+
+#: includes/class.topics-api.php:570
+msgid "Topic Created"
+msgstr "Тема создана"
+
+#: includes/class.topics-api.php:454
+msgid "Topic delete successfull"
+msgstr "Тема успешно удалена"
+
+#: includes/functions.php:144
+msgid "Topic Forum "
+msgstr "Тематический форум"
+
+#: includes/class.api.php:846
+msgid "Topic labels found"
+msgstr "Ярлыки тем найдены"
+
+#: includes/class.api.php:851
+msgid "Topic labels not found"
+msgstr "Ярлыки тем не найдены"
+
+#: includes/class.api.php:950
+msgid "Topic marked as resolved!"
+msgstr "Тема отмечена как разрешенная!"
+
+#: includes/class.api.php:957
+msgid "Topic marked as unresolved!"
+msgstr "Тема отмечена как нерешенная!"
+
+#: includes/class.topics-api.php:574
+msgid "Topic not Created"
+msgstr "Тема не создана"
+
+#: includes/class.topics-api.php:434
+msgid "Topic not Exist."
+msgstr "Тема не существует."
+
+#: includes/class.init.php:245
+msgid "Topic Notes"
+msgstr "Примечания к теме"
+
+#: includes/class.topics-api.php:385
+msgid "Topic Set as Fovorite"
+msgstr "Тема установлена как фоворите"
+
+#: includes/class.topics-api.php:408
+msgid "Topic Set as Unfavorite"
+msgstr "Тема отмечена как неизбранная"
+
+#: includes/functions.php:133
+msgid "Topic Status"
+msgstr "Статус темы"
+
+#: includes/class.touchpoints.php:167
+msgid "Topic subscription"
+msgstr "Подписка на тему"
+
+#: includes/class.init.php:227 includes/functions.php:111
+msgid "Topic title"
+msgstr "Название темы"
+
+#: includes/class.topics-api.php:442
+msgid "Topic trash successfull"
+msgstr "Удаление темы успешно"
+
+#: includes/functions.php:122
+msgid "Topic Type"
+msgstr "Тип темы"
+
+#: includes/class.topics-api.php:448
+msgid "Topic untrash successfull"
+msgstr "Тема успешно удалена"
+
+#: includes/class.topics-api.php:544
+msgid "Topic Updated"
+msgstr "Тема обновлена"
+
+#: includes/class.topics-api.php:116 includes/class.topics-api.php:336
+msgid "Topics not found!"
+msgstr "Темы не найдены!"
+
+#: includes/class.init.php:253
+msgid "Total Topics"
+msgstr "Всего тем"
+
+#: includes/functions.php:139
+msgid "Trash"
+msgstr "Мусор"
+
+#: includes/autoupdate.php:384 includes/autoupdate.php:549
+msgid "Try again"
+msgstr "Попробуйте еще раз"
+
+#: includes/widgets/helpdesk-chart.php:76
+#: includes/widgets/helpdesk-stats.php:76
+msgid "Two Third"
+msgstr "Две трети"
+
+#: includes/class.api.php:297 includes/class.topics-api.php:319
+msgid "Unable to add subscription"
+msgstr "Не удалось добавить подписку"
+
+#: includes/class.api.php:291
+msgid "Unable to chage forum subscription status."
+msgstr "Не удалось изменить статус подписки на форум."
+
+#: includes/class.topics-api.php:312
+msgid "Unable to chage topic subscription status."
+msgstr "Не удалось изменить статус подписки на тему."
+
+#: includes/class.api.php:303 includes/class.topics-api.php:325
+msgid "Unable to remove subscription"
+msgstr "Не удалось удалить подписку"
+
+#: includes/class.topics-api.php:377
+msgid "Unable to set Fovorite"
+msgstr "Не удалось установить фоворите"
+
+#: includes/class.topics-api.php:400
+msgid "Unable to set Unfavorite"
+msgstr "Не удалось установить Удалить из избранного"
+
+#: includes/class.init.php:165
+msgid "Unassigned"
+msgstr "Неназначенный"
+
+#: includes/class.init.php:207
+msgid "Unassigned Tickets"
+msgstr "Неназначенные билеты"
+
+#: includes/class.init.php:143
+msgid "Unresolved Tickets"
+msgstr "Неразрешенные заявки"
+
+#: includes/class.init.php:255
+msgid "Unresolved Topics"
+msgstr "Нерешенные темы"
+
+#: includes/class.init.php:247
+msgid "User Information"
+msgstr "информация о пользователе"
+
+#: includes/autoupdate.php:641
+msgid "User name"
+msgstr "Имя пользователя"
+
+#: includes/class.settings.php:147
+msgid "User role who are can assign tickets to agents"
+msgstr "Роль пользователя, который может назначать заявки агентам"
+
+#: includes/class.settings.php:140
+msgid "User role who are classified as agents"
+msgstr "Роль пользователя, который классифицируется как агент"
+
+#: includes/autoupdate.php:523
+msgid "Username: "
+msgstr "Имя пользователя:"
+
+#: includes/class.init.php:175
+msgid "Weekly"
+msgstr "Еженедельно"
+
+#: includes/class.settings.php:178
+msgid "Who can create a new Forum"
+msgstr "Кто может создать новый форум"
+
+#: includes/class.settings.php:181
+msgid "Who can create new Forum."
+msgstr "Кто может создать новый форум."
+
+#: includes/class.init.php:176
+msgid "Yearly"
+msgstr "Ежегодно"
+
+#: includes/class.api.php:768
+msgid "You are not a valid user to delete this reply"
+msgstr "Вы не являетесь действительным пользователем, чтобы удалить этот ответ"
+
+#: includes/class.topics-api.php:475
+msgid "You are not a valid user to delete this topic"
+msgstr "Вы не являетесь действительным пользователем, чтобы удалить эту тему"
+
+#: includes/class.api.php:670
+msgid "You are not a valid user to update this reply"
+msgstr ""
+"Вы не являетесь действительным пользователем для обновления этого ответа"
+
+#: includes/class.forums-api.php:317
+msgid "Your forum cannot be created at this time."
+msgstr "Ваш форум не может быть создан в настоящее время."
+
+#: includes/class.forums-api.php:252
+msgid "Your forum description cannot be empty."
+msgstr "Описание вашего форума не может быть пустым."
+
+#: includes/class.forums-api.php:267
+msgid "Your forum must have a parent."
+msgstr "У вашего форума должен быть родитель."
+
+#: includes/class.forums-api.php:234
+msgid "Your forum needs a title."
+msgstr "Вашему форуму нужно название."
+
+#: includes/class.forums-api.php:239
+msgid "Your title is too long."
+msgstr "Ваш заголовок слишком длинный."
