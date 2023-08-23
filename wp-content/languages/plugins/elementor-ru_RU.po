@@ -1284,7 +1284,7 @@ msgstr "Набор не существует."
 #: assets/js/kit-library.18b65108d23ab1dafb8a.bundle.js:4095
 #: assets/js/kit-library.18b65108d23ab1dafb8a.bundle.js:4396
 msgid "Kit Library"
-msgstr "Бибилиотека наборов"
+msgstr "Библиотека наборов"
 
 #: includes/settings/settings.php:285
 msgid "API Key"

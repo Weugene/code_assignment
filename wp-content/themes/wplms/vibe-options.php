@@ -264,7 +264,7 @@ $sections[] = array(
 							'title' => __('Header Top Content (Optional)', 'vibe'), 
 							'sub_desc' => __('* Standard headers', 'vibe'),
 							'desc' => __('Optional content, only required in Header variations', 'vibe'),
-	                        'std' => 'Call us Today ! 11223344 / 45678 | info@yourdomain.com'
+	                        'std' => 'Пишите на ватсап или Телеграм | suot.school@gmail.com'
 						),
 						array(
 							'id' => 'header_content',
